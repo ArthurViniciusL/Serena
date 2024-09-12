@@ -10,8 +10,8 @@ interface StyleProps {
 
 const StyledButton = styled.button<StyleProps>`
     &:hover {
-        color: ${({ $bgColorHover }) => $bgColorHover};
-        background-color: ${({ $fontColorHover }) => $fontColorHover};
+        color: ${({ $fontColorHover }) => $fontColorHover};
+        background-color: ${({ $bgColorHover }) => $bgColorHover};
     }
 `;
 

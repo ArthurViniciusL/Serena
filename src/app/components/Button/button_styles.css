@@ -1,0 +1,19 @@
+.app-button {
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    padding: var(--padding);
+    font-size: var(--NormalText);
+    border-radius: var(--coners);
+
+    color: var(--fontColor-01);
+    background-color: var(--bgColor-02);
+}
+
+.app-button:hover {
+    text-decoration: underline;
+
+    color: var(--bgColor-01);
+    background-color: var(--fontColor-01);
+}
