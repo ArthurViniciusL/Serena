@@ -6,5 +6,4 @@
  * its projects
  */
 
-export {} from // itens as newName
-"your-lib";
+export { CirclePlus as CirclePlusIcon } from "lucide-react";
