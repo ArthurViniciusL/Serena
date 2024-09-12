@@ -75,60 +75,6 @@
     border-radius: var(--coners);
 }
 
-.app-button {
-    border: none;
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
-    padding: var(--padding);
-    font-size: var(--NormalText);
-    border-radius: var(--coners);
-    color: var(--fontColor-01);
-    background-color: var(--bgColor-02);
-}
-
-.app-button:hover {
-    text-decoration: underline;
-}
-
-.app-tooltip {
-    width: fit-content;
-    height: fit-content;
-    position: relative;
-    display: inline-block;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.app-tooltip__content {
-    visibility: hidden;
-    position: absolute;
-    z-index: 1;
-
-    width: fit-content;
-    height: fit-content;
-    text-align: center;
-
-    margin-top: 120px;
-    padding: var(--padding);
-    border-radius: var(--Coners);
-
-    opacity: 0.9;
-    transition: opacity 0.3s;
-    font-size: var(--NormalText);
-
-    /* A propriedas css estão invertidas para abrigar a mudanca de tema */
-    color: var(--bgColor-01);
-    background-color: var(--fontColor-01);
-}
-
-.app-tooltip:hover .app-tooltip__content {
-    visibility: visible;
-}
-
 html {
     scroll-behavior: smooth;
     color: var(--fontColor-01);
@@ -162,12 +108,14 @@ p {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
+    padding: var(--padding) var(--padding-left) var(--padding)
+        var(--padding-right);
 }
 
 .app-section {
     width: 90%;
     display: flex;
     flex-direction: column;
-    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
+    padding: var(--padding) var(--padding-left) var(--padding)
+        var(--padding-right);
 }
