@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('./fonts/SourceSans3-VariableFont_wght.ttf');
+}
+
 * {
   border: 0;
   margin: 0;
@@ -51,7 +56,7 @@
 
   /* Font size */
   --Title: xx-large;
-  --SubTitle: large;
+  --SubTitle: larger;
   --NormalText: medium;
 
 }
@@ -134,17 +139,25 @@
   text-decoration: underline;
 }
 
+html {
+  color: var(--fontColor-01);
+  background-color: var(--bgColor-01);
+}
+
 h1 {
+  font-family: 'Source Sans 3';
   font-weight: bold;
   font-size: var(--Title);
 }
 
 h2 {
+  font-family: 'Source Sans 3';
   font-weight: bolder;
   font-size: var(--SubTitle);
 }
 
 p {
+  font-family: 'Source Sans 3';
   font-weight: normal;
   font-size: var(--NormalText);
   margin-bottom: var(--Margin);
@@ -154,10 +167,12 @@ p {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  padding: var(--Padding);
 }
 
 .app-section {
   width: 90%;
   display: flex;
   flex-direction: column;
+  padding: var(--Padding);
 }
