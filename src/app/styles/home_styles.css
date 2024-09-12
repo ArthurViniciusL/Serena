@@ -1,0 +1,13 @@
+.home-header__content {
+    display: flex;
+    gap: var(--gap);
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttons-list {
+    display: flex;
+    gap: var(--gap);
+    justify-content: center;
+    align-items: center;
+}
