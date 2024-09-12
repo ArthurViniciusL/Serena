@@ -1,0 +1,19 @@
+@import url('../../globals.css');
+
+.header-box {
+    width: 100dvw;
+    height: 80px;
+}
+
+.header-box__content {
+    position: fixed;
+    width: 100dvw;
+    height: 80px;
+    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}

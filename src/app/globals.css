@@ -14,7 +14,6 @@
 }
 
 :root {
-
     /* Background color: */
     --bgColor-01: #ffffff;
     --bgColor-02: #f6f5f4;
@@ -40,10 +39,12 @@
     --serena-blue: #174ae4;
 
     /*  */
-    --Coners: 10px;
-    --Margin: 10px;
-    --Padding: 10px;
-    --Gap: 10px;
+    --coners: 10px;
+    --margin: 10px;
+    --padding: 10px;
+    --padding-left: 20px;
+    --padding-right: 20px;
+    --gap: 10px;
 
     /* Font size */
     --Title: xx-large;
@@ -71,7 +72,7 @@
 }
 
 .app-coners {
-    border-radius: var(--Coners);
+    border-radius: var(--coners);
 }
 
 .app-button {
@@ -79,9 +80,9 @@
     width: fit-content;
     height: fit-content;
     cursor: pointer;
-    padding: var(--Padding);
+    padding: var(--padding);
     font-size: var(--NormalText);
-    border-radius: var(--Coners);
+    border-radius: var(--coners);
     color: var(--fontColor-01);
     background-color: var(--bgColor-02);
 }
@@ -112,7 +113,7 @@
     text-align: center;
 
     margin-top: 120px;
-    padding: var(--Padding);
+    padding: var(--padding);
     border-radius: var(--Coners);
 
     opacity: 0.9;
@@ -128,11 +129,14 @@
     visibility: visible;
 }
 
-
-
 html {
+    scroll-behavior: smooth;
     color: var(--fontColor-01);
     background-color: var(--bgColor-01);
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
@@ -158,12 +162,12 @@ p {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: var(--Padding);
+    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
 }
 
 .app-section {
     width: 90%;
     display: flex;
     flex-direction: column;
-    padding: var(--Padding);
+    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
 }
