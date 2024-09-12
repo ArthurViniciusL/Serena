@@ -9,8 +9,13 @@ interface HeaderProps {
 
 export function Header({ colorFill, children }: HeaderProps) {
     return (
-        <header className="header-box" >
-            <div className="header-box__content " style={{ backgroundColor: colorFill }}>{children}</div>
+        <header className="header-box">
+            <div
+                className="header-box__content "
+                style={{ backgroundColor: colorFill }}
+            >
+                {children}
+            </div>
         </header>
     );
 }

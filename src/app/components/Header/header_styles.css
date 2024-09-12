@@ -1,4 +1,4 @@
-@import url('../../globals.css');
+@import url("../../globals.css");
 
 .header-box {
     width: 100dvw;
@@ -9,7 +9,8 @@
     position: fixed;
     width: 100dvw;
     height: 80px;
-    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
+    padding: var(--padding) var(--padding-left) var(--padding)
+        var(--padding-right);
 
     display: flex;
     flex-wrap: wrap;

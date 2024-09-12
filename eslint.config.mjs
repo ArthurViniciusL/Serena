@@ -7,6 +7,11 @@ export default [
     { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
     { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
     { languageOptions: { globals: globals.browser } },
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off"
+    },
+
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
