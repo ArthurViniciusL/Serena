@@ -15,16 +15,26 @@
 
 :root {
     /* Background color: */
-    --bgColor-01: #ffffff;
-    --bgColor-02: #f6f5f4;
-    --bgColor-03: #dedddc;
-    --bgColor-04: #b8b8b7;
+    --bg-color-01: #ffffff;
+    --bg-color-02: #f6f5f4;
+    --bg-color-03: #dedddc;
+    --bg-color-04: #b8b8b7;
+
+    --bg-color-05: #000000;
+    --bg-color-06: #1a1717;
+    --bg-color-07: #2f2f2f;
+    --bg-color-08: #322e2b;
 
     /* Font color */
-    --fontColor-01: #000000;
-    --fontColor-02: #1a1717;
-    --fontColor-03: #2f2f2f;
-    --fontColor-03: #322e2b;
+    --font-color-01: #000000;
+    --font-color-02: #1a1717;
+    --font-color-03: #2f2f2f;
+    --font-color-04: #322e2b;
+
+    --font-color-05: #ffffff;
+    --font-color-06: #f6f5f4;
+    --font-color-07: #dedddc;
+    --font-color-08: #b8b8b7;
 
     /* Colors: */
     --red-01: #f60000;
@@ -54,21 +64,33 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bgColor-01: #000000;
-        --bgColor-02: #2f2f2f;
-        --bgColor-03: #1a1717;
-        --bgColor-04: #322e2b;
+        /* Background color: */
+        --bg-color-01: #000000;
+        --bg-color-02: #1a1717;
+        --bg-color-03: #2f2f2f;
+        --bg-color-04: #322e2b;
 
-        --fontColor-01: #ffffff;
-        --fontColor-02: #f6f5f4;
-        --fontColor-03: #dedddc;
-        --fontColor-04: #b8b8b7;
+        --bg-color-05: #ffffff;
+        --bg-color-06: #f6f5f4;
+        --bg-color-07: #dedddc;
+        --bg-color-08: #b8b8b7;
+
+        /* Font color */
+        --font-color-01: #ffffff;
+        --font-color-02: #f6f5f4;
+        --font-color-03: #dedddc;
+        --font-color-04: #b8b8b7;
+
+        --font-color-05: #000000;
+        --font-color-06: #1a1717;
+        --font-color-07: #2f2f2f;
+        --font-color-08: #322e2b;
     }
 }
 
 .app-bg-color {
-    color: var(--fontColor-01);
-    background-color: var(--bgColor-01);
+    color: var(--font-color-01);
+    background-color: var(--bg-color-01);
 }
 
 .app-coners {
@@ -77,8 +99,8 @@
 
 html {
     scroll-behavior: smooth;
-    color: var(--fontColor-01);
-    background-color: var(--bgColor-01);
+    color: var(--font-color-01);
+    background-color: var(--bg-color-01);
 }
 
 html::-webkit-scrollbar {
@@ -108,14 +130,12 @@ p {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: var(--padding) var(--padding-left) var(--padding)
-        var(--padding-right);
+    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
 }
 
 .app-section {
     width: 90%;
     display: flex;
     flex-direction: column;
-    padding: var(--padding) var(--padding-left) var(--padding)
-        var(--padding-right);
+    padding: var(--padding) var(--padding-left) var(--padding) var(--padding-right);
 }
