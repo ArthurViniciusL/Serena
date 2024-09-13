@@ -1,4 +1,4 @@
-import "./tooltip_styles.css"
+import "./tooltip_styles.css";
 
 interface TooltipProps {
     msg: string;
@@ -9,9 +9,7 @@ export function Tooltip({ msg, children }: TooltipProps) {
     return (
         <div className="app-tooltip">
             {children}
-            <span className="app-tooltip__content">
-                {msg}
-            </span>
+            <span className="app-tooltip__content">{msg}</span>
         </div>
     );
 }

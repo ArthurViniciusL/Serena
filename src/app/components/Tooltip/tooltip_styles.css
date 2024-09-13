@@ -1,4 +1,4 @@
-@import url('../../globals.css');
+@import url("../../globals.css");
 
 .app-tooltip {
     width: fit-content;
@@ -34,6 +34,7 @@
 .app-tooltip:hover .app-tooltip__content {
     visibility: visible;
     opacity: 0.8;
-    transition: opacity 0.5s ease-in-out, visibility 0s;
-
+    transition:
+        opacity 0.5s ease-in-out,
+        visibility 0s;
 }

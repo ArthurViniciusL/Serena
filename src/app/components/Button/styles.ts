@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface StyleProps {
     className: string;
     $border?: string;
+    $bgColor?: string;
     $bgColorHover?: string;
     $fontColorHover?: string;
 }
@@ -12,6 +13,7 @@ interface StyleProps {
 
 const StyledButton = styled.button<StyleProps>`
     border: ${({ $border }) => $border};
+    background-color: ${({ $bgColor }) => $bgColor};
     &:hover {
         color: ${({ $fontColorHover }) => $fontColorHover};
         background-color: ${({ $bgColorHover }) => $bgColorHover};

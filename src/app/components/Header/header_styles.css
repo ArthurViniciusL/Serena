@@ -2,13 +2,13 @@
 
 .header-box {
     width: 100dvw;
-    height: 80px;
+    height: 70px;
 }
 
 .header-box__content {
     position: fixed;
     width: 100dvw;
-    height: 80px;
+    height: 70px;
     padding: var(--padding) var(--padding-left) var(--padding)
         var(--padding-right);
 

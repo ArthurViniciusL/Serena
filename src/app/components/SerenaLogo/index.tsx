@@ -8,8 +8,8 @@ export function SerenaLogo() {
         <Image
             className="serena-logo"
             src={logo}
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="Picture of the author"
         />
     );
