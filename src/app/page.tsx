@@ -9,6 +9,7 @@ import { Tooltip } from "./components/Tooltip";
 import Image from "next/image";
 import home_banner_01 from "@/app/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
+import { Input } from "./components/Input";
 
 export default function Home() {
     return (
@@ -66,6 +67,7 @@ export default function Home() {
                     </li>
                 </ul>
             </Header>
+
             <main className="app-main">
                 <section className="app-section home-section home-content__section-01">
                     <div className="home-content-01__intro">
