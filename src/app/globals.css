@@ -57,9 +57,9 @@
     --gap: 10px;
 
     /* Font size */
-    --Title: xx-large;
-    --SubTitle: larger;
-    --NormalText: medium;
+    --title: xx-large;
+    --sub-title: larger;
+    --normal-text: medium;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,19 +110,19 @@ html::-webkit-scrollbar {
 h1 {
     font-family: "Source Sans 3";
     font-weight: bold;
-    font-size: var(--Title);
+    font-size: var(--title);
 }
 
 h2 {
     font-family: "Source Sans 3";
     font-weight: bolder;
-    font-size: var(--SubTitle);
+    font-size: var(--sub-title);
 }
 
 p {
     font-family: "Source Sans 3";
     font-weight: normal;
-    font-size: var(--NormalText);
+    font-size: var(--normal-text);
     margin-bottom: var(--Margin);
 }
 

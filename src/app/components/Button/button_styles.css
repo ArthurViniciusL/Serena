@@ -4,16 +4,16 @@
     height: fit-content;
     cursor: pointer;
     padding: var(--padding);
-    font-size: var(--NormalText);
+    font-size: var(--normal-text);
     border-radius: var(--coners);
 
-    color: var(--fontColor-01);
-    background-color: var(--bgColor-02);
+    color: var(--font-color-01);
+    background-color: var(--bg-color-02);
 }
 
 .app-button:hover {
     text-decoration: underline;
-
-    color: var(--bgColor-01);
-    background-color: var(--fontColor-01);
+    cursor: pointer;
+    color: var(--bg-color-01);
+    background-color: var(--font-color-01);
 }

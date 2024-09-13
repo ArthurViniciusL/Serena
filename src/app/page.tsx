@@ -9,30 +9,30 @@ import { Tooltip } from "./components/Tooltip";
 export default function Home() {
     return (
         <div>
-            <Header colorFill="var(--bgColor-02)">
+            <Header colorFill="var(--bg-color-02)">
                 <div className="home-header__content">
                     <SerenaLogo />
                     <ul className="buttons-list">
                         <li>
                             <Button
-                                bgColorHover="var(--bgColor-01)"
-                                fontColorHover="var(--fontColor-01)"
+                                bgColorHover="var(--bg-color-01)"
+                                fontColorHover="var(--font-color-01)"
                             >
                                 Sobre
                             </Button>
                         </li>
                         <li>
                             <Button
-                                bgColorHover="var(--bgColor-01)"
-                                fontColorHover="var(--fontColor-01)"
+                                bgColorHover="var(--bg-color-01)"
+                                fontColorHover="var(--font-color-01)"
                             >
                                 Recursos
                             </Button>
                         </li>
                         <li>
                             <Button
-                                bgColorHover="var(--bgColor-01)"
-                                fontColorHover="var(--fontColor-01)"
+                                bgColorHover="var(--bg-color-01)"
+                                fontColorHover="var(--font-color-01)"
                             >
                                 Preços
                             </Button>
@@ -41,9 +41,9 @@ export default function Home() {
                         <li>
 
 
-                            <Tooltip msg="AAAAAAAAAAAAAAA">
-                                <Button bgColorHover="var(--bgColor-01)">
-                                    <CirclePlusIcon color="var(--fontColor-01)" />
+                            <Tooltip msg="Mais informações">
+                                <Button bgColorHover="var(--bg-color-01)">
+                                    <CirclePlusIcon color="var(--font-color-01)" />
                                 </Button>
                             </Tooltip>
                         </li>
@@ -52,7 +52,7 @@ export default function Home() {
 
                 <Button
                     bgColorHover="var(--red-01)"
-                    fontColorHover="var(--fontColor-01)"
+                    fontColorHover="var(--font-color-01)"
                 >
                     clique aqui!
                 </Button>
