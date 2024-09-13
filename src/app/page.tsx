@@ -53,12 +53,13 @@ export default function Home() {
                 <Button
                     bgColorHover="var(--red-01)"
                     fontColorHover="var(--font-color-01)"
+                    border={true}
                 >
-                    clique aqui!
+                    clique aqui! 1
                 </Button>
             </Header>
             <main className="app-main">
-                <Button>clique aqui!</Button>
+                <Button>clique aqui! 2</Button>
 
                 <div>
                     <p>

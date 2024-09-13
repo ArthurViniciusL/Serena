@@ -6,21 +6,25 @@ interface ButtonProps {
     onClick?: () => void;
     children: React.ReactNode;
     className?: string;
+    border?: boolean;
     bgColorHover?: string;
     fontColorHover?: string;
 }
 
 export function Button({
     onClick,
-    className,
     children,
+    className,
+    border,
     bgColorHover,
     fontColorHover,
 }: ButtonProps) {
+    const borderButton = border ? 'solid var(--bg-color-05) 1px' : 'none';
     return (
         <StyledButton
-            className={`app-button ${className}`}
             onClick={onClick}
+            className={`app-button ${className}`}
+            $border={borderButton}
             $bgColorHover={bgColorHover}
             $fontColorHover={fontColorHover}
         >

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface StyleProps {
     className: string;
+    $border?: string;
     $bgColorHover?: string;
     $fontColorHover?: string;
 }
@@ -10,6 +11,7 @@ interface StyleProps {
 /* O componente inverte as cores para ficar adequado a tema de cores do usuário */
 
 const StyledButton = styled.button<StyleProps>`
+    border: ${({ $border }) => $border};
     &:hover {
         color: ${({ $fontColorHover }) => $fontColorHover};
         background-color: ${({ $bgColorHover }) => $bgColorHover};
