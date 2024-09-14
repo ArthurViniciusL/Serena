@@ -6,4 +6,7 @@
  * its projects
  */
 
-export { CirclePlus as CirclePlusIcon } from "lucide-react";
+export {
+    CirclePlus as CirclePlusIcon,
+    CircleX as CircleCloseIcon,
+} from "lucide-react";

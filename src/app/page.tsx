@@ -1,3 +1,5 @@
+"use client";
+
 import "@/app/styles/home_styles.css";
 
 import { Button } from "./components/Button";
@@ -9,9 +11,32 @@ import { Tooltip } from "./components/Tooltip";
 import Image from "next/image";
 import home_banner_01 from "@/app/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
-import { Input } from "./components/Input";
+
+import { useContext, useEffect, useState } from "react";
+import { ModalContext } from "./context/ModalContext";
+import { Modal } from "./components/Modals/Modal";
+import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
+import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
 
 export default function Home() {
+
+    const { setIsOpenModal } = useContext(ModalContext);
+
+    const [modal_1, setModal_1] = useState(false);
+    const [modal_2, setModal_2] = useState(false);
+
+    function open01() {
+        setIsOpenModal(true);
+        setModal_1(true);
+        setModal_2(false)
+    }
+
+    function open02() {
+        setIsOpenModal(true);
+        setModal_1(false)
+        setModal_2(true)
+    }
+
     return (
         <div>
             <Header colorFill="var(--bg-color-02)">
@@ -67,6 +92,25 @@ export default function Home() {
                     </li>
                 </ul>
             </Header>
+
+            <ModalCreateAccount modalView={modal_1}>
+                <button
+                    className="app-button"
+                    onClick={open01}
+                >
+                    Clique aqui 1
+                </button>
+            </ModalCreateAccount>
+
+            <ModalLoginAccount modalView={modal_2}>
+                <button
+                    className="app-button"
+                    onClick={open02}
+                >
+                    Clique aqui 2
+                </button>
+            </ModalLoginAccount>
+
 
             <main className="app-main">
                 <section className="app-section home-section home-content__section-01">

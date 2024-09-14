@@ -1,0 +1,44 @@
+.modal-box {
+    top: 0;
+    z-index: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    /* z-index: 4; */
+    position: fixed;
+    width: 50dvw;
+    height: 80dvh;
+    padding: var(--padding);
+    border-radius: var(--coners);
+    background-color: var(--bg-color-01);
+
+    .modal-content__span {
+        width: 5%;
+    }
+
+    .modal-content__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.modal-title-style {
+    font-weight: bold;
+    font-size: var(--sub-title);
+}
+
+@media (max-width: 700px) {
+    .modal-content {
+        /* z-index: 4; */
+        width: 90dvw;
+        height: 70dvh;
+    }
+}
