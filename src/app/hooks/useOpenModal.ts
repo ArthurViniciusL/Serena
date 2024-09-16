@@ -1,19 +1,7 @@
-
-/* 
-1 - Modal de Login
-2 - Modal de entrar
-3 - Modal de detalhes de perfil
-4 - Modal de add serviço
-5 - Modal de edit serviço
-6 - Modal de excluir serviço
-7 - Modal de cancelar agendamento
-8 - Modal de detalhes de serviço
-*/
-
 import { useEffect, useReducer, useState } from "react";
 import { useModalContext } from "./useModalContext";
 
-/* const Modal = {
+/* export const Modal = {
     Login: "LOGIN",
     SignUp: "SIGN_UP",
     AboutProfile: "ABOUT_PROFILE",
@@ -22,34 +10,49 @@ import { useModalContext } from "./useModalContext";
     DeleteService: "DELETE_SERVICE",
     CancelService: "CANCEL_SERVICE",
     AboutService: "ABOUT_SERVICE",
-}; */
+};
+ */
 
+export const Modal = {
+    login: "LOGIN",
+    signUp: "SIGN_UP",
+};
 
 function modalReducer(state: any, action: any) {
-
     switch (action.type) {
-        case 'MODAL_LOGIN':
+        case Modal.login:
             return {
-                modal_1: true, modal_2: false
+                LOGIN: true,
+                SIGN_UP: false,
             };
 
-        case 'MODAL_SIGN_UP':
+        case Modal.signUp:
             return {
-                modal_1: false, modal_2: true
+                LOGIN: false,
+                SIGN_UP: true,
             };
         default:
             state;
     }
 }
 
-export function useOpenModal(initialState = {
-    modal_1: false,
-    modal_2: false
-}) {
+export function useOpenModal(
+    initialState = {
+        LOGIN: false,
+        SIGN_UP: false,
+    },
+) {
+    const { openModal } = useModalContext();
     const [state, dispatch] = useReducer(modalReducer, initialState);
+
+    function openThisModal(modalType: string) {
+        openModal();
+        dispatch({ type: modalType });
+    }
 
     return {
         state,
-        dispatch
-    }
+        dispatch,
+        openThisModal,
+    };
 }
