@@ -10,16 +10,13 @@ interface ModalProviderProps {
 }
 
 export function ModalProvider({ children }: ModalProviderProps) {
-
     const { state, dispatch } = useOpenModal();
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     function openModal() {
         setIsOpen(true);
-       
     }
-
 
     function closeModal() {
         setIsOpen(false);
