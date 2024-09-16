@@ -13,21 +13,11 @@ import home_banner_01 from "@/app/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
 
 import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
-import { useModalContext } from "./hooks/useModalContext";
 import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
-import { useOpenModal } from "./hooks/useOpenModal";
+import { Modal, useOpenModal } from "./hooks/useOpenModal";
 
 export default function Home() {
-
-    const { openModal } = useModalContext();
-    const { state, dispatch } = useOpenModal();
-
-    function openLocalModal(modalType: string) {
-        openModal();
-        dispatch({
-            type: modalType
-        });
-    }
+    const { state, openThisModal } = useOpenModal();
 
     return (
         <div>
@@ -75,35 +65,28 @@ export default function Home() {
 
                 <ul className="buttons-list">
                     <li>
-                        <Button bgColor="var(--bg-color-01)">Entrar</Button>
+                        <ModalLoginAccount thisModalIsOpen={state?.LOGIN}>
+                            <Button
+                                onClick={() => openThisModal(Modal.login)}
+                                bgColor="var(--bg-color-01)"
+                            >
+                                Entrar
+                            </Button>
+                        </ModalLoginAccount>
                     </li>
                     <li>
-                        <Button border={true} bgColor="var(--bg-color-01)">
-                            Criar conta
-                        </Button>
+                        <ModalCreateAccount thisModalIsOpen={state?.SIGN_UP}>
+                            <Button
+                                onClick={() => openThisModal(Modal.signUp)}
+                                border={true}
+                                bgColor="var(--bg-color-01)"
+                            >
+                                Criar conta
+                            </Button>
+                        </ModalCreateAccount>
                     </li>
                 </ul>
             </Header>
-
-            <ModalCreateAccount view={state?.modal_1}>
-                <button className="app-button" onClick={() => openLocalModal('MODAL_LOGIN')}>
-                    Clique aqui 1
-                </button>
-            </ModalCreateAccount>
-
-            <ModalLoginAccount view={state?.modal_2}>
-                <button className="app-button" onClick={() => openLocalModal('MODAL_SIGN_UP')}>
-                    Clique aqui 2
-                </button>
-            </ModalLoginAccount>
-
-
-
-            {/*          <ModalLoginAccount modalView={modal_2}>
-                <button className="app-button" onClick={open02}>
-                    Clique aqui 2
-                </button>
-            </ModalLoginAccount> */}
 
             <main className="app-main">
                 <section className="app-section home-section home-content__section-01">
@@ -178,9 +161,16 @@ export default function Home() {
                                 única plataforma.
                             </p>
 
-                            <Button className="home-content-03__button">
-                                Criar conta
-                            </Button>
+                            <ModalCreateAccount
+                                thisModalIsOpen={state?.SIGN_UP}
+                            >
+                                <Button
+                                    onClick={() => openThisModal(Modal.signUp)}
+                                    className="home-content-03__button"
+                                >
+                                    Criar conta
+                                </Button>
+                            </ModalCreateAccount>
                         </div>
                     </div>
                 </section>
