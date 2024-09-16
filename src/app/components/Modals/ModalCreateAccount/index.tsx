@@ -1,25 +1,23 @@
-"use client";
-
-import { useContext, useEffect, useState } from "react";
-import { Modal } from "../Modal";
-import { ModalContext } from "@/app/context/ModalContext";
+import { Modal } from "../Modal"
+import { useModalContext } from "@/app/hooks/useModalContext";
 
 interface ModalCreateAccountProps {
-    modalView: boolean;
+    view: boolean;
     children: React.ReactNode;
 }
 
-export function ModalCreateAccount({modalView, children }: ModalCreateAccountProps) {
-    const { isOpen } = useContext(ModalContext);
+export function ModalCreateAccount({view, children }: ModalCreateAccountProps) {
+
+    const { isOpen } = useModalContext();
 
     return (
         <div>
             {children}
-            {isOpen && modalView ? (
+            {isOpen && view ? (
                 <Modal modalTtile="Criar conta">
                     <h1>Olá 1</h1>
                 </Modal>
-            ) : null}
+            ) : null} 
         </div>
     );
 }

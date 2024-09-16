@@ -12,29 +12,21 @@ import Image from "next/image";
 import home_banner_01 from "@/app/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
 
-import { useContext, useEffect, useState } from "react";
-import { ModalContext } from "./context/ModalContext";
-import { Modal } from "./components/Modals/Modal";
 import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
+import { useModalContext } from "./hooks/useModalContext";
 import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
+import { useOpenModal } from "./hooks/useOpenModal";
 
 export default function Home() {
 
-    const { setIsOpenModal } = useContext(ModalContext);
+    const { openModal } = useModalContext();
+    const { state, dispatch } = useOpenModal();
 
-    const [modal_1, setModal_1] = useState(false);
-    const [modal_2, setModal_2] = useState(false);
-
-    function open01() {
-        setIsOpenModal(true);
-        setModal_1(true);
-        setModal_2(false)
-    }
-
-    function open02() {
-        setIsOpenModal(true);
-        setModal_1(false)
-        setModal_2(true)
+    function openLocalModal(modalType: string) {
+        openModal();
+        dispatch({
+            type: modalType
+        });
     }
 
     return (
@@ -93,24 +85,25 @@ export default function Home() {
                 </ul>
             </Header>
 
-            <ModalCreateAccount modalView={modal_1}>
-                <button
-                    className="app-button"
-                    onClick={open01}
-                >
+            <ModalCreateAccount view={state?.modal_1}>
+                <button className="app-button" onClick={() => openLocalModal('MODAL_LOGIN')}>
                     Clique aqui 1
                 </button>
             </ModalCreateAccount>
 
-            <ModalLoginAccount modalView={modal_2}>
-                <button
-                    className="app-button"
-                    onClick={open02}
-                >
+            <ModalLoginAccount view={state?.modal_2}>
+                <button className="app-button" onClick={() => openLocalModal('MODAL_SIGN_UP')}>
                     Clique aqui 2
                 </button>
             </ModalLoginAccount>
 
+
+
+            {/*          <ModalLoginAccount modalView={modal_2}>
+                <button className="app-button" onClick={open02}>
+                    Clique aqui 2
+                </button>
+            </ModalLoginAccount> */}
 
             <main className="app-main">
                 <section className="app-section home-section home-content__section-01">

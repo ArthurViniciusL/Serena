@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useState } from "react";
+import { useOpenModal } from "../hooks/useOpenModal";
 
 export const ModalContext = createContext<any>({});
 
@@ -9,14 +10,23 @@ interface ModalProviderProps {
 }
 
 export function ModalProvider({ children }: ModalProviderProps) {
+
+    const { state, dispatch } = useOpenModal();
+
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    function setIsOpenModal(order: boolean) {
-        setIsOpen(order);
+    function openModal() {
+        setIsOpen(true);
+       
+    }
+
+
+    function closeModal() {
+        setIsOpen(false);
     }
 
     return (
-        <ModalContext.Provider value={{ isOpen, setIsOpenModal }}>
+        <ModalContext.Provider value={{ isOpen, openModal, closeModal }}>
             {children}
         </ModalContext.Provider>
     );

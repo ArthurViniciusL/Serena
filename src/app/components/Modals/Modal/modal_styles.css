@@ -1,18 +1,32 @@
 .modal-box {
     top: 0;
     z-index: 0;
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .modal-content {
+    z-index: 2;
     /* z-index: 4; */
-    position: fixed;
+    position: relative;
     width: 50dvw;
     height: 80dvh;
     padding: var(--padding);
