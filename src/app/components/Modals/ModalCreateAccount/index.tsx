@@ -1,10 +1,11 @@
+import "./ModalCreateAccount_styles.css";
+
+import { Button } from "../../Button";
 import { Modal, ModalProps } from "../Modal";
 import { useModalContext } from "@/app/hooks/useModalContext";
 
-/* interface ModalCreateAccountProps {
-    thisModalIsOpen: boolean | undefined;
-    children: React.ReactNode;
-} */
+import serena_asset_2 from "@/app/assets/images/serena_asset_2.svg";
+import Image from "next/image";
 
 export function ModalCreateAccount({ thisModalIsOpen, children }: ModalProps) {
     const { isOpen } = useModalContext();
@@ -12,9 +13,30 @@ export function ModalCreateAccount({ thisModalIsOpen, children }: ModalProps) {
         <div>
             {children}
             {isOpen && thisModalIsOpen ? (
-                <Modal modalTitle="Criar conta">
-                    <h1>Olá 1</h1>
-                </Modal>
+                 <Modal modalTitle="Criar conta">
+                 <div className="model-signUp-content">
+                     <h3 className="signUp-content__msg">
+                         <span className="signUp-content__msg-style">
+                             {" "}
+                             Seja bem vindo!
+                         </span> Que tipo de conta você quer criar?
+                     </h3>
+
+                     <Image
+                         src={serena_asset_2}
+                         width={200}
+                         height={200}
+                         alt="signUp ilustration"
+                         priority={true}
+                     />
+
+                     <div className="buttons-container">
+                         <Button>Serviço</Button>
+                         <p style={{ color: "var(--font-color-04)" }}>ou</p>
+                         <Button>Cliente</Button>
+                     </div>
+                 </div>
+             </Modal>
             ) : null}
         </div>
     );
