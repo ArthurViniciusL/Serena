@@ -1,4 +1,4 @@
-import "./ModalCreateAccount_styles.css";
+import "@/app/components/Modals/modals_styles.css";
 
 import { Button } from "../../Button";
 import { Modal, ModalProps } from "../Modal";
@@ -13,30 +13,33 @@ export function ModalCreateAccount({ thisModalIsOpen, children }: ModalProps) {
         <div>
             {children}
             {isOpen && thisModalIsOpen ? (
-                 <Modal modalTitle="Criar conta">
-                 <div className="model-signUp-content">
-                     <h3 className="signUp-content__msg">
-                         <span className="signUp-content__msg-style">
-                             {" "}
-                             Seja bem vindo!
-                         </span> Que tipo de conta você quer criar?
-                     </h3>
+                <Modal modalTitle="Criar conta">
+                    <div className="model-content">
+                        <h3 className="content__msg">
+                            <span className="content__msg-style">
+                                {" "}
+                                Seja bem vindo!
+                            </span>{" "}
+                            Que tipo de conta você quer criar?
+                        </h3>
 
-                     <Image
-                         src={serena_asset_2}
-                         width={200}
-                         height={200}
-                         alt="signUp ilustration"
-                         priority={true}
-                     />
+                        <Image
+                            src={serena_asset_2}
+                            width={200}
+                            height={200}
+                            alt="signUp ilustration"
+                            priority={true}
+                        />
 
-                     <div className="buttons-container">
-                         <Button>Serviço</Button>
-                         <p style={{ color: "var(--font-color-04)" }}>ou</p>
-                         <Button>Cliente</Button>
-                     </div>
-                 </div>
-             </Modal>
+                        <div className="buttons-container">
+                            <a href="">
+                                <Button>Serviço</Button>
+                            </a>
+                            <p style={{ color: "var(--font-color-04)" }}>ou</p>
+                            <Button>Cliente</Button>
+                        </div>
+                    </div>
+                </Modal>
             ) : null}
         </div>
     );

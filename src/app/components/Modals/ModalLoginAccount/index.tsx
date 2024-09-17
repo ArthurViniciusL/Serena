@@ -1,4 +1,4 @@
-import "./ModalLoginAccount_styles.css";
+import "@/app/components/Modals/modals_styles.css";
 
 import { Button } from "../../Button";
 import { Modal, ModalProps } from "../Modal";
@@ -15,9 +15,9 @@ export function ModalLoginAccount({ thisModalIsOpen, children }: ModalProps) {
             {children}
             {isOpen && thisModalIsOpen ? (
                 <Modal modalTitle="Entrar">
-                    <div className="model-login-content">
-                        <h3 className="login-content__msg">
-                            <span className="login-content__msg-style">
+                    <div className="model-content">
+                        <h3 className="content__msg">
+                            <span className="content__msg-style">
                                 {" "}
                                 Bem vindo de volta
                             </span>

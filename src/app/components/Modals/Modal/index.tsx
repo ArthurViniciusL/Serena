@@ -1,4 +1,4 @@
-import "./modal_styles.css";
+import "./parentModal_styles.css";
 import { Button } from "../../Button";
 import { CircleCloseIcon } from "@/app/modules/app.modules";
 import { useModalContext } from "@/app/hooks/useModalContext";

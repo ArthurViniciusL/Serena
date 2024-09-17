@@ -15,6 +15,7 @@ import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
 import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
 import { Modal, useOpenModal } from "./hooks/useOpenModal";
+import AppRoutes from "./app.routes";
 
 export default function Home() {
     const { state, openThisModal } = useOpenModal();
@@ -23,7 +24,9 @@ export default function Home() {
         <div>
             <Header colorFill="var(--bg-color-02)">
                 <div className="home-header__content">
-                    <SerenaLogo />
+                    <a href={AppRoutes.Home}>
+                        <SerenaLogo />
+                    </a>
                     <ul className="buttons-list">
                         <li>
                             <Button
