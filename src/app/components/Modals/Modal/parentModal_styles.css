@@ -38,6 +38,9 @@
     border-radius: var(--coners);
     background-color: var(--bg-color-01);
 
+    flex-wrap: wrap;
+    flex-flow: column;
+
     .modal-header {
         display: flex;
         justify-content: space-between;
@@ -64,8 +67,32 @@
 
 @media (max-width: 700px) {
     .modal-background {
-        /* z-index: 4; */
-        width: 90dvw;
-        height: 70dvh;
+        width: 100dvw;
+        height: 100dvh;
+        background-color: var(--bg-color-01);
     }
+    
+    .modal-box {
+        top: 0;
+        width: 100dvw;
+        height: 100dvh;
+        padding: 10%;
+        flex-grow: inherit;
+        overflow: hidden;
+
+        .modal-header {
+            .modal-header__span {
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media (max-height: 500px) {
+
+    .modal-box {
+        height: 90vh;
+    }
+    
 }

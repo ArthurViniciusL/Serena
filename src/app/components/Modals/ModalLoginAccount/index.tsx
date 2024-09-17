@@ -19,9 +19,8 @@ export function ModalLoginAccount({ thisModalIsOpen, children }: ModalProps) {
                         <h3 className="content__msg">
                             <span className="content__msg-style">
                                 {" "}
-                                Bem vindo de volta
-                            </span>
-                            , qual o seu tipo de conta?
+                                Bem vindo de volta!
+                            </span> Qual o seu tipo de conta?
                         </h3>
 
                         <Image

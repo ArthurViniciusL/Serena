@@ -10,6 +10,7 @@ export interface ModalProps {
 }
 
 export function Modal({ modalTitle, children, thisModalIsOpen }: ModalProps) {
+    
     const { isOpen, closeModal } = useModalContext();
 
     if (isOpen) {
