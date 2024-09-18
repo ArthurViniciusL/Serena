@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-shadow);
 
     opacity: 0;
     animation: fadeIn 0.3s ease forwards;
