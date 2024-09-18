@@ -14,7 +14,7 @@ export function ModalCreateAccount({ thisModalIsOpen, children }: ModalProps) {
             {children}
             {isOpen && thisModalIsOpen ? (
                 <Modal modalTitle="Criar conta">
-                    <div className="model-content">
+                    <div className="modal-content">
                         <h3 className="content__msg">
                             <span className="content__msg-style">
                                 {" "}
@@ -24,6 +24,7 @@ export function ModalCreateAccount({ thisModalIsOpen, children }: ModalProps) {
                         </h3>
 
                         <Image
+                            className="content__img"
                             src={serena_asset_2}
                             width={200}
                             height={200}

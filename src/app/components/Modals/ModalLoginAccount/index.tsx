@@ -15,18 +15,18 @@ export function ModalLoginAccount({ thisModalIsOpen, children }: ModalProps) {
             {children}
             {isOpen && thisModalIsOpen ? (
                 <Modal modalTitle="Entrar">
-                    <div className="model-content">
+                    <div className="modal-content">
                         <h3 className="content__msg">
                             <span className="content__msg-style">
-                                {" "}
-                                Bem vindo de volta!
+                                Bem vindo de volta! 
                             </span> Qual o seu tipo de conta?
                         </h3>
 
                         <Image
+                            className="content__img"
                             src={serena_asset_1}
-                            width={130}
-                            height={130}
+                            width={110}
+                            height={110}
                             alt="login ilustration"
                             priority={true}
                         />
