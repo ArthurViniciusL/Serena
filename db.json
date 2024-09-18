@@ -1,0 +1,33 @@
+{
+    "PersonClients": [],
+    "PersonServicesProviders": [
+      {
+        "id": 0,
+        "picture": "",
+        "serviceCategory": "",
+        "agendaStatus": "",
+        "servicesList": [],
+        "profileDescription": "",
+        "reviews": 0
+      },
+      {
+        "id": 1,
+        "picture": "",
+        "serviceCategory": "",
+        "agendaStatus": "",
+        "servicesList": [],
+        "profileDescription": "",
+        "reviews": 0
+      },
+      {
+        "id": 2,
+        "picture": "",
+        "serviceCategory": "",
+        "agendaStatus": "",
+        "servicesList": [],
+        "profileDescription": "",
+        "reviews": 0
+      }
+    ]
+  }
+  
