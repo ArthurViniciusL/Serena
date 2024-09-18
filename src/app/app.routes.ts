@@ -3,9 +3,8 @@
 const AppRoutes = {
     Home: "/",
     
-    LoginService: '',
-    LoginClient: '',
-
+    Feed: '/pages/feed/',
+    
     CreateAccount: '',
     
     pageWithId: (id: number) => `/page_path${id}`,
