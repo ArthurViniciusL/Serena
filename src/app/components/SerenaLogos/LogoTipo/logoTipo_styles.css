@@ -1,0 +1,18 @@
+.logo-tipo-content {
+    
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    gap: var(--gap);
+    align-items: baseline;
+
+    .content__img {
+
+    }
+
+    .content__title {
+        font-size: var(--title);
+        color: var(--serena-02);
+    }
+}
