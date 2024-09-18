@@ -4,7 +4,7 @@ import "@/app/styles/home_styles.css";
 
 import { Button } from "./components/Button";
 import { Header } from "./components/Header";
-import { SerenaLogo } from "./components/SerenaLogo";
+
 import { CirclePlusIcon } from "./modules/app.modules";
 import { Tooltip } from "./components/Tooltip";
 
@@ -16,16 +16,16 @@ import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
 import { Modal, useOpenModal } from "./hooks/useOpenModal";
 import AppRoutes from "./app.routes";
+import { LogoMarca } from "./components/SerenaLogos/LogoMarca";
 
 export default function Home() {
     const { state, openThisModal } = useOpenModal();
-
     return (
         <div>
             <Header colorFill="var(--bg-color-02)">
                 <div className="home-header__content">
                     <a href={AppRoutes.Home}>
-                        <SerenaLogo />
+                        <LogoMarca />
                     </a>
                     <ul className="buttons-list">
                         <li>

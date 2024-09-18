@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
-            <body className="">
+            <body className="app-bg-color">
                 <ModalProvider>{children}</ModalProvider>
             </body>
         </html>
