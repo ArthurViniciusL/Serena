@@ -1,13 +1,22 @@
 .app-button {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
     border: none;
     width: fit-content;
     height: fit-content;
     cursor: pointer;
     padding: var(--padding);
-    font-size: var(--normal-text);
     border-radius: var(--coners);
 
+    font-family: "Source Sans 3";
+    font-size: large;
+    font-weight: normal;    
     color: var(--font-color-01);
+    
     background-color: var(--bg-color-02);
 }
 
