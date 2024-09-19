@@ -102,7 +102,7 @@
     }
 
     .home-content-03__button {
-        width: 25vw;
+        min-width: 25vw;
     }
 }
 
