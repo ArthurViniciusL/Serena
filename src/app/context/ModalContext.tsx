@@ -9,11 +9,10 @@ interface ModalProviderProps {
 }
 
 export function ModalProvider({ children }: ModalProviderProps) {
-
     // const { state, dispatch } = useModal();
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [modalName, setModalName] = useState<string>('');
+    const [modalName, setModalName] = useState<string>("");
 
     function openModal(modalName: string) {
         setIsOpen(true);
@@ -24,9 +23,10 @@ export function ModalProvider({ children }: ModalProviderProps) {
         setIsOpen(false);
     }
 
-
     return (
-        <ModalContext.Provider value={{ isOpen, openModal, closeModal, modalName }}>
+        <ModalContext.Provider
+            value={{ isOpen, openModal, closeModal, modalName }}
+        >
             {children}
         </ModalContext.Provider>
     );

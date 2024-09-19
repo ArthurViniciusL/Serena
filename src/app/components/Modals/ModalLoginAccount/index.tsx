@@ -8,8 +8,7 @@ import Image from "next/image";
 import serena_asset_1 from "@/app/assets/images/serena_asset_1.svg";
 
 export function ModalLoginAccount({ children }: ModalProps) {
-
-    const thisModalName = 'ModalLoginAccount'
+    const thisModalName = "ModalLoginAccount";
     const { modalName } = useModal();
 
     return (

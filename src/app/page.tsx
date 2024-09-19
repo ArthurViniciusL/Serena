@@ -17,7 +17,6 @@ import { useModal } from "./hooks/useModal";
 import { ButtonsList } from "./components/Ui/Home/ButtonsList";
 
 export default function Home() {
-
     const { openModal } = useModal();
 
     return (
@@ -27,14 +26,14 @@ export default function Home() {
                     <a href={AppRoutes.Home}>
                         <LogoMarca />
                     </a>
-                    <ButtonsList/>
+                    <ButtonsList />
                 </div>
 
                 <ul className="home-buttons__list">
                     <li>
                         <ModalLoginAccount>
                             <Button
-                                onClick={() => openModal('ModalLoginAccount')}
+                                onClick={() => openModal("ModalLoginAccount")}
                                 className="app-bg-color"
                             >
                                 Entrar
@@ -44,7 +43,7 @@ export default function Home() {
                     <li>
                         <ModalCreateAccount>
                             <Button
-                                onClick={() => openModal('ModalCreateAccount')}
+                                onClick={() => openModal("ModalCreateAccount")}
                                 className="app-bg-color"
                                 border={true}
                             >
@@ -130,7 +129,9 @@ export default function Home() {
 
                             <ModalCreateAccount>
                                 <Button
-                                    onClick={() => openModal('ModalCreateAccount')}
+                                    onClick={() =>
+                                        openModal("ModalCreateAccount")
+                                    }
                                     className="home-content-03__button"
                                 >
                                     Criar conta

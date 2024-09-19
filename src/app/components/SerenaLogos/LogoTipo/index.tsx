@@ -16,6 +16,7 @@ export function LogoTipo() {
                         width={25}
                         height={25}
                         alt="serena_logo"
+                        priority={true}
                     />
                 </Button>
             </a>

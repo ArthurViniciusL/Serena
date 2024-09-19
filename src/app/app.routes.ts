@@ -4,6 +4,7 @@ const AppRoutes = {
     Home: "/",
 
     Feed: "/pages/feed/",
+    Profile: "/pages/profile",
 
     CreateAccount: "",
 

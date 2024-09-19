@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Header } from "../components/Header";
 import { LogoTipo } from "../components/SerenaLogos/LogoTipo";
 import { ButtonsList } from "../components/Ui/Feed/ButtonsList";
-
+import { ButtonProvider } from "../context/ButtonContext";
 
 export const metadata: Metadata = {
     title: "Serena | {}",
@@ -18,11 +18,13 @@ export default function RootLayout({
     return (
         <html lang="pt-br" className="">
             <body className="app-bg-color">
-                <Header colorFill="var(--bg-color-01)">
-                    <LogoTipo />
-                    <ButtonsList/>
-                </Header>
-                {children}
+                <ButtonProvider>
+                    <Header colorFill="var(--bg-color-01)">
+                        <LogoTipo />
+                        <ButtonsList />
+                    </Header>
+                    {children}
+                </ButtonProvider>
             </body>
         </html>
     );

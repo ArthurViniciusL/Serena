@@ -13,5 +13,5 @@ export {
     CalendarDays as AppIcon_CalendarDays,
     CircleUserRound as AppIcon_CircleUserRound,
     DoorClosed as AppIcon_DoorClosed,
-    DoorOpen as AppIcon_DoorOpen
+    DoorOpen as AppIcon_DoorOpen,
 } from "lucide-react";
