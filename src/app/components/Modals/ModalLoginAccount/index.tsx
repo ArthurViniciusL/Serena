@@ -7,19 +7,22 @@ import { useModalContext } from "@/app/hooks/useModalContext";
 import Image from "next/image";
 import serena_asset_1 from "@/app/assets/images/serena_asset_1.svg";
 
-export function ModalLoginAccount({ thisModalIsOpen, children }: ModalProps) {
-    const { isOpen } = useModalContext();
+export function ModalLoginAccount({ children }: ModalProps) {
+
+    const thisModalName = 'ModalLoginAccount'
+    const { modalName } = useModalContext();
 
     return (
         <div>
             {children}
-            {isOpen && thisModalIsOpen ? (
+            {modalName === thisModalName ? (
                 <Modal modalTitle="Entrar">
                     <div className="modal-content">
                         <h3 className="content__msg">
                             <span className="content__msg-style">
-                                Bem vindo de volta! 
-                            </span> Qual o seu tipo de conta?
+                                Bem vindo de volta!
+                            </span>{" "}
+                            Qual o seu tipo de conta?
                         </h3>
 
                         <Image

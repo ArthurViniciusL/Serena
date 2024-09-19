@@ -7,12 +7,15 @@ import { useModalContext } from "@/app/hooks/useModalContext";
 import serena_asset_2 from "@/app/assets/images/serena_asset_2.svg";
 import Image from "next/image";
 
-export function ModalCreateAccount({ thisModalIsOpen, children }: ModalProps) {
-    const { isOpen } = useModalContext();
+export function ModalCreateAccount({ children }: ModalProps) {
+
+    const thisModalName = 'ModalCreateAccount';
+    const { modalName } = useModalContext();
+    
     return (
         <div>
             {children}
-            {isOpen && thisModalIsOpen ? (
+            {modalName === thisModalName ? (
                 <Modal modalTitle="Criar conta">
                     <div className="modal-content">
                         <h3 className="content__msg">

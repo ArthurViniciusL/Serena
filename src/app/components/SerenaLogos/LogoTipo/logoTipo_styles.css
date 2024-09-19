@@ -1,5 +1,4 @@
 .logo-tipo-content {
-    
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -8,7 +7,6 @@
     align-items: baseline;
 
     .content__img {
-
     }
 
     .content__title {

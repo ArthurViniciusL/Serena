@@ -14,12 +14,14 @@ import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
 
 import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
-import { Modal, useOpenModal } from "./hooks/useOpenModal";
 import AppRoutes from "./app.routes";
 import { LogoMarca } from "./components/SerenaLogos/LogoMarca";
+import { useModalContext } from "./hooks/useModalContext";
 
 export default function Home() {
-    const { state, openThisModal } = useOpenModal();
+
+    const { openModal } = useModalContext();
+
     return (
         <div>
             <Header colorFill="var(--bg-color-02)">
@@ -68,21 +70,21 @@ export default function Home() {
 
                 <ul className="buttons-list">
                     <li>
-                        <ModalLoginAccount thisModalIsOpen={state?.LOGIN}>
+                        <ModalLoginAccount>
                             <Button
-                                onClick={() => openThisModal(Modal.login)}
-                                bgColor="var(--bg-color-01)"
+                                onClick={() => openModal('ModalLoginAccount')}
+                                className="app-bg-color"
                             >
                                 Entrar
                             </Button>
                         </ModalLoginAccount>
                     </li>
                     <li>
-                        <ModalCreateAccount thisModalIsOpen={state?.SIGN_UP}>
+                        <ModalCreateAccount>
                             <Button
-                                onClick={() => openThisModal(Modal.signUp)}
+                                onClick={() => openModal('ModalCreateAccount')}
+                                className="app-bg-color"
                                 border={true}
-                                bgColor="var(--bg-color-01)"
                             >
                                 Criar conta
                             </Button>
@@ -164,11 +166,9 @@ export default function Home() {
                                 única plataforma.
                             </p>
 
-                            <ModalCreateAccount
-                                thisModalIsOpen={state?.SIGN_UP}
-                            >
+                            <ModalCreateAccount>
                                 <Button
-                                    onClick={() => openThisModal(Modal.signUp)}
+                                    onClick={() => openModal('ModalCreateAccount')}
                                     className="home-content-03__button"
                                 >
                                     Criar conta

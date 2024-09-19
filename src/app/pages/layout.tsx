@@ -19,9 +19,7 @@ export default function RootLayout({
             <body className="app-bg-color">
                 <Header colorFill="var(--bg-color-01)">
                     <LogoTipo />
-                    <Button>
-                        Teste
-                    </Button>
+                    <Button>Teste</Button>
                 </Header>
                 {children}
             </body>

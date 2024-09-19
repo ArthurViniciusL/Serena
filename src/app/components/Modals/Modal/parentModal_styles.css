@@ -71,7 +71,7 @@
         height: 100dvh;
         background-color: var(--bg-color-01);
     }
-    
+
     .modal-box {
         top: 0;
         width: 100dvw;
@@ -85,14 +85,11 @@
                 display: none;
             }
         }
-
     }
 }
 
 @media (max-height: 500px) {
-
     .modal-box {
         height: 90vh;
     }
-    
 }

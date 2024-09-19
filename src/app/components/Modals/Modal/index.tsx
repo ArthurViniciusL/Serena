@@ -5,12 +5,10 @@ import { useModalContext } from "@/app/hooks/useModalContext";
 
 export interface ModalProps {
     modalTitle?: string;
-    thisModalIsOpen?: boolean | undefined;
     children: React.ReactNode;
 }
 
-export function Modal({ modalTitle, children, thisModalIsOpen }: ModalProps) {
-    
+export function Modal({ modalTitle, children }: ModalProps) {
     const { isOpen, closeModal } = useModalContext();
 
     if (isOpen) {

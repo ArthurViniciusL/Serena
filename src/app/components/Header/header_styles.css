@@ -3,7 +3,6 @@
 .header-box {
     width: 100dvw;
     height: 70px;
-
 }
 
 .header-box__content {
@@ -11,11 +10,11 @@
     width: 100dvw;
     height: 70px;
     padding: var(--padding) var(--padding-left) var(--padding)
-    var(--padding-right);
-    
+        var(--padding-right);
+
     /* border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
-    
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;

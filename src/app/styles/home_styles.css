@@ -107,10 +107,8 @@
 }
 
 @media (max-width: 700px) {
-
     .buttons-list {
-       /*  display: none; */
-        
+        /*  display: none; */
     }
 
     .home-section {
