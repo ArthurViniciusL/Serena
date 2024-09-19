@@ -2,7 +2,7 @@ import "@/app/components/Modals/modals_styles.css";
 
 import { Button } from "../../Button";
 import { Modal, ModalProps } from "../Modal";
-import { useModalContext } from "@/app/hooks/useModalContext";
+import { useModal } from "@/app/hooks/useModal";
 
 import Image from "next/image";
 import serena_asset_1 from "@/app/assets/images/serena_asset_1.svg";
@@ -10,7 +10,7 @@ import serena_asset_1 from "@/app/assets/images/serena_asset_1.svg";
 export function ModalLoginAccount({ children }: ModalProps) {
 
     const thisModalName = 'ModalLoginAccount'
-    const { modalName } = useModalContext();
+    const { modalName } = useModal();
 
     return (
         <div>

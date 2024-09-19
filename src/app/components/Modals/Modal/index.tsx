@@ -1,7 +1,7 @@
 import "./parentModal_styles.css";
 import { Button } from "../../Button";
 import { CircleCloseIcon } from "@/app/modules/app.modules";
-import { useModalContext } from "@/app/hooks/useModalContext";
+import { useModal } from "@/app/hooks/useModal";
 
 export interface ModalProps {
     modalTitle?: string;
@@ -9,7 +9,7 @@ export interface ModalProps {
 }
 
 export function Modal({ modalTitle, children }: ModalProps) {
-    const { isOpen, closeModal } = useModalContext();
+    const { isOpen, closeModal } = useModal();
 
     if (isOpen) {
         return (

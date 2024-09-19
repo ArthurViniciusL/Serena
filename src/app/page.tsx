@@ -16,11 +16,11 @@ import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
 import AppRoutes from "./app.routes";
 import { LogoMarca } from "./components/SerenaLogos/LogoMarca";
-import { useModalContext } from "./hooks/useModalContext";
+import { useModal } from "./hooks/useModal";
 
 export default function Home() {
 
-    const { openModal } = useModalContext();
+    const { openModal } = useModal();
 
     return (
         <div>
