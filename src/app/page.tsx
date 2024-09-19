@@ -5,7 +5,7 @@ import "@/app/styles/home_styles.css";
 import { Button } from "./components/Button";
 import { Header } from "./components/Header";
 
-import { CirclePlusIcon } from "./modules/app.modules";
+import { AppIcon_CirclePlus } from "./modules/app.modules";
 import { Tooltip } from "./components/Tooltip";
 
 import Image from "next/image";
@@ -58,7 +58,7 @@ export default function Home() {
                         <li>
                             <Tooltip msg="Mais informações">
                                 <Button bgColorHover="var(--bg-color-01)">
-                                    <CirclePlusIcon
+                                    <AppIcon_CirclePlus
                                         color="var(--font-color-01)"
                                         size={20}
                                     />
