@@ -102,6 +102,7 @@
 }
 
 html {
+    font-family: "Source Sans 3";
     scroll-behavior: smooth;
     color: var(--font-color-01);
     background-color: var(--bg-color-01);
@@ -112,19 +113,16 @@ html::-webkit-scrollbar {
 }
 
 h1 {
-    font-family: "Source Sans 3";
     font-weight: bold;
     font-size: var(--title);
 }
 
 h2 {
-    font-family: "Source Sans 3";
     font-weight: bolder;
     font-size: var(--sub-title);
 }
 
 p {
-    font-family: "Source Sans 3";
     font-weight: normal;
     font-size: var(--normal-text);
     margin-bottom: var(--Margin);
@@ -147,4 +145,8 @@ p {
     padding-bottom: var(--padding);
     padding-right: var(--padding-right);
     padding-left: var(--padding-left);
+}
+
+.app-font {
+    /* font-weight: bold; */
 }
