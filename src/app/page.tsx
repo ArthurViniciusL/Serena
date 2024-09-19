@@ -5,9 +5,6 @@ import "@/app/styles/home_styles.css";
 import { Button } from "./components/Button";
 import { Header } from "./components/Header";
 
-import { AppIcon_CirclePlus } from "./modules/app.modules";
-import { Tooltip } from "./components/Tooltip";
-
 import Image from "next/image";
 import home_banner_01 from "@/app/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
@@ -17,6 +14,7 @@ import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
 import AppRoutes from "./app.routes";
 import { LogoMarca } from "./components/SerenaLogos/LogoMarca";
 import { useModal } from "./hooks/useModal";
+import { ButtonsList } from "./components/Ui/Home/ButtonsList";
 
 export default function Home() {
 
@@ -29,46 +27,10 @@ export default function Home() {
                     <a href={AppRoutes.Home}>
                         <LogoMarca />
                     </a>
-                    <ul className="buttons-list">
-                        <li>
-                            <Button
-                                bgColorHover="var(--bg-color-01)"
-                                fontColorHover="var(--font-color-01)"
-                            >
-                                Sobre
-                            </Button>
-                        </li>
-                        <li>
-                            <Button
-                                bgColorHover="var(--bg-color-01)"
-                                fontColorHover="var(--font-color-01)"
-                            >
-                                Recursos
-                            </Button>
-                        </li>
-                        <li>
-                            <Button
-                                bgColorHover="var(--bg-color-01)"
-                                fontColorHover="var(--font-color-01)"
-                            >
-                                Preços
-                            </Button>
-                        </li>
-
-                        <li>
-                            <Tooltip msg="Mais informações">
-                                <Button bgColorHover="var(--bg-color-01)">
-                                    <AppIcon_CirclePlus
-                                        color="var(--font-color-01)"
-                                        size={20}
-                                    />
-                                </Button>
-                            </Tooltip>
-                        </li>
-                    </ul>
+                    <ButtonsList/>
                 </div>
 
-                <ul className="buttons-list">
+                <ul className="home-buttons__list">
                     <li>
                         <ModalLoginAccount>
                             <Button

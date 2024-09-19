@@ -2,9 +2,8 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Header } from "../components/Header";
 import { LogoTipo } from "../components/SerenaLogos/LogoTipo";
-import { Button } from "../components/Button";
-import { AppIcon_CalendarDays, AppIcon_CircleUserRound, AppIcon_DoorClosed, AppIcon_LayoutList } from "../modules/app.modules";
 import { ButtonsList } from "../components/Ui/Feed/ButtonsList";
+
 
 export const metadata: Metadata = {
     title: "Serena | {}",
