@@ -7,6 +7,11 @@
  */
 
 export {
-    CirclePlus as CirclePlusIcon,
-    CircleX as CircleCloseIcon,
+    CirclePlus as AppIcon_CirclePlus,
+    CircleX as AppIcon_CircleClose,
+    LayoutList as AppIcon_LayoutList,
+    CalendarDays as AppIcon_CalendarDays,
+    CircleUserRound as AppIcon_CircleUserRound,
+    DoorClosed as AppIcon_DoorClosed,
+    DoorOpen as AppIcon_DoorOpen
 } from "lucide-react";

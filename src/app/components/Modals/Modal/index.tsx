@@ -1,6 +1,6 @@
 import "./parentModal_styles.css";
 import { Button } from "../../Button";
-import { CircleCloseIcon } from "@/app/modules/app.modules";
+import { AppIcon_CircleClose } from "@/app/modules/app.modules";
 import { useModal } from "@/app/hooks/useModal";
 
 export interface ModalProps {
@@ -22,7 +22,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
                             onClick={() => closeModal()}
                             bgColorHover="var(--serena-01)"
                         >
-                            <CircleCloseIcon size={20} />
+                            <AppIcon_CircleClose size={20} />
                         </Button>
                     </div>
 
