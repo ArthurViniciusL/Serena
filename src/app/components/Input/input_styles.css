@@ -5,7 +5,7 @@
 
 .input-field {
     display: block;
-    width: 40%; /* Alterei para 100% para melhor responsividade */
+    min-width: 50vw; /* Alterei para 100% para melhor responsividade */
     padding: var(--padding);
     font-size: var(--normal-text);
     outline: none;
@@ -41,5 +41,5 @@
 }
 
 .input-field:focus ~ .input-highlight {
-    width: 40%; /* Alinhado com a largura do input-field */
+    min-width: 50vw; /* Alinhado com a largura do input-field */
 }

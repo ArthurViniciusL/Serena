@@ -9,22 +9,23 @@ import {
 } from "@/app/modules/app.modules";
 
 import { Button } from "../../../Button";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useButtonState } from "@/app/hooks/useButtonState";
 import { useRouter } from "next/navigation";
 import AppRoutes from "@/app/app.routes";
 
-export const PageName = {
-    Feed: "feed",
-    Agenda: "agenda",
-    Profile: "profile",
-};
-
 export function ButtonsList() {
 
-    const { buttonActive, activeButton } = useButtonState();
+    const { currentPage, activeButton } = useButtonState();
 
     const route = useRouter();
+
+    function handleButtonClick(pageLink: string) {
+        activeButton(pageLink);
+        if (pageLink) {
+            route.push(pageLink)
+        }
+    }
 
     const iconsSize = 24;
     const [iconDoor, setIconDoor] = useState<boolean>(false);
@@ -37,15 +38,12 @@ export function ButtonsList() {
     function handleIconDoor(status: boolean) {
         setIconDoor(status);
     }
-
     return (
         <ul className="flex gap-[var(--gap)] feed-buttons__list">
             <li>
                 <Button
-                    isActive={PageName.Feed === buttonActive}
-                    onClick={() => {
-                        activeButton(PageName.Feed), route.push(AppRoutes.Feed);
-                    }}
+                    isActive={currentPage === AppRoutes.Feed}
+                    onClick={() => { handleButtonClick(AppRoutes.Feed) }}
                 >
                     <AppIcon_LayoutList size={iconsSize} />
                     Lista de servições
@@ -53,8 +51,8 @@ export function ButtonsList() {
             </li>
             <li>
                 <Button
-                    isActive={PageName.Agenda === buttonActive}
-                    onClick={() => activeButton(PageName.Agenda)}
+                    isActive={currentPage === AppRoutes.Agenda}
+                    onClick={() => handleButtonClick(AppRoutes.Agenda)}
                 >
                     <AppIcon_CalendarDays size={iconsSize} />
                     Minha agenda
@@ -62,11 +60,9 @@ export function ButtonsList() {
             </li>
             <li>
                 <Button
-                    isActive={PageName.Profile === buttonActive}
-                    onClick={() => {
-                        activeButton(PageName.Profile),
-                            route.push(AppRoutes.Profile);
-                    }}
+                    isActive={currentPage === AppRoutes.Profile}
+                    onClick={() => handleButtonClick(AppRoutes.Profile)
+                    }
                 >
                     <AppIcon_CircleUserRound size={iconsSize} />
                     Meu perfil
@@ -85,5 +81,5 @@ export function ButtonsList() {
                 </Button>
             </li>
         </ul>
-    );
+    )
 }

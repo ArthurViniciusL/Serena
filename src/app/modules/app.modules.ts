@@ -14,4 +14,6 @@ export {
     CircleUserRound as AppIcon_CircleUserRound,
     DoorClosed as AppIcon_DoorClosed,
     DoorOpen as AppIcon_DoorOpen,
+
+    ListFilter as AppIcon_ListFilter
 } from "lucide-react";

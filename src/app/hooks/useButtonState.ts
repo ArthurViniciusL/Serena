@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ButtonContext } from "../context/ButtonContext";
+import { PageNameContext } from "../context/PageNameContext";
 
 export function useButtonState() {
-    return useContext(ButtonContext);
-}
+    return useContext(PageNameContext);
+};
