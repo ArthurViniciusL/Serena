@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function ModalCreateAccount({ children }: ModalProps) {
     const thisModalName = "ModalCreateAccount";
-    const { modalName } = useModal();
+    const { modalName, setIsOpen } = useModal();
 
     return (
         <div>
