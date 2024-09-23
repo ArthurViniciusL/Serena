@@ -13,7 +13,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
 
     const { isOpen, closeModal } = useModal();
 
-    const [leaveContent, setLeaveContent] = useState(false);
+    const [leaveContent, setLeaveContent] = useState(true);
 
     function clickOut() {
         if (leaveContent) {

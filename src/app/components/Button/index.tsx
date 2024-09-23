@@ -25,7 +25,7 @@ export function Button({
     fontColorHover,
 }: ButtonProps) {
     const borderButton = border ? "solid var(--bg-color-05) 1px" : "none";
-    
+
     const activeButton = isActive ? "app-button-active" : "";
 
     return (

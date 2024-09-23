@@ -9,21 +9,21 @@ import {
 } from "@/app/modules/app.modules";
 
 import { Button } from "../../../Button";
-import { useMemo, useState } from "react";
-import { useButtonState } from "@/app/hooks/useButtonState";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import AppRoutes from "@/app/app.routes";
+import { usePageName } from "@/app/hooks/usePageName";
+import useSearch from "@/app/hooks/useSearch";
 
 export function ButtonsList() {
-
-    const { currentPage, activeButton } = useButtonState();
+    const { currentPage, activeButton } = usePageName();
 
     const route = useRouter();
 
     function handleButtonClick(pageLink: string) {
         activeButton(pageLink);
         if (pageLink) {
-            route.push(pageLink)
+            route.push(pageLink);
         }
     }
 
@@ -43,7 +43,9 @@ export function ButtonsList() {
             <li>
                 <Button
                     isActive={currentPage === AppRoutes.Feed}
-                    onClick={() => { handleButtonClick(AppRoutes.Feed) }}
+                    onClick={() => {
+                        handleButtonClick(AppRoutes.Feed);
+                    }}
                 >
                     <AppIcon_LayoutList size={iconsSize} />
                     Lista de servições
@@ -61,8 +63,7 @@ export function ButtonsList() {
             <li>
                 <Button
                     isActive={currentPage === AppRoutes.Profile}
-                    onClick={() => handleButtonClick(AppRoutes.Profile)
-                    }
+                    onClick={() => handleButtonClick(AppRoutes.Profile)}
                 >
                     <AppIcon_CircleUserRound size={iconsSize} />
                     Meu perfil
@@ -81,5 +82,5 @@ export function ButtonsList() {
                 </Button>
             </li>
         </ul>
-    )
+    );
 }

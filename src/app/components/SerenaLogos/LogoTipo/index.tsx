@@ -9,7 +9,11 @@ export function LogoTipo() {
     return (
         <div className="logo-tipo-content">
             <a href={AppRoutes.Feed}>
-                <Button className="app-bg-color">
+                <Button
+                    className="app-bg-color"
+                    bgColor="#fff"
+                    bgColorHover="var(--bg-color-02)"
+                >
                     <Image
                         className="content__img"
                         src={serena_logo}
