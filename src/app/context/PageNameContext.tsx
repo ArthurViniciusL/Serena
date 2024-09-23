@@ -8,7 +8,7 @@ interface PageNameProps {
     children: React.ReactNode;
 }
 
-export function PageName({ children }: PageNameProps) {
+export function PageNameProvider({ children }: PageNameProps) {
     const [currentPage, setCurrentPage] = useState<string>("");
 
     function activeButton(name: string) {
