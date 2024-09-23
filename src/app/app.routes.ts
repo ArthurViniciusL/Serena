@@ -2,8 +2,9 @@
 
 const AppRoutes = {
     Home: "/",
+    Login: "",
 
-    Feed: "/pages/feed/",
+    Feed: "/pages/user/feed",
     Agenda: "//",
     Profile: "/pages/profile",
 
