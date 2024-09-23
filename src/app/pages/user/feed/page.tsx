@@ -1,15 +1,14 @@
 "use client";
-import AppRoutes from "@/app/app.routes";
-import { Button } from "@/app/components/Button";
-import { Header } from "@/app/components/Header";
-import { Input } from "@/app/components/Input";
-import { SearchBar } from "@/app/components/SearchBar";
-import { usePageName } from "@/app/hooks/usePageName";
-import useSearch from "@/app/hooks/useSearch";
+
+import AppRoutes from "@/app.routes";
+import { Button } from "@/components/Button";
+import { Header } from "@/components/Header";
+import { SearchBar } from "@/components/SearchBar";
+import { usePageName } from "@/hooks/usePageName";
+import useSearch from "@/hooks/useSearch";
 import {
-    AppIcon_CircleClose,
     AppIcon_ListFilter,
-} from "@/app/modules/app.modules";
+} from "@/modules/app.modules";
 import { useEffect, useState } from "react";
 
 export default function Feed() {

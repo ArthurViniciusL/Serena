@@ -1,10 +1,10 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
-import { Header } from "@/app/components/Header";
-import { LogoTipo } from "@/app/components/SerenaLogos/LogoTipo";
-import { ButtonsList } from "@/app/components/Ui/Feed/ButtonsList";
-import { PageNameProvider } from "@/app/context/PageNameContext";
-import { SearchBarProvider } from "@/app/context/SearchContext";
+import { Header } from "@/components/Header";
+import { LogoTipo } from "@/components/SerenaLogos/LogoTipo";
+import { ButtonsList } from "@/components/Ui/Feed/ButtonsList";
+import { PageNameProvider } from "@/context/PageNameContext";
+import { SearchBarProvider } from "@/context/SearchContext";
 
 export const metadata: Metadata = {
     title: "Serena",

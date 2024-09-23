@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { ModalProvider } from "./context/ModalContext";
+import { ModalProvider } from "@/context/ModalContext";
 
 export const metadata: Metadata = {
     title: "Serena",

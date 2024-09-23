@@ -1,11 +1,11 @@
 "use client";
 
-import AppRoutes from "@/app/app.routes";
-import { useButtonState } from "@/app/hooks/useButtonState";
+import AppRoutes from "@/app.routes";
+import { usePageName } from "@/hooks/usePageName";
 import { useEffect } from "react";
 
 export default function Profile() {
-    const { activeButton } = useButtonState();
+    const { activeButton } = usePageName();
 
     useEffect(() => {
         activeButton(AppRoutes.Profile);

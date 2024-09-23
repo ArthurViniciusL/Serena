@@ -2,19 +2,20 @@
 
 import "@/app/styles/home_styles.css";
 
-import { Button } from "./components/Button";
-import { Header } from "./components/Header";
+import { Button } from "@/components/Button";
+import { Header } from "@/components/Header";
 
 import Image from "next/image";
-import home_banner_01 from "@/app/assets/images/home_banner_01.svg";
-import serena_asset_4 from "@/app/assets/images/serena_asset_4.svg";
+import home_banner_01 from "@/assets/images/home_banner_01.svg";
+import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 
-import { ModalCreateAccount } from "./components/Modals/ModalCreateAccount";
-import { ModalLoginAccount } from "./components/Modals/ModalLoginAccount";
-import AppRoutes from "./app.routes";
-import { LogoMarca } from "./components/SerenaLogos/LogoMarca";
-import { useModal } from "./hooks/useModal";
-import { ButtonsList } from "./components/Ui/Home/ButtonsList";
+import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
+import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
+
+import AppRoutes from "@/app.routes";
+import { LogoMarca } from "@/components/SerenaLogos/LogoMarca";
+import { useModal } from "@/hooks/useModal";
+import { ButtonsList } from "@/components/Ui/Home/ButtonsList";
 
 export default function Home() {
     const { openModal } = useModal();

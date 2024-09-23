@@ -1,5 +1,5 @@
-import { Header } from "@/app/components/Header";
-import { LogoTipo } from "@/app/components/SerenaLogos/LogoTipo";
+import { Header } from "@/components/Header";
+import { LogoTipo } from "@/components/SerenaLogos/LogoTipo";
 import "@/app/globals.css";
 import { Metadata } from "next";
 
