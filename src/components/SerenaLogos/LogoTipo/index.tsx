@@ -3,12 +3,12 @@ import "./logoTipo_styles.css";
 import serena_logo from "@/assets/icons/logo/serena_logo.svg";
 import Image from "next/image";
 import { Button } from "../../Button";
-import AppRoutes from "@/app.routes";
+import routes from "@/app.routes";
 
 export function LogoTipo() {
     return (
         <div className="logo-tipo-content">
-            <a href={AppRoutes.Feed}>
+            <a href={routes.Feed}>
                 <Button
                     className="app-bg-color"
                     bgColor="#fff"

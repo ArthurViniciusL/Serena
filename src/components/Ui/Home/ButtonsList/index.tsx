@@ -2,7 +2,7 @@ import "./styles.css";
 
 import { Tooltip } from "@/components/Tooltip";
 import { Button } from "../../../Button";
-import { AppIcon_CirclePlus } from "@/modules/app.modules";
+import { SerenaIconCirclePlus } from "@/modules/app.modules";
 
 export function ButtonsList() {
     return (
@@ -36,7 +36,7 @@ export function ButtonsList() {
                 <li>
                     <Tooltip msg="Mais informações">
                         <Button bgColorHover="var(--bg-color-01)">
-                            <AppIcon_CirclePlus
+                            <SerenaIconCirclePlus
                                 color="var(--font-color-01)"
                                 size={20}
                             />

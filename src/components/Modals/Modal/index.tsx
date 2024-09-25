@@ -1,6 +1,6 @@
 import "./parentModal_styles.css";
 import { Button } from "../../Button";
-import { AppIcon_CircleClose } from "@/modules/app.modules";
+import { SerenaIconCircleClose } from "@/modules/app.modules";
 import { useModal } from "@/hooks/useModal";
 import { useState } from "react";
 
@@ -10,7 +10,6 @@ export interface ModalProps {
 }
 
 export function Modal({ modalTitle, children }: ModalProps) {
-
     const { isOpen, closeModal } = useModal();
 
     const [leaveContent, setLeaveContent] = useState(true);
@@ -24,9 +23,11 @@ export function Modal({ modalTitle, children }: ModalProps) {
     if (isOpen) {
         return (
             <div className="modal-background" onClick={clickOut}>
-                <div className="modal-box"
+                <div
+                    className="modal-box"
                     onMouseEnter={() => setLeaveContent(false)}
-                    onMouseLeave={() => setLeaveContent(true)}>
+                    onMouseLeave={() => setLeaveContent(true)}
+                >
                     <div className="modal-header">
                         <span className="modal-header__span"></span>
                         <p className="modal-title-style">{modalTitle}</p>
@@ -34,16 +35,11 @@ export function Modal({ modalTitle, children }: ModalProps) {
                             onClick={() => closeModal()}
                             bgColorHover="var(--serena-01)"
                         >
-                            <AppIcon_CircleClose size={20} />
+                            <SerenaIconCircleClose size={20} />
                         </Button>
                     </div>
 
-                    <section
-                        className="modal-content"
-
-                    >
-                        {children}
-                    </section>
+                    <section className="modal-content">{children}</section>
                 </div>
             </div>
         );

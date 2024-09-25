@@ -12,7 +12,7 @@ import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
 
-import AppRoutes from "@/app.routes";
+import routes from "@/app.routes";
 import { LogoMarca } from "@/components/SerenaLogos/LogoMarca";
 import { useModal } from "@/hooks/useModal";
 import { ButtonsList } from "@/components/Ui/Home/ButtonsList";
@@ -24,7 +24,7 @@ export default function Home() {
         <div>
             <Header colorFill="var(--bg-color-02)">
                 <div className="home-header__content">
-                    <a href={AppRoutes.Home}>
+                    <a href={routes.Home}>
                         <LogoMarca />
                     </a>
                     <ButtonsList />

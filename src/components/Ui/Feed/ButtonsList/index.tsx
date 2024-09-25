@@ -1,27 +1,25 @@
 "use client";
 
 import {
-    AppIcon_CalendarDays,
-    AppIcon_CircleUserRound,
-    AppIcon_DoorClosed,
-    AppIcon_DoorOpen,
-    AppIcon_LayoutList,
+    SerenaIconCalendarDays,
+    SerenaIconCircleUserRound,
+    SerenaIconDoorClosed,
+    SerenaIconDoorOpen,
+    SerenaIconLayoutList,
 } from "@/modules/app.modules";
 
 import { Button } from "../../../Button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import AppRoutes from "@/app.routes";
+import routes from "@/app.routes";
 import { usePageName } from "@/hooks/usePageName";
-import useSearch from "@/hooks/useSearch";
-
 export function ButtonsList() {
-    const { currentPage, activeButton } = usePageName();
+    const { currentPage, setPageName } = usePageName();
 
     const route = useRouter();
 
     function handleButtonClick(pageLink: string) {
-        activeButton(pageLink);
+        setPageName(pageLink);
         if (pageLink) {
             route.push(pageLink);
         }
@@ -30,42 +28,43 @@ export function ButtonsList() {
     const iconsSize = 24;
     const [iconDoor, setIconDoor] = useState<boolean>(false);
     const iconExit = iconDoor ? (
-        <AppIcon_DoorOpen size={iconsSize} />
+        <SerenaIconDoorOpen size={iconsSize} />
     ) : (
-        <AppIcon_DoorClosed size={iconsSize} />
+        <SerenaIconDoorClosed size={iconsSize} />
     );
 
     function handleIconDoor(status: boolean) {
         setIconDoor(status);
     }
+     {/* Mudar para um componente nav -> ul -> li*/}
     return (
         <ul className="flex gap-[var(--gap)] feed-buttons__list">
             <li>
                 <Button
-                    isActive={currentPage === AppRoutes.Feed}
+                    isActive={currentPage === routes.Feed}
                     onClick={() => {
-                        handleButtonClick(AppRoutes.Feed);
+                        handleButtonClick(routes.Feed);
                     }}
                 >
-                    <AppIcon_LayoutList size={iconsSize} />
+                    <SerenaIconLayoutList size={iconsSize} />
                     Lista de servições
                 </Button>
             </li>
             <li>
                 <Button
-                    isActive={currentPage === AppRoutes.Agenda}
-                    onClick={() => handleButtonClick(AppRoutes.Agenda)}
+                    isActive={currentPage === routes.Agenda}
+                    onClick={() => handleButtonClick(routes.Agenda)}
                 >
-                    <AppIcon_CalendarDays size={iconsSize} />
+                    <SerenaIconCalendarDays size={iconsSize} />
                     Minha agenda
                 </Button>
             </li>
             <li>
                 <Button
-                    isActive={currentPage === AppRoutes.Profile}
-                    onClick={() => handleButtonClick(AppRoutes.Profile)}
+                    isActive={currentPage === routes.Profile}
+                    onClick={() => handleButtonClick(routes.Profile)}
                 >
-                    <AppIcon_CircleUserRound size={iconsSize} />
+                    <SerenaIconCircleUserRound size={iconsSize} />
                     Meu perfil
                 </Button>
             </li>

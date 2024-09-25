@@ -7,12 +7,12 @@
  */
 
 export {
-    CirclePlus as AppIcon_CirclePlus,
-    CircleX as AppIcon_CircleClose,
-    LayoutList as AppIcon_LayoutList,
-    CalendarDays as AppIcon_CalendarDays,
-    CircleUserRound as AppIcon_CircleUserRound,
-    DoorClosed as AppIcon_DoorClosed,
-    DoorOpen as AppIcon_DoorOpen,
-    ListFilter as AppIcon_ListFilter,
+    CirclePlus as SerenaIconCirclePlus,
+    CircleX as SerenaIconCircleClose,
+    LayoutList as SerenaIconLayoutList,
+    CalendarDays as SerenaIconCalendarDays,
+    CircleUserRound as SerenaIconCircleUserRound,
+    DoorClosed as SerenaIconDoorClosed,
+    DoorOpen as SerenaIconDoorOpen,
+    ListFilter as SerenaIconListFilter,
 } from "lucide-react";

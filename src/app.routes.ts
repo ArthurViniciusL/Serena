@@ -1,15 +1,16 @@
 /* @arthur.vsl */
 
-const AppRoutes = {
+const routes = {
     Home: "/",
     Login: "",
 
-    Feed: "/pages/user/feed",
-    Agenda: "//",
+    Feed: "/pages/feed",
+    Agenda: "",
     Profile: "/pages/profile",
 
-    CreateAccount: "",
+    CreateClientAccount: "",
+    CreateServiceAccount: "",
 
     pageWithId: (id: number) => `/page_path${id}`,
 };
-export default AppRoutes;
+export default routes;
