@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/styles/home_styles.css";
+import "@/app/pages/home/styles/home_styles.css";
 
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
@@ -15,7 +15,7 @@ import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
 import routes from "@/app.routes";
 import { LogoMarca } from "@/components/SerenaLogos/LogoMarca";
 import { useModal } from "@/hooks/useModal";
-import { ButtonsList } from "@/components/Ui/Home/ButtonsList";
+import { ButtonsList } from "./pages/home/components/ButtonsList";
 
 export default function Home() {
     const { openModal } = useModal();

@@ -1,7 +1,7 @@
-import "./styles.css";
+
 
 import { Tooltip } from "@/components/Tooltip";
-import { Button } from "../../../Button";
+import { Button } from "@/components/Button";
 import { SerenaIconCirclePlus } from "@/modules/app.modules";
 
 export function ButtonsList() {
