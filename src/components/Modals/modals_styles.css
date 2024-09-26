@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
+
     .content__msg {
         width: 90%;
         flex-wrap: wrap;

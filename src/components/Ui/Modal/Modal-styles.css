@@ -66,8 +66,6 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
-        
     }
 }
 
@@ -76,9 +74,8 @@
         min-width: 100dvw;
         height: 100dvh;
         background-color: var(--bg-color-01);
-
     }
-    
+
     .app-modal-box {
         top: 0;
         min-width: 100dvw;
@@ -86,7 +83,7 @@
         padding: 10%;
         flex-grow: inherit;
         overflow: hidden;
-        
+
         .app-modal-header {
             .app-modal-header__span {
                 display: none;

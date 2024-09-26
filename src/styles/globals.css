@@ -140,7 +140,7 @@ a:hover {
     align-items: center;
     flex-direction: column;
     /* padding: var(--padding) var(--padding-left) var(--padding)
-        var(--padding-right); */    
+        var(--padding-right); */
 }
 
 .app-section {
@@ -151,7 +151,6 @@ a:hover {
     padding-bottom: var(--padding);
     padding-right: var(--padding-right);
     padding-left: var(--padding-left);
-
 }
 
 .app-font {

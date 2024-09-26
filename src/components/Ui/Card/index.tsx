@@ -15,7 +15,7 @@ interface UserCardProps {
     category: string;
 }
 
-export function Card({ id, name, category }: UserCardProps) {
+export function Card({ name, category }: UserCardProps) {
     return (
         <div className="user-card-content">
             <div className="content-left-side">
@@ -31,9 +31,10 @@ export function Card({ id, name, category }: UserCardProps) {
                             size={20}
                         />
                     </div>
-                    <ModalSeeDetails name={name}>
-                        <button>Ver detalhes</button>
-                    </ModalSeeDetails>
+                    {/* <ModalSeeDetails>
+
+                    </ModalSeeDetails> */}
+                    <button>Ver detalhes</button>
                 </div>
             </div>
 

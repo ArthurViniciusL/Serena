@@ -1,6 +1,6 @@
 "use client";
 
-import "./button_styles.css"
+import "./button_styles.css";
 import StyledButton from "./styles";
 
 interface ButtonProps {

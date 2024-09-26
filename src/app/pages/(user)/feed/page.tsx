@@ -9,6 +9,7 @@ import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/Ui/Card";
 import { Menu } from "@/components/Ui/Menu";
+import { ModalSeeDetails } from "@/components/Modals/ModalSeeDetails";
 
 export default function Feed() {
     const { setPageName, memoValue } = usePageName();
@@ -29,7 +30,8 @@ export default function Feed() {
         async function fetchData() {
             try {
                 const response = await fetch(
-                    process.env.NEXT_PUBLIC_SERVICES_PROVIDERS as string, { signal }
+                    process.env.NEXT_PUBLIC_SERVICES_PROVIDERS as string,
+                    { signal },
                 );
 
                 if (!response.ok) {
@@ -37,7 +39,6 @@ export default function Feed() {
                 }
                 const data = await response.json();
                 setServicesProviders(data);
-
             } catch (e: any) {
                 console.error("Erro ao buscar dados: ", e);
             }
@@ -59,6 +60,12 @@ export default function Feed() {
 
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 
+    const [userId, setUserId] = useState(0);
+    function handleId(id: number) {
+        setUserId(id);
+    }
+    const seletUser = servicesProviders.find((u: any) => u.id === userId);
+
     if (isLoad) {
         return (
             <div>
@@ -70,16 +77,24 @@ export default function Feed() {
                     </Button>
                 </Menu>
                 <main className="app-main">
-
                     <section className="app-section flex items-center justify-center">
                         <ul>
                             {dataFilter.map((provider: any) => (
                                 <li key={provider.id}>
-                                    <Card
-                                        id={provider.id}
-                                        name={provider.name}
-                                        category={provider.category}
-                                    />
+                                    {
+                                        <ModalSeeDetails
+                                            data={seletUser}
+                                            onClick={() =>
+                                                handleId(provider.id)
+                                            }
+                                        >
+                                            <Card
+                                                id={provider.id}
+                                                name={provider.name}
+                                                category={provider.category}
+                                            />
+                                        </ModalSeeDetails>
+                                    }
                                 </li>
                             ))}
                         </ul>
@@ -89,10 +104,9 @@ export default function Feed() {
         );
     } else {
         return (
-
             <section className="app-section flex items-center justify-center h-[90vh] bg-transparent">
                 <span className="loading loading-ring loading-lg"></span>
             </section>
-        )
+        );
     }
 }
