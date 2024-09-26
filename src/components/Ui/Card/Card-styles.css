@@ -1,5 +1,4 @@
 .user-card-content {
-    
     min-width: 50vw;
     height: max-content;
 
@@ -11,7 +10,7 @@
 
     padding: calc(var(--padding) + 10px);
     border: solid 0.5px var(--bg-color-03);
-    border-radius:calc(var(--coners) + 10px);
+    border-radius: calc(var(--coners) + 10px);
 
     margin-bottom: calc(var(--margin) + 10px);
 }
@@ -28,7 +27,6 @@
     .user-card-content {
         width: 90vw;
     }
-
 }
 
 @media (min-width: 2600px) {
@@ -37,9 +35,8 @@
     }
 }
 
-
-
-.content__name, .content__category {
+.content__name,
+.content__category {
     display: flex;
     justify-content: baseline;
     align-items: start;

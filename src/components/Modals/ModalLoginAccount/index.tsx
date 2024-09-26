@@ -13,9 +13,7 @@ export function ModalLoginAccount({ children }: ModalProps) {
 
     return (
         <div>
-            <span onClick={() => openModal(thisModalName)}>
-                {children}
-            </span>
+            <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Entrar">
                     <div className="modal-content">

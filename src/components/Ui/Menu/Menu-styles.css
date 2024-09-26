@@ -1,0 +1,23 @@
+.menu-box {
+    width: 100dvw;
+    height: 70px;
+}
+
+.menu-box__content {
+    position: fixed;
+    width: 100dvw;
+    height: 70px;
+    padding: var(--padding) var(--padding-left) var(--padding)
+        var(--padding-right);
+
+    background-color: var(--bg-color-01);
+
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}

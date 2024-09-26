@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import routes from "@/app.routes";
 import { Button } from "@/components/Button";
@@ -6,8 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function ClientCreateAccount() {
-    
-    const router = useRouter()
+    const router = useRouter();
 
     return (
         /* EXEMPLO USANDO CLASSES TAILWIND */
@@ -16,18 +15,14 @@ export default function ClientCreateAccount() {
             <Button onClick={() => router.push(routes.Home)}>
                 Link com hook
             </Button>
-            
-            <a href={routes.Home}>Link nativo do  HTML</a>
+
+            <a href={routes.Home}>Link nativo do HTML</a>
 
             <a href={routes.Home}>
-                <Button>
-                    Link nativo com botão
-                </Button>
+                <Button>Link nativo com botão</Button>
             </a>
 
-            <Link href={routes.Home}>
-                Componente de Link nativo do Nex.js
-            </Link>
+            <Link href={routes.Home}>Componente de Link nativo do Nex.js</Link>
         </div>
     );
 }

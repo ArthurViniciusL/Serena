@@ -6,18 +6,15 @@ interface ModalSeeDetailsProps {
     name: string;
 }
 
-type props = ModalSeeDetailsProps & ModalProps
+type props = ModalSeeDetailsProps & ModalProps;
 
 export function ModalSeeDetails({ children, id, name }: props) {
-
-    const thisModalName = "ModalSeeDetails";
     const { modalName, openModal } = useModal();
+    const thisModalName = "ModalSeeDetails";
 
     return (
         <div>
-            <span onClick={() => openModal(thisModalName)}>
-                {children}
-            </span>
+            <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Ver detalhes">
                     <div className="modal-content">
@@ -28,5 +25,5 @@ export function ModalSeeDetails({ children, id, name }: props) {
                 </Modal>
             ) : null}
         </div>
-    )
+    );
 }

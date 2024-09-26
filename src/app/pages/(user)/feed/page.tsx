@@ -3,19 +3,20 @@
 import routes from "@/app.routes";
 import useSearch from "@/hooks/useSearch";
 import { Button } from "@/components/Button";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Ui/Header";
 import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
 import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/Ui/Card";
+import { Menu } from "@/components/Ui/Menu";
 
 export default function Feed() {
     const { setPageName, memoValue } = usePageName();
 
     const { search, setSearch } = useSearch();
 
-    const [servicesProviders, setServicesProviders] = useState<any>([])
+    const [servicesProviders, setServicesProviders] = useState<any>([]);
 
     useEffect(() => {
         async function fillButton() {
@@ -26,7 +27,7 @@ export default function Feed() {
             const api = await fetch("http://localhost:8000/services-providers");
             const data: any = await api.json();
 
-            setServicesProviders(data)
+            setServicesProviders(data);
         }
 
         fillButton();
@@ -41,15 +42,14 @@ export default function Feed() {
 
     return (
         <div>
-            <Header colorFill="var(--bg-color-01)">
+            <Menu>
                 <SearchBar onChange={handleSearch} />
                 <Button>
                     <SerenaIconListFilter />
                     Filtrar categoria
                 </Button>
-            </Header>
+            </Menu>
             <main className="app-main">
-
                 <section className="app-section flex items-center justify-center">
                     <ul>
                         {servicesProviders.map((provider: any) => (
@@ -58,13 +58,15 @@ export default function Feed() {
                                 <p>{provider.description}</p>
                                 <p>Categoria: {provider.category}</p>
                                 <p>Telefone: {provider.phone}</p> */}
-                                <Card id={provider.id} name={provider.name} category={provider.category} />
+                                <Card
+                                    id={provider.id}
+                                    name={provider.name}
+                                    category={provider.category}
+                                />
                             </li>
                         ))}
                     </ul>
                 </section>
-
-
             </main>
         </div>
     );

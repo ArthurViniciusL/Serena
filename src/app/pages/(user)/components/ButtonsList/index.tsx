@@ -36,7 +36,9 @@ export function ButtonsList() {
     function handleIconDoor(status: boolean) {
         setIconDoor(status);
     }
-     {/* Mudar para um componente nav -> ul -> li*/}
+    {
+        /* Mudar para um componente nav -> ul -> li*/
+    }
     return (
         <ul className="flex gap-[var(--gap)] feed-buttons__list">
             <li>

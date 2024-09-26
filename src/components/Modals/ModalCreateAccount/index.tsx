@@ -13,9 +13,7 @@ export function ModalCreateAccount({ children }: ModalProps) {
 
     return (
         <div>
-            <span onClick={() => openModal(thisModalName)}>
-                {children}
-            </span>
+            <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Criar conta">
                     <div className="modal-content">

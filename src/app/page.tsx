@@ -3,7 +3,7 @@
 import "@/app/pages/home/styles/home_styles.css";
 
 import { Button } from "@/components/Button";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Ui/Header";
 
 import Image from "next/image";
 import home_banner_01 from "@/assets/images/home_banner_01.svg";
@@ -30,19 +30,12 @@ export default function Home() {
                 <ul className="home-buttons__list">
                     <li>
                         <ModalLoginAccount>
-                            <Button
-                                className="app-bg-color"
-                            >
-                                Entrar
-                            </Button>
+                            <Button className="app-bg-color">Entrar</Button>
                         </ModalLoginAccount>
                     </li>
                     <li>
                         <ModalCreateAccount>
-                            <Button
-                                className="app-bg-color"
-                                border={true}
-                            >
+                            <Button className="app-bg-color" border={true}>
                                 Criar conta
                             </Button>
                         </ModalCreateAccount>
@@ -124,9 +117,7 @@ export default function Home() {
                             </p>
 
                             <ModalCreateAccount>
-                                <Button
-                                    className="home-content-03__button"
-                                >
+                                <Button className="home-content-03__button">
                                     Criar conta
                                 </Button>
                             </ModalCreateAccount>

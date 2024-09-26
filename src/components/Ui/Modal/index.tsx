@@ -32,7 +32,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
                         <span className="modal-header__span"></span>
                         <p className="modal-title-style">{modalTitle}</p>
                         <Button
-                            onClick={() =>closeModal()}
+                            onClick={() => closeModal()}
                             bgColorHover="var(--serena-01)"
                         >
                             <SerenaIconCircleClose size={20} />

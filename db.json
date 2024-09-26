@@ -9,11 +9,7 @@
             "email": "contato@belezapura.com",
             "cnpj": "12345678000199",
             "category": "Beleza e estética",
-            "working_days": [
-                "Segunda",
-                "Quarta",
-                "Sexta"
-            ],
+            "working_days": ["Segunda", "Quarta", "Sexta"],
             "opening_hours": {
                 "morning": "08:00 - 11:00",
                 "afternoon": "13:00 - 18:00"
@@ -25,7 +21,7 @@
                     "id": 1,
                     "name": "Corte de Cabelo",
                     "time": 30,
-                    "price": 50.00,
+                    "price": 50.0,
                     "insertion_date": "2024-09-25T10:00:00Z"
                 }
             ]
@@ -38,10 +34,7 @@
             "email": "contato@barbeariaestilo.com",
             "cnpj": "98765432000199",
             "category": "Beleza e estética",
-            "working_days": [
-                "Terça",
-                "Quinta"
-            ],
+            "working_days": ["Terça", "Quinta"],
             "opening_hours": {
                 "morning": "08:00 - 11:00",
                 "afternoon": "13:00 - 18:00"
@@ -53,7 +46,7 @@
                     "id": 1,
                     "name": "Barba",
                     "time": 20,
-                    "price": 25.00,
+                    "price": 25.0,
                     "insertion_date": "2024-09-25T10:00:00Z"
                 }
             ]
@@ -66,11 +59,7 @@
             "email": "contato@oficinarapida.com",
             "cnpj": "11122233344455",
             "category": "Oficina Mecânica",
-            "working_days": [
-                "Segunda",
-                "Terça",
-                "Sábado"
-            ],
+            "working_days": ["Segunda", "Terça", "Sábado"],
             "opening_hours": {
                 "morning": "08:00 - 12:00",
                 "afternoon": "14:00 - 17:00"
@@ -82,7 +71,7 @@
                     "id": 1,
                     "name": "Troca de Óleo",
                     "time": 40,
-                    "price": 120.00,
+                    "price": 120.0,
                     "insertion_date": "2024-09-25T10:00:00Z"
                 }
             ]
@@ -95,11 +84,7 @@
             "email": "joao@personaltrainer.com",
             "cnpj": "33445566778899",
             "category": "Personal Trainer",
-            "working_days": [
-                "Segunda",
-                "Quarta",
-                "Sexta"
-            ],
+            "working_days": ["Segunda", "Quarta", "Sexta"],
             "opening_hours": {
                 "morning": "06:00 - 12:00",
                 "afternoon": "16:00 - 21:00"
@@ -111,7 +96,7 @@
                     "id": 1,
                     "name": "Treinamento Funcional",
                     "time": 60,
-                    "price": 70.00,
+                    "price": 70.0,
                     "insertion_date": "2024-09-25T10:00:00Z"
                 }
             ]

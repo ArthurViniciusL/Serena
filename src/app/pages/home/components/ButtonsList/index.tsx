@@ -1,4 +1,4 @@
-import "@/app/pages/home/styles/home_styles.css"
+import "@/app/pages/home/styles/home_styles.css";
 
 import { Tooltip } from "@/components/Ui/Tooltip";
 import { Button } from "@/components/Button";
