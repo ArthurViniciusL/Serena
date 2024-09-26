@@ -1,7 +1,7 @@
 import { useModal } from "@/hooks/useModal";
-import { Button } from "../Button";
-import { ModalSeeDetails } from "../Modals/ModalSeeDetails";
-import "./UserCard-styles.css"
+import { Button } from "../../Button";
+import { ModalSeeDetails } from "../../Modals/ModalSeeDetails";
+import "./Card-styles.css"
 
 import { SerenaIconBadgeCheck, SerenaIconImage, SerenaIconStar } from "@/modules/app.modules";
 
@@ -11,14 +11,14 @@ interface UserCardProps {
     category: string;
 }
 
-export function UserCard({id, name, category }: UserCardProps) {
+export function Card({ id, name, category }: UserCardProps) {
 
     const { openModal } = useModal();
 
     return (
         <div className="user-card-content">
 
-            <div className="card-left-side">
+            <div className="content-left-side">
                 <Button bgColorHover="var(--serena-03)">
                     <SerenaIconImage size={30} />
                 </Button>
@@ -29,14 +29,20 @@ export function UserCard({id, name, category }: UserCardProps) {
                         <SerenaIconBadgeCheck stroke="var(--serena-01)" size={20} />
                     </div>
                     <ModalSeeDetails id={id} name={name}>
-                        <button onClick={() => openModal("ModalSeeDetails")}>Ver detalhes</button>
+                        <button>Ver detalhes</button>
                     </ModalSeeDetails>
                 </div>
             </div>
 
             <div className="content__category">
                 <span className="category-name">{category}</span>
-                <SerenaIconStar fill="var(--serena-yellow)" stroke="" size={20}  />
+                <div className="flex flex-row">
+                    <SerenaIconStar fill="var(--serena-yellow)" stroke="" size={20} />
+                    <SerenaIconStar fill="var(--serena-yellow)" stroke="" size={20} />
+                    <SerenaIconStar fill="var(--serena-yellow)" stroke="" size={20} />
+                    <SerenaIconStar fill="var(--serena-yellow)" stroke="" size={20} />
+                    <SerenaIconStar fill="var(--serena-yellow)" stroke="" size={20} />
+                </div>
             </div>
 
         </div>

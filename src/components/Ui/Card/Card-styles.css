@@ -16,7 +16,7 @@
     margin-bottom: calc(var(--margin) + 10px);
 }
 
-.card-left-side {
+.content-left-side {
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
@@ -28,8 +28,6 @@
     .user-card-content {
         width: 90vw;
     }
-
-    
 
 }
 
@@ -47,6 +45,10 @@
     align-items: start;
     flex-direction: column;
     gap: var(--gap);
+}
+
+.content__category {
+    align-items: end;
 }
 
 .content-name__box {

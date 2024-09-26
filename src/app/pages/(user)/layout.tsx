@@ -1,7 +1,7 @@
-import "@/app/globals.css";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
-import { LogoTipo } from "@/components/SerenaLogos/LogoTipo";
+import { LogoTipo } from "@/components/Ui/LogoTipo";
 import { PageNameProvider } from "@/context/PageNameContext";
 import { SearchBarProvider } from "@/context/SearchContext";
 import { ButtonsList } from "./components/ButtonsList";

@@ -13,13 +13,10 @@ import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
 
 import routes from "@/app.routes";
-import { LogoMarca } from "@/components/SerenaLogos/LogoMarca";
-import { useModal } from "@/hooks/useModal";
+import { LogoMarca } from "@/components/Ui/LogoMarca";
 import { ButtonsList } from "./pages/home/components/ButtonsList";
 
 export default function Home() {
-    const { openModal } = useModal();
-
     return (
         <div>
             <Header colorFill="var(--bg-color-02)">
@@ -34,7 +31,6 @@ export default function Home() {
                     <li>
                         <ModalLoginAccount>
                             <Button
-                                onClick={() => openModal("ModalLoginAccount")}
                                 className="app-bg-color"
                             >
                                 Entrar
@@ -44,7 +40,6 @@ export default function Home() {
                     <li>
                         <ModalCreateAccount>
                             <Button
-                                onClick={() => openModal("ModalCreateAccount")}
                                 className="app-bg-color"
                                 border={true}
                             >
@@ -130,9 +125,6 @@ export default function Home() {
 
                             <ModalCreateAccount>
                                 <Button
-                                    onClick={() =>
-                                        openModal("ModalCreateAccount")
-                                    }
                                     className="home-content-03__button"
                                 >
                                     Criar conta

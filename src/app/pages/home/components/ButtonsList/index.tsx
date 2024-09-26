@@ -1,6 +1,6 @@
 import "@/app/pages/home/styles/home_styles.css"
 
-import { Tooltip } from "@/components/Tooltip";
+import { Tooltip } from "@/components/Ui/Tooltip";
 import { Button } from "@/components/Button";
 import { SerenaIconCirclePlus } from "@/modules/app.modules";
 

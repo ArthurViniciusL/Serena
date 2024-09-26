@@ -8,7 +8,7 @@ import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
 import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
-import { UserCard } from "@/components/UserCard";
+import { Card } from "@/components/Ui/Card";
 
 export default function Feed() {
     const { setPageName, memoValue } = usePageName();
@@ -58,7 +58,7 @@ export default function Feed() {
                                 <p>{provider.description}</p>
                                 <p>Categoria: {provider.category}</p>
                                 <p>Telefone: {provider.phone}</p> */}
-                                <UserCard id={provider.id} name={provider.name} category={provider.category} />
+                                <Card id={provider.id} name={provider.name} category={provider.category} />
                             </li>
                         ))}
                     </ul>
