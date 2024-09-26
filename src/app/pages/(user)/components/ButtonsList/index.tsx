@@ -44,9 +44,7 @@ export function ButtonsList() {
             <li>
                 <Button
                     isActive={currentPage === routes.Feed}
-                    onClick={() => {
-                        handleButtonClick(routes.Feed);
-                    }}
+                    onClick={() => handleButtonClick(routes.Feed)}
                 >
                     <SerenaIconLayoutList size={iconsSize} />
                     Lista de servições

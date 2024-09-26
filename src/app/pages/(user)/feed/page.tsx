@@ -3,7 +3,6 @@
 import routes from "@/app.routes";
 import useSearch from "@/hooks/useSearch";
 import { Button } from "@/components/Button";
-import { Header } from "@/components/Ui/Header";
 import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
 import { SerenaIconListFilter } from "@/modules/app.modules";
@@ -13,25 +12,45 @@ import { Menu } from "@/components/Ui/Menu";
 
 export default function Feed() {
     const { setPageName, memoValue } = usePageName();
-
     const { search, setSearch } = useSearch();
 
+    const [isLoad, setIsLoad] = useState(false);
     const [servicesProviders, setServicesProviders] = useState<any>([]);
+    const dataFilter = servicesProviders.filter((providers: any) =>
+        providers.name.toLowerCase().includes(search.toLowerCase()),
+    );
 
     useEffect(() => {
-        async function fillButton() {
-            setPageName(routes.Feed);
-        }
+        setPageName(routes.Feed);
+
+        const controller = new AbortController();
+        const signal = controller.signal;
 
         async function fetchData() {
-            const api = await fetch("http://localhost:8000/services-providers");
-            const data: any = await api.json();
+            try {
+                const response = await fetch(
+                    process.env.NEXT_PUBLIC_SERVICES_PROVIDERS as string, { signal }
+                );
 
-            setServicesProviders(data);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch service providers");
+                }
+                const data = await response.json();
+                setServicesProviders(data);
+
+            } catch (e: any) {
+                console.error("Erro ao buscar dados: ", e);
+            }
+
+            setIsLoad(true);
         }
 
-        fillButton();
         fetchData();
+
+        return () => {
+            /* canceling the api request, in case the user cancels the page call */
+            controller.abort();
+        };
     }, [memoValue, search]);
 
     function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
@@ -40,34 +59,42 @@ export default function Feed() {
 
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 
-    return (
-        <div>
-            <Menu>
-                <SearchBar onChange={handleSearch} />
-                <Button>
-                    <SerenaIconListFilter />
-                    Filtrar categoria
-                </Button>
-            </Menu>
-            <main className="app-main">
-                <section className="app-section flex items-center justify-center">
-                    <ul>
-                        {servicesProviders.map((provider: any) => (
-                            <li key={provider.id}>
-                                {/* <h2>{provider.name}</h2>
-                                <p>{provider.description}</p>
-                                <p>Categoria: {provider.category}</p>
-                                <p>Telefone: {provider.phone}</p> */}
-                                <Card
-                                    id={provider.id}
-                                    name={provider.name}
-                                    category={provider.category}
-                                />
-                            </li>
-                        ))}
-                    </ul>
-                </section>
-            </main>
-        </div>
-    );
+    if (isLoad) {
+
+        return (
+            <div>
+                <Menu>
+                    <SearchBar onChange={handleSearch} />
+                    <Button>
+                        <SerenaIconListFilter />
+                        Filtrar categoria
+                    </Button>
+                </Menu>
+                <main className="app-main">
+
+
+                    <section className="app-section flex items-center justify-center">
+                        <ul>
+                            {dataFilter.map((provider: any) => (
+                                <li key={provider.id}>
+                                    <Card
+                                        id={provider.id}
+                                        name={provider.name}
+                                        category={provider.category}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                </main>
+            </div>
+        );
+    } else {
+        return (
+
+            <section className="app-section flex items-center justify-center h-[90vh] bg-transparent">
+                <span className="loading loading-ring loading-lg"></span>
+            </section>
+        )
+    }
 }
