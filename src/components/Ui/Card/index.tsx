@@ -16,12 +16,10 @@ interface UserCardProps {
 }
 
 export function Card({ id, name, category }: UserCardProps) {
-    const { openModal } = useModal();
-
     return (
         <div className="user-card-content">
             <div className="content-left-side">
-                <Button bgColorHover="var(--serena-03)">
+                <Button>
                     <SerenaIconImage size={30} />
                 </Button>
 
@@ -33,7 +31,7 @@ export function Card({ id, name, category }: UserCardProps) {
                             size={20}
                         />
                     </div>
-                    <ModalSeeDetails id={id} name={name}>
+                    <ModalSeeDetails name={name}>
                         <button>Ver detalhes</button>
                     </ModalSeeDetails>
                 </div>

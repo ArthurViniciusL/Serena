@@ -106,6 +106,8 @@ html {
     scroll-behavior: smooth;
     color: var(--font-color-01);
     background-color: var(--bg-color-01);
+
+    scrollbar-width: none;
 }
 
 html::-webkit-scrollbar {
@@ -133,12 +135,12 @@ a:hover {
 }
 
 .app-main {
-    width: 100dvw;
+    max-width: 100dvw;
     display: flex;
     align-items: center;
     flex-direction: column;
     /* padding: var(--padding) var(--padding-left) var(--padding)
-        var(--padding-right); */
+        var(--padding-right); */    
 }
 
 .app-section {
@@ -149,6 +151,7 @@ a:hover {
     padding-bottom: var(--padding);
     padding-right: var(--padding-right);
     padding-left: var(--padding-left);
+
 }
 
 .app-font {

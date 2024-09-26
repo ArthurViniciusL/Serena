@@ -60,7 +60,6 @@ export default function Feed() {
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 
     if (isLoad) {
-
         return (
             <div>
                 <Menu>
@@ -71,7 +70,6 @@ export default function Feed() {
                     </Button>
                 </Menu>
                 <main className="app-main">
-
 
                     <section className="app-section flex items-center justify-center">
                         <ul>

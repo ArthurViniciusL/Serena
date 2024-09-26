@@ -9,11 +9,7 @@ interface MenuProps {
 export function Menu({ children }: MenuProps) {
     return (
         <div className="menu-box">
-            <div
-                className="menu-box__content"
-            >
-                {children}
-            </div>
+            <div className="menu-box__content">{children}</div>
         </div>
     );
 }

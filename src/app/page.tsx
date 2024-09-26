@@ -102,7 +102,7 @@ export default function Home() {
                             />
                         </div>
 
-                        <div className="home-content-03__text-container">
+                        <div className="home-content-03__text-container"> {/*  */}
                             <p className="home-content-03__msg">
                                 <span className="serena-style-font">
                                     Serena{" "}

@@ -2,13 +2,12 @@ import { Modal, ModalProps } from "@/components/Ui/Modal";
 import { useModal } from "@/hooks/useModal";
 
 interface ModalSeeDetailsProps {
-    id: number;
     name: string;
 }
 
 type props = ModalSeeDetailsProps & ModalProps;
 
-export function ModalSeeDetails({ children, id, name }: props) {
+export function ModalSeeDetails({ children, name }: props) {
     const { modalName, openModal } = useModal();
     const thisModalName = "ModalSeeDetails";
 
@@ -18,7 +17,7 @@ export function ModalSeeDetails({ children, id, name }: props) {
             {modalName === thisModalName ? (
                 <Modal modalTitle="Ver detalhes">
                     <div className="modal-content">
-                        <p>ID: {id}</p>
+                        
                         <p>Nome: {name}</p>
                         <h1>...</h1>
                     </div>

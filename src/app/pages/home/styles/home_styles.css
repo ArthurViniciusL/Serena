@@ -3,6 +3,8 @@
     gap: var(--gap);
     flex-direction: row;
     align-items: center;
+
+
 }
 
 .home-buttons__list {
@@ -10,6 +12,7 @@
     gap: var(--gap);
     justify-content: center;
     align-items: center;
+
 }
 
 .home-section {
@@ -21,17 +24,16 @@
 }
 
 .serena-style-font {
-    font-size: x-large;
+    font-size: 1.2em;
     font-weight: bold;
     color: var(--serena-02);
 }
 
 .home-content__section-01 {
-    .home-content-01__intro {
-    }
+    .home-content-01__intro {}
 
     .home-content-01__msg {
-        font-size: xxx-large;
+        font-size: 2.5em;
     }
 
     .home-content__name-container {
@@ -43,10 +45,11 @@
             font-weight: bolder;
             color: var(--serena-02);
             font-size: clamp(90px, 9vw, 180px);
+
         }
 
         .home-content__emoji {
-            font-size: clamp(50px, 6vw, 80px);
+            font-size: clamp(40px, 6vw, 80px);
         }
     }
 }
@@ -58,10 +61,11 @@
         justify-content: center;
         gap: var(--gap);
         align-items: row;
+
     }
 
     .home-content-02__text-container {
-        width: 45%;
+        width: 40%;
         display: flex;
         flex-wrap: wrap;
         margin-right: var(--margin);
@@ -69,12 +73,13 @@
     }
 
     .home-content-02__msg {
-        font-size: x-large;
+        font-size: 1.2em;
         margin-bottom: 20px;
     }
 }
 
 .home-content__section-03 {
+
     .home-content-03__intro {
         display: flex;
         align-items: center;
@@ -87,28 +92,29 @@
         width: 45%;
         display: flex;
         flex-wrap: wrap;
-        margin-left: var(--margin);
         text-align: justify;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
     }
 
     .home-content-03__msg {
-        font-size: x-large;
+        /* font-size: x-large; */
+        font-size: 1.2em;
         margin-bottom: 20px;
     }
 
     .home-content-03__button {
-        min-width: 25vw;
+        width: 30vmax;
     }
 }
 
 @media (max-width: 700px) {
-    .buttons-list {
-        /*  display: none; */
+    .home-buttons__list {
+        display: none;
     }
 
     .home-section {
@@ -124,6 +130,11 @@
     .home-content-03__text-container {
         margin: 0;
         min-width: 100%;
+    }
+
+
+    .home-content-03__text-container {
+        margin-left: 0;
     }
 
     .home-content-02__img-container,

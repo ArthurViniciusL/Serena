@@ -16,7 +16,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-br" className="app-bg-color">
+        <html lang="pt-br" className="">
             <body className="app-bg-color">
                 <PageNameProvider>
                     <Header colorFill="var(--bg-color-01)">

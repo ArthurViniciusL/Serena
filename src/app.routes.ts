@@ -5,7 +5,7 @@ const routes = {
     Login: "",
 
     Feed: "/pages/feed",
-    Agenda: "",
+    Agenda: "/",
     Profile: "/pages/profile",
 
     Cadastro: "",

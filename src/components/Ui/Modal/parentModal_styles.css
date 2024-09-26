@@ -66,6 +66,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        
     }
 }
 
@@ -74,8 +76,9 @@
         width: 100dvw;
         height: 100dvh;
         background-color: var(--bg-color-01);
-    }
 
+    }
+    
     .modal-box {
         top: 0;
         width: 100dvw;
@@ -83,7 +86,7 @@
         padding: 10%;
         flex-grow: inherit;
         overflow: hidden;
-
+        
         .modal-header {
             .modal-header__span {
                 display: none;
