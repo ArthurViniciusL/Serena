@@ -1,3 +1,5 @@
+import { SerenaIconBadgeCheck } from '@/modules/app.modules';
+import { SerenaIconStar } from '@/modules/app.modules';
 /* @arthur.vsl */
 
 /*
@@ -15,4 +17,7 @@ export {
     DoorClosed as SerenaIconDoorClosed,
     DoorOpen as SerenaIconDoorOpen,
     ListFilter as SerenaIconListFilter,
+    Star as SerenaIconStar,
+    BadgeCheck as SerenaIconBadgeCheck,
+    Image as SerenaIconImage
 } from "lucide-react";
