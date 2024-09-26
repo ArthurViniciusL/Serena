@@ -1,4 +1,4 @@
-import { Modal, ModalProps } from "@/components/Modals/Modal";
+import { Modal, ModalProps } from "@/components/Ui/Modal";
 import { useModal } from "@/hooks/useModal";
 
 interface ModalSeeDetailsProps {
@@ -11,11 +11,13 @@ type props = ModalSeeDetailsProps & ModalProps
 export function ModalSeeDetails({ children, id, name }: props) {
 
     const thisModalName = "ModalSeeDetails";
-    const { modalName } = useModal();
+    const { modalName, openModal } = useModal();
 
     return (
         <div>
-            {children}
+            <span onClick={() => openModal(thisModalName)}>
+                {children}
+            </span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Ver detalhes">
                     <div className="modal-content">

@@ -1,7 +1,7 @@
 import "@/components/Modals/modals_styles.css";
 
 import { Button } from "../../Button";
-import { Modal, ModalProps } from "../Modal";
+import { Modal, ModalProps } from "../../Ui/Modal";
 import { useModal } from "@/hooks/useModal";
 
 import Image from "next/image";
@@ -9,11 +9,13 @@ import serena_asset_1 from "@/assets/images/serena_asset_1.svg";
 
 export function ModalLoginAccount({ children }: ModalProps) {
     const thisModalName = "ModalLoginAccount";
-    const { modalName } = useModal();
+    const { modalName, openModal } = useModal();
 
     return (
         <div>
-            {children}
+            <span onClick={() => openModal(thisModalName)}>
+                {children}
+            </span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Entrar">
                     <div className="modal-content">
