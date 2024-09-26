@@ -25,6 +25,15 @@
     background-color: var(--bg-color-05);
 }
 
+.app-button-medium {
+    width: 15vmax;
+
+}
+
+.app-button-large {
+    width: 30vmax;
+}
+
 .app-button:hover,
 .app-button-active:hover {
     text-decoration: underline;

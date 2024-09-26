@@ -117,7 +117,7 @@ export default function Home() {
                             </p>
 
                             <ModalCreateAccount>
-                                <Button className="home-content-03__button">
+                                <Button className="app-button-large">
                                     Criar conta
                                 </Button>
                             </ModalCreateAccount>
