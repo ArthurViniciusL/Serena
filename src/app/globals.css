@@ -128,6 +128,10 @@ p {
     margin-bottom: var(--Margin);
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .app-main {
     width: 100dvw;
     display: flex;

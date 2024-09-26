@@ -8,6 +8,8 @@ const routes = {
     Agenda: "",
     Profile: "/pages/profile",
 
+    Cadastro: "",
+
     CreateClientAccount: "",
     CreateServiceAccount: "",
 

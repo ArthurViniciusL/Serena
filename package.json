@@ -9,7 +9,8 @@
         "server": "npx json-server --watch db.json --port 8000",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "serena": "next dev & npx json-server --watch db.json --port 8000"
     },
     "dependencies": {
         "@radix-ui/react-dialog": "^1.1.1",
