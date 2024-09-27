@@ -27,7 +27,7 @@ export default function Home() {
                     <ButtonsList />
                 </div>
 
-                <ul className="home-buttons__list">
+                <ul className="home-buttons__list remove-on-mobile">
                     <li>
                         <ModalLoginAccount>
                             <Button className="app-bg-color">Entrar</Button>

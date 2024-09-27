@@ -10,7 +10,7 @@
     height: fit-content;
     cursor: pointer;
     padding: var(--padding);
-    border-radius: var(--coners);
+    border-radius: var(--radius);
 
     font-family: "Source Sans 3";
     font-size: large;

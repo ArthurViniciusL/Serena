@@ -16,8 +16,6 @@
     opacity: 0;
     animation: fadeIn 0.3s ease forwards;
 
-    overflow: hidden;
-
     cursor: pointer;
 }
 
@@ -37,13 +35,14 @@
     min-width: 50dvw;
     height: 80dvh;
     padding: var(--padding);
-    border-radius: var(--coners);
+    border-radius: var(--radius);
     background-color: var(--bg-color-01);
 
     flex-wrap: wrap;
     flex-flow: column;
 
     cursor: auto;
+    overflow: hidden;
 
     .app-modal-header {
         display: flex;
@@ -66,6 +65,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
     }
 }
 
@@ -74,6 +74,9 @@
         min-width: 100dvw;
         height: 100dvh;
         background-color: var(--bg-color-01);
+
+        position: fixed;
+        overflow: hidden;
     }
 
     .app-modal-box {
@@ -93,7 +96,14 @@
 }
 
 @media (max-height: 500px) {
+    .app-modal-background {
+        position: fixed;
+        overflow: hidden;
+    }
+
     .app-modal-box {
         height: 90vh;
+
+
     }
 }

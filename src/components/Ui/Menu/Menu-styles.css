@@ -7,6 +7,7 @@
     position: fixed;
     width: 100dvw;
     height: 70px;
+    gap: var(--gap);
     padding: var(--padding) var(--padding-left) var(--padding)
         var(--padding-right);
 

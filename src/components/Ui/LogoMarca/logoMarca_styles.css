@@ -1,6 +1,6 @@
 .serena-logo {
     padding: var(--padding);
-    border-radius: var(--coners);
+    border-radius: var(--radius);
     background-color: white;
 }
 

@@ -5,6 +5,7 @@ interface ModalSeeDetailsProps {
         id: number;
         name: string;
         description: string;
+        services: string;
     };
     onClick: () => void;
 }
@@ -15,7 +16,7 @@ export function ModalSeeDetails({ children, data, onClick }: props) {
     const { modalName, openModal } = useModal();
     const thisModalName = "ModalSeeDetails";
     //console.log(data)
-
+    /* ideia de implementacao: if (!isOpne) return {childrens} else {return Modal} */
     return (
         <div onClick={onClick}>
             <span onClick={() => openModal(thisModalName)}>{children}</span>
@@ -25,10 +26,8 @@ export function ModalSeeDetails({ children, data, onClick }: props) {
                         <div>
                             <p>Name: {data.name}</p>
                             <p>Descrição: {data.description}</p>
+                            {/* <p>Serviços: {data.services}</p> */}
                         </div>
-
-                        {/* <p>Nome: {data.name}</p>
-                        <h1>...</h1> */}
                     </div>
                 </Modal>
             ) : null}
