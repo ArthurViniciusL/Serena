@@ -1,73 +1,16 @@
 import "./Card-styles.css";
-import { useModal } from "@/hooks/useModal";
-import { Button } from "@/components/Button";
-import { ModalSeeDetails } from "@/components/Modals/ModalSeeDetails";
 
-import {
-    SerenaIconBadgeCheck,
-    SerenaIconImage,
-    SerenaIconStar,
-} from "@/modules/app.modules";
+export interface CardProps {
+    children?: React.ReactNode;
 
-interface UserCardProps {
-    id: number;
-    name: string;
-    category: string;
+    name?: string;
+    category?: string;
 }
 
-export function Card({ name, category }: UserCardProps) {
+export function Card({children}: CardProps) {
     return (
-        <div className="user-card-content">
-            <div className="content-left-side">
-                <Button>
-                    <SerenaIconImage size={30} />
-                </Button>
-
-                <div className="content__name">
-                    <div className="content-name__box">
-                        <h3 className="service-provider-name">{name}</h3>
-                        <SerenaIconBadgeCheck
-                            stroke="var(--serena-01)"
-                            size={20}
-                        />
-                    </div>
-                    {/* <ModalSeeDetails>
-
-                    </ModalSeeDetails> */}
-                    <button>Ver detalhes</button>
-                </div>
-            </div>
-
-            <div className="content__category">
-                <span className="category-name">{category}</span>
-                <div className="flex flex-row">
-                    <SerenaIconStar
-                        fill="var(--serena-yellow)"
-                        stroke=""
-                        size={20}
-                    />
-                    <SerenaIconStar
-                        fill="var(--serena-yellow)"
-                        stroke=""
-                        size={20}
-                    />
-                    <SerenaIconStar
-                        fill="var(--serena-yellow)"
-                        stroke=""
-                        size={20}
-                    />
-                    <SerenaIconStar
-                        fill="var(--serena-yellow)"
-                        stroke=""
-                        size={20}
-                    />
-                    <SerenaIconStar
-                        fill="var(--serena-yellow)"
-                        stroke=""
-                        size={20}
-                    />
-                </div>
-            </div>
+        <div className="app-card">
+                {children}
         </div>
-    );
+    )
 }
