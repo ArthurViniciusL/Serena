@@ -51,7 +51,7 @@
     --serena-blue: #174ae4;
 
     /*  */
-    --coners: 10px;
+    --radius: 10px;
     --margin: 10px;
     --padding: 10px;
     --padding-left: 25px;
@@ -98,7 +98,11 @@
 }
 
 .app-coners {
-    border-radius: var(--coners);
+    border-radius: var(--radius);
+}
+
+.app-shadow-hover:hover {
+    box-shadow: 0px 0px 24px var(--bg-shadow);
 }
 
 html {
@@ -130,7 +134,8 @@ p {
     margin-bottom: var(--Margin);
 }
 
-a:hover {
+a,
+button:hover {
     text-decoration: underline;
 }
 
@@ -155,4 +160,22 @@ a:hover {
 
 .app-font {
     /* font-weight: bold; */
+}
+
+.remove-on-mobile {
+    
+}
+
+.show-on-mobile {
+
+}
+
+@media (max-width: 700px) {
+    .remove-on-mobile {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: flex;
+    }
 }
