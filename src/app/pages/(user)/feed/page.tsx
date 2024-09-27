@@ -7,12 +7,14 @@ import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
 import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
-import { Card } from "@/components/Ui/Card";
+/* import { Card } from "@/components/Ui/Card"; */
 import { Menu } from "@/components/Ui/Menu";
 import { ModalSeeDetails } from "@/components/Modals/ModalSeeDetails";
+import { Card } from "@/components/Ui/Card";
+import { CardServiceProvider } from "../components/CardServiceProvider";
 
 export default function Feed() {
-    const { setPageName, memoValue } = usePageName();
+    const { setPageName } = usePageName();
     const { search, setSearch } = useSearch();
 
     const [isLoad, setIsLoad] = useState(false);
@@ -52,7 +54,7 @@ export default function Feed() {
             /* canceling the api request, in case the user cancels the page call */
             controller.abort();
         };
-    }, [memoValue, search]);
+    }, []);
 
     function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
         setSearch(e.target.value);
@@ -76,6 +78,7 @@ export default function Feed() {
                         Filtrar categoria
                     </Button>
                 </Menu>
+
                 <main className="app-main">
                     <section className="app-section flex items-center justify-center">
                         <ul>
@@ -88,11 +91,7 @@ export default function Feed() {
                                                 handleId(provider.id)
                                             }
                                         >
-                                            <Card
-                                                id={provider.id}
-                                                name={provider.name}
-                                                category={provider.category}
-                                            />
+                                            <CardServiceProvider name={provider.name} category={provider.category}  />
                                         </ModalSeeDetails>
                                     }
                                 </li>

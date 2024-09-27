@@ -6,7 +6,7 @@ import { SerenaIconCirclePlus } from "@/modules/app.modules";
 
 export function ButtonsList() {
     return (
-        <div>
+        <div className="remove-on-mobile">
             <ul className="home-buttons__list">
                 <li>
                     <Button

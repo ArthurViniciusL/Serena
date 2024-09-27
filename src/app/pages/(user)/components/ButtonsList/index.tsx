@@ -40,7 +40,7 @@ export function ButtonsList() {
         /* Mudar para um componente nav -> ul -> li*/
     }
     return (
-        <ul className="flex gap-[var(--gap)] feed-buttons__list">
+        <ul className="flex gap-[var(--gap)] remove-on-mobile">
             <li>
                 <Button
                     isActive={currentPage === routes.Feed}
