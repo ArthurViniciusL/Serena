@@ -1,12 +1,10 @@
-import "@/components/Ui/Card/Card-styles.css"
+import "@/components/Ui/Card/Card.css";
 
 import { Card, CardProps } from "@/components/Ui/Card";
 import { SerenaIconBadgeCheck, SerenaIconStar } from "@/modules/app.modules";
 import { Avatar } from "@/components/Ui/Avatar";
 
-
-
-export function CardServiceProvider({name, category}:CardProps) {
+export function CardServiceProvider({ name, category }: CardProps) {
     return (
         <Card>
             <div className="app-card-left-side">
@@ -35,5 +33,5 @@ export function CardServiceProvider({name, category}:CardProps) {
                 <span className="app-card-category">{category}</span>
             </div>
         </Card>
-    )
+    );
 }

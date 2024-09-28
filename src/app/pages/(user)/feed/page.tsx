@@ -7,10 +7,8 @@ import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
 import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
-/* import { Card } from "@/components/Ui/Card"; */
 import { Menu } from "@/components/Ui/Menu";
 import { ModalSeeDetails } from "@/components/Modals/ModalSeeDetails";
-import { Card } from "@/components/Ui/Card";
 import { CardServiceProvider } from "../components/CardServiceProvider";
 
 export default function Feed() {
@@ -91,12 +89,20 @@ export default function Feed() {
                                                 handleId(provider.id)
                                             }
                                         >
-                                            <CardServiceProvider name={provider.name} category={provider.category}  />
+                                            <CardServiceProvider
+                                                name={provider.name}
+                                                category={provider.category}
+                                            />
                                         </ModalSeeDetails>
                                     }
                                 </li>
                             ))}
                         </ul>
+                        {dataFilter.length === 0 ? (
+                            <p style={{ color: "var(--font-color-08)" }}>
+                                Nenhum resultado encontrado
+                            </p>
+                        ) : null}
                     </section>
                 </main>
             </div>

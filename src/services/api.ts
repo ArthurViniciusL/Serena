@@ -1,3 +1,1 @@
-export async function getServicesProvider() {
-
-} 
+export async function getServicesProvider() {}

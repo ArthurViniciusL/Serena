@@ -48,7 +48,7 @@
     background-color: var(--bg-color-02);
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
     .app-card {
         flex-direction: column;
     }

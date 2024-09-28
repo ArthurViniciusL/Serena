@@ -1,4 +1,4 @@
-import "./Card-styles.css";
+import "./Card.css";
 
 export interface CardProps {
     children?: React.ReactNode;
@@ -7,10 +7,6 @@ export interface CardProps {
     category?: string;
 }
 
-export function Card({children}: CardProps) {
-    return (
-        <div className="app-card">
-                {children}
-        </div>
-    )
+export function Card({ children }: CardProps) {
+    return <div className="app-card">{children}</div>;
 }
