@@ -91,6 +91,7 @@ export default function Feed() {
                                         >
                                             <CardServiceProvider
                                                 name={provider.name}
+                                                review={provider.average_rating}
                                                 category={provider.category}
                                             />
                                         </ModalSeeDetails>

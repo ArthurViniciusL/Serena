@@ -1,10 +1,7 @@
 import "./Card.css";
 
 export interface CardProps {
-    children?: React.ReactNode;
-
-    name?: string;
-    category?: string;
+    children: React.ReactNode;
 }
 
 export function Card({ children }: CardProps) {

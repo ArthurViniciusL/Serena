@@ -3,8 +3,15 @@ import "@/components/Ui/Card/Card.css";
 import { Card, CardProps } from "@/components/Ui/Card";
 import { SerenaIconBadgeCheck, SerenaIconStar } from "@/modules/app.modules";
 import { Avatar } from "@/components/Ui/Avatar";
+import { Reviews } from "@/components/Rating";
 
-export function CardServiceProvider({ name, category }: CardProps) {
+interface CardServiceProviderProps {
+    name: string;
+    review: string;
+    category: string;
+}
+
+export function CardServiceProvider({ name, category, review }: CardServiceProviderProps) {
     return (
         <Card>
             <div className="app-card-left-side">
@@ -24,6 +31,7 @@ export function CardServiceProvider({ name, category }: CardProps) {
             </div>
             <div className="app-card-right-side gap-4">
                 <div className="cursor">
+                    <Reviews nota={review}/>
                     <SerenaIconStar
                         fill="var(--serena-yellow)"
                         stroke=""

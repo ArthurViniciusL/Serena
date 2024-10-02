@@ -133,8 +133,9 @@ p {
     font-size: var(--normal-text);
     margin-bottom: var(--Margin);
 }
-
-a,
+a:hover {
+    text-decoration: underline;
+}
 button:hover {
     text-decoration: underline;
 }
