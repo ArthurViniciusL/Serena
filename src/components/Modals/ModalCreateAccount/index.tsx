@@ -39,7 +39,10 @@ export function ModalCreateAccount({ children }: ModalProps) {
                                 <Button>Serviço</Button>
                             </a>
                             <p style={{ color: "var(--font-color-04)" }}>ou</p>
-                            <Button>Cliente</Button>
+                            <a href="">
+                                <Button>Cliente</Button>
+                            </a>
+                            
                         </div>
                     </div>
                 </Modal>
