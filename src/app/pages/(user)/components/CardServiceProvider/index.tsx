@@ -1,13 +1,27 @@
 import "@/components/Ui/Card/Card.css";
 
-import { Card, CardProps } from "@/components/Ui/Card";
+import { Card } from "@/components/Ui/Card";
 import { SerenaIconBadgeCheck, SerenaIconStar } from "@/modules/app.modules";
 import { Avatar } from "@/components/Ui/Avatar";
+import { Reviews } from "@/components/Rating";
 
-export function CardServiceProvider({ name, category }: CardProps) {
+interface CardServiceProviderProps {
+    name: string;
+    review: string;
+    category: string;
+    onClick: () => void;
+}
+
+export function CardServiceProvider({
+    name,
+    category,
+    review,
+    onClick
+}: CardServiceProviderProps) {
+
     return (
         <Card>
-            <div className="app-card-left-side">
+            <div onClick={onClick} className="app-card-left-side">
                 <div className=" flex flex-row justify-start gap-[var(--gap)]">
                     <Avatar src="" alt={`avatar de  ${name}`} />
                     <div className="flex flex-col items-start gap-2">
@@ -18,12 +32,15 @@ export function CardServiceProvider({ name, category }: CardProps) {
                                 size={20}
                             />
                         </div>
-                        <button>Ver detalhes</button>
+                        <button>
+                            Ver detalhes
+                        </button>
                     </div>
                 </div>
             </div>
             <div className="app-card-right-side gap-4">
                 <div className="cursor">
+                    <Reviews nota={review} />
                     <SerenaIconStar
                         fill="var(--serena-yellow)"
                         stroke=""
