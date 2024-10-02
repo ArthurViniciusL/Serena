@@ -8,12 +8,15 @@ import { usePageName } from "@/hooks/usePageName";
 import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
 import { Menu } from "@/components/Ui/Menu";
-import { ModalSeeDetails } from "@/components/Modals/ModalSeeDetails";
 import { CardServiceProvider } from "../components/CardServiceProvider";
+import { useModal } from "@/hooks/useModal";
+import { DetailsServiceProvider } from "@/components/Modals/DetailsServiceProvider";
 
 export default function Feed() {
     const { setPageName } = usePageName();
     const { search, setSearch } = useSearch();
+
+    const { selectContentInfo, infoId } = useModal();
 
     const [isLoad, setIsLoad] = useState(false);
     const [servicesProviders, setServicesProviders] = useState<any>([]);
@@ -60,21 +63,19 @@ export default function Feed() {
 
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 
-    const [userId, setUserId] = useState(0);
-    function handleId(id: number) {
-        setUserId(id);
-    }
-    const seletUser = servicesProviders.find((u: any) => u.id === userId);
+    const seletUser = servicesProviders.find((u: any) => u.id === infoId);
 
     if (isLoad) {
         return (
             <div>
                 <Menu>
                     <SearchBar onChange={handleSearch} />
-                    <Button>
+                    
+                    {/* <Button>
                         <SerenaIconListFilter />
                         Filtrar categoria
-                    </Button>
+                    </Button> */}
+
                 </Menu>
 
                 <main className="app-main">
@@ -83,18 +84,14 @@ export default function Feed() {
                             {dataFilter.map((provider: any) => (
                                 <li key={provider.id}>
                                     {
-                                        <ModalSeeDetails
-                                            data={seletUser}
-                                            onClick={() =>
-                                                handleId(provider.id)
-                                            }
-                                        >
+                                        <DetailsServiceProvider data={seletUser}>
                                             <CardServiceProvider
                                                 name={provider.name}
-                                                review={provider.average_rating}
+                                                review={provider.review}
                                                 category={provider.category}
+                                                onClick={() => selectContentInfo(provider.id)}
                                             />
-                                        </ModalSeeDetails>
+                                        </DetailsServiceProvider>
                                     }
                                 </li>
                             ))}
