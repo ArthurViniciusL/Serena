@@ -11,6 +11,7 @@ import { Menu } from "@/components/Ui/Menu";
 import { CardServiceProvider } from "../components/CardServiceProvider";
 import { useModal } from "@/hooks/useModal";
 import { DetailsServiceProvider } from "@/components/Modals/DetailsServiceProvider";
+import { Input } from "@/components/Input";
 
 export default function Feed() {
     const { setPageName } = usePageName();
@@ -75,6 +76,8 @@ export default function Feed() {
                         <SerenaIconListFilter />
                         Filtrar categoria
                     </Button> */}
+
+                    {/* <Input onChange={handleSearch} placeholder="Algo" type="search"/> */}
 
                 </Menu>
 

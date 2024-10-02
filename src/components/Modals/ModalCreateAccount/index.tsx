@@ -12,7 +12,7 @@ export function ModalCreateAccount({ children }: ModalProps) {
     const { modalName, openModal } = useModal();
 
     return (
-        <div>
+        <>
             <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Criar conta">
@@ -44,6 +44,6 @@ export function ModalCreateAccount({ children }: ModalProps) {
                     </div>
                 </Modal>
             ) : null}
-        </div>
+        </>
     );
 }

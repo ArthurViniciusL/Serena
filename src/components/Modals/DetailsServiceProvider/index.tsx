@@ -18,7 +18,7 @@ export function DetailsServiceProvider({ children, data }: props) {
     const thisModalName = "DetailsServiceProvider";
 
     return (
-        <div>
+        <>
             <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Detalhes">
@@ -49,6 +49,6 @@ export function DetailsServiceProvider({ children, data }: props) {
                     </div>
                 </Modal>
             ) : null}
-        </div>
+        </>
     );
 }

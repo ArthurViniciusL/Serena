@@ -1,7 +1,8 @@
 import { Header } from "@/components/Ui/Header";
-import { LogoTipo } from "@/components/SerenaLogos/LogoTipo";
+
 import "@/app/globals.css";
 import { Metadata } from "next";
+import { LogoTipo } from "@/components/Ui/LogoTipo";
 
 export const metadata: Metadata = {
     title: "Serena",

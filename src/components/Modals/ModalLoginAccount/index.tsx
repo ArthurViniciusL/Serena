@@ -12,7 +12,7 @@ export function ModalLoginAccount({ children }: ModalProps) {
     const { modalName, openModal } = useModal();
 
     return (
-        <div>
+        <>
             <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Entrar">
@@ -41,6 +41,6 @@ export function ModalLoginAccount({ children }: ModalProps) {
                     </div>
                 </Modal>
             ) : null}
-        </div>
+        </>
     );
 }

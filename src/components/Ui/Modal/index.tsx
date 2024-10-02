@@ -30,7 +30,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
                 >
                     <div className="app-modal-header">
                         <span className="app-modal-header__span"></span>
-                        <p className="app-modal-title-style">{modalTitle}</p>
+                        <h3 className="app-modal-title-style">{modalTitle}</h3>
                         <Button
                             onClick={() => closeModal()}
                             bgColorHover="var(--serena-01)"
