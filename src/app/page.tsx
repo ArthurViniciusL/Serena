@@ -1,9 +1,9 @@
 "use client";
 
-import "@/app/styles/home_styles.css";
+import "@/app/pages/home/styles/home_styles.css";
 
 import { Button } from "@/components/Button";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Ui/Header";
 
 import Image from "next/image";
 import home_banner_01 from "@/assets/images/home_banner_01.svg";
@@ -12,42 +12,30 @@ import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
 
-import AppRoutes from "@/app.routes";
-import { LogoMarca } from "@/components/SerenaLogos/LogoMarca";
-import { useModal } from "@/hooks/useModal";
-import { ButtonsList } from "@/components/Ui/Home/ButtonsList";
+import routes from "@/app.routes";
+import { LogoMarca } from "@/components/Ui/LogoMarca";
+import { ButtonsList } from "./pages/home/components/ButtonsList";
 
 export default function Home() {
-    const { openModal } = useModal();
-
     return (
         <div>
             <Header colorFill="var(--bg-color-02)">
                 <div className="home-header__content">
-                    <a href={AppRoutes.Home}>
+                    <a href={routes.Home}>
                         <LogoMarca />
                     </a>
                     <ButtonsList />
                 </div>
 
-                <ul className="home-buttons__list">
+                <ul className="home-buttons__list remove-on-mobile">
                     <li>
                         <ModalLoginAccount>
-                            <Button
-                                onClick={() => openModal("ModalLoginAccount")}
-                                className="app-bg-color"
-                            >
-                                Entrar
-                            </Button>
+                            <Button className="app-bg-color">Entrar</Button>
                         </ModalLoginAccount>
                     </li>
                     <li>
                         <ModalCreateAccount>
-                            <Button
-                                onClick={() => openModal("ModalCreateAccount")}
-                                className="app-bg-color"
-                                border={true}
-                            >
+                            <Button className="app-bg-color" border={true}>
                                 Criar conta
                             </Button>
                         </ModalCreateAccount>
@@ -115,6 +103,8 @@ export default function Home() {
                         </div>
 
                         <div className="home-content-03__text-container">
+                            {" "}
+                            {/*  */}
                             <p className="home-content-03__msg">
                                 <span className="serena-style-font">
                                     Serena{" "}
@@ -127,14 +117,8 @@ export default function Home() {
                                 detalhados sobre seus atendimentos, tudo em uma
                                 única plataforma.
                             </p>
-
                             <ModalCreateAccount>
-                                <Button
-                                    onClick={() =>
-                                        openModal("ModalCreateAccount")
-                                    }
-                                    className="home-content-03__button"
-                                >
+                                <Button className="app-button-large">
                                     Criar conta
                                 </Button>
                             </ModalCreateAccount>

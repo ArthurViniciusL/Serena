@@ -2,7 +2,7 @@
     min-width: 30vw;
     height: fit-content;
     padding: var(--padding);
-    border-radius: var(--coners);
+    border-radius: var(--radius);
     background-color: var(--bg-color-02);
 
     display: flex;

@@ -1,32 +1,105 @@
 {
-    "PersonClients": [],
-    "PersonServicesProviders": [
-        {
-            "id": 0,
-            "picture": "",
-            "serviceCategory": "",
-            "agendaStatus": "",
-            "servicesList": [],
-            "profileDescription": "",
-            "reviews": 0
-        },
+    "clients": [],
+    "services-providers": [
         {
             "id": 1,
-            "picture": "",
-            "serviceCategory": "",
-            "agendaStatus": "",
-            "servicesList": [],
-            "profileDescription": "",
-            "reviews": 0
+            "profile_picture": null,
+            "name": "Salão Satar Bella",
+            "phone": "1234567890",
+            "email": "contato@belezapura.com",
+            "cnpj": "12345678000199",
+            "category": "Beleza e estética",
+            "working_days": ["Segunda", "Quarta", "Sexta"],
+            "opening_hours": {
+                "morning": "08:00 - 11:00",
+                "afternoon": "13:00 - 18:00"
+            },
+            "description": "Especializados em cortes e tratamentos capilares.",
+            "review": 4.8,
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de Cabelo",
+                    "time": 30,
+                    "price": 50.0,
+                    "insertion_date": "2024-09-25T10:00:00Z"
+                }
+            ]
         },
         {
             "id": 2,
-            "picture": "",
-            "serviceCategory": "",
-            "agendaStatus": "",
-            "servicesList": [],
-            "profileDescription": "",
-            "reviews": 0
+            "profile_picture": "link_para_foto",
+            "name": "Barbearia Estilo",
+            "phone": "0987654321",
+            "email": "contato@barbeariaestilo.com",
+            "cnpj": "98765432000199",
+            "category": "Beleza e estética",
+            "working_days": ["Terça", "Quinta"],
+            "opening_hours": {
+                "morning": "08:00 - 11:00",
+                "afternoon": "13:00 - 18:00"
+            },
+            "description": "Cortes modernos e atendimento premium.",
+            "review": 4.9,
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Barba",
+                    "time": 20,
+                    "price": 25.0,
+                    "insertion_date": "2024-09-25T10:00:00Z"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "profile_picture": null,
+            "name": "Oficina Mecânica Rápida",
+            "phone": "1122334455",
+            "email": "contato@oficinarapida.com",
+            "cnpj": "11122233344455",
+            "category": "Oficina Mecânica",
+            "working_days": ["Segunda", "Terça", "Sábado"],
+            "opening_hours": {
+                "morning": "08:00 - 12:00",
+                "afternoon": "14:00 - 17:00"
+            },
+            "description": "Especialistas em manutenção e reparos rápidos de veículos.",
+            "review": 4.7,
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Troca de Óleo",
+                    "time": 40,
+                    "price": 120.0,
+                    "insertion_date": "2024-09-25T10:00:00Z"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "profile_picture": "link_para_foto",
+            "name": "João Personal Trainer",
+            "phone": "3344556677",
+            "email": "joao@personaltrainer.com",
+            "cnpj": "33445566778899",
+            "category": "Personal Trainer",
+            "working_days": ["Segunda", "Quarta", "Sexta"],
+            "opening_hours": {
+                "morning": "06:00 - 12:00",
+                "afternoon": "16:00 - 21:00"
+            },
+            "description": "Treinamento personalizado com foco em resultados e saúde.",
+            "review": 4.9,
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Treinamento Funcional",
+                    "time": 60,
+                    "price": 70.0,
+                    "insertion_date": "2024-09-25T10:00:00Z"
+                }
+            ]
         }
     ]
 }

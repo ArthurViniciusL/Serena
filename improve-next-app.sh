@@ -72,11 +72,11 @@ cd src
 touch app.routes.ts
 echo "/* @arthur.vsl */
 
-const AppRoutes = {
+const routes = {
     home: '/',
     pageWithId: (id:number) => \`/page_path\${id}\`
 };
-export default AppRoutes;" > app.routes.ts
+export default routes;" > app.routes.ts
 
 clear
 echo "Creating files..."

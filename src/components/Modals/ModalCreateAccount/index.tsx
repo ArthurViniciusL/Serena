@@ -1,7 +1,7 @@
 import "@/components/Modals/modals_styles.css";
 
 import { Button } from "../../Button";
-import { Modal, ModalProps } from "../Modal";
+import { Modal, ModalProps } from "../../Ui/Modal";
 import { useModal } from "@/hooks/useModal";
 
 import serena_asset_2 from "@/assets/images/serena_asset_2.svg";
@@ -9,14 +9,14 @@ import Image from "next/image";
 
 export function ModalCreateAccount({ children }: ModalProps) {
     const thisModalName = "ModalCreateAccount";
-    const { modalName, setIsOpen } = useModal();
+    const { modalName, openModal } = useModal();
 
     return (
         <div>
-            {children}
+            <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Criar conta">
-                    <div className="modal-content">
+                    <div className="app-modal-content">
                         <h3 className="content__msg">
                             <span className="content__msg-style">
                                 {" "}
@@ -39,7 +39,10 @@ export function ModalCreateAccount({ children }: ModalProps) {
                                 <Button>Serviço</Button>
                             </a>
                             <p style={{ color: "var(--font-color-04)" }}>ou</p>
-                            <Button>Cliente</Button>
+                            <a href="">
+                                <Button>Cliente</Button>
+                            </a>
+                            
                         </div>
                     </div>
                 </Modal>

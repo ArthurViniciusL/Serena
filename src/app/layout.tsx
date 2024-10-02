@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { ModalProvider } from "@/context/ModalContext";
 
@@ -13,7 +13,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-br">
+        <html lang="pt-br" className="app-bg-color">
             <body className="app-bg-color">
                 <ModalProvider>{children}</ModalProvider>
             </body>

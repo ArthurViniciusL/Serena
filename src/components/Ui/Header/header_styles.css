@@ -1,0 +1,21 @@
+.header-box {
+    max-width: 100dvh;
+    height: 70px;
+}
+
+.header-box__content {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    padding: var(--padding) var(--padding-left) var(--padding)
+        var(--padding-right);
+
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

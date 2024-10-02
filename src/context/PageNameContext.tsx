@@ -11,21 +11,21 @@ interface PageNameProps {
 export function PageNameProvider({ children }: PageNameProps) {
     const [currentPage, setCurrentPage] = useState<string>("");
 
-    function activeButton(name: string) {
+    function setPageName(name: string) {
         setCurrentPage(name);
     }
 
     const memoValue = useMemo(
         () => ({
             currentPage,
-            activeButton,
+            setPageName,
         }),
         [currentPage],
     );
 
     return (
         <PageNameContext.Provider
-            value={{ currentPage, activeButton, memoValue }}
+            value={{ currentPage, setPageName, memoValue }}
         >
             {children}
         </PageNameContext.Provider>

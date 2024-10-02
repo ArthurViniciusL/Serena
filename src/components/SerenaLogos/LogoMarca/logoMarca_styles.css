@@ -1,9 +1,0 @@
-.serena-logo {
-    padding: var(--padding);
-    border-radius: var(--coners);
-    background-color: white;
-}
-
-.serena-logo:hover {
-    cursor: pointer;
-}

@@ -11,6 +11,9 @@ interface ModalProviderProps {
 export function ModalProvider({ children }: ModalProviderProps) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [modalName, setModalName] = useState<string>("");
+    const [infoId, setinfoId] = useState<number>(0);
+    
+    // const [data, setData] = useState<object>([]);
 
     function openModal(modalName: string) {
         setIsOpen(true);
@@ -21,9 +24,21 @@ export function ModalProvider({ children }: ModalProviderProps) {
         setIsOpen(false);
     }
 
+    function selectContentInfo(id: number, infos: object) {
+        setinfoId(id);
+        // setData(infos);
+    }
+
     return (
         <ModalContext.Provider
-            value={{ isOpen, openModal, closeModal, modalName }}
+            value={{
+                isOpen,
+                openModal,
+                closeModal,
+                modalName,
+                infoId,
+                selectContentInfo,
+            }}
         >
             {children}
         </ModalContext.Provider>

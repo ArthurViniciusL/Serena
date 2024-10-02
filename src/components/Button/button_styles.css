@@ -10,7 +10,7 @@
     height: fit-content;
     cursor: pointer;
     padding: var(--padding);
-    border-radius: var(--coners);
+    border-radius: var(--radius);
 
     font-family: "Source Sans 3";
     font-size: large;
@@ -23,6 +23,14 @@
 .app-button-active {
     color: var(--font-color-05);
     background-color: var(--bg-color-05);
+}
+
+.app-button-medium {
+    width: 15vmax;
+}
+
+.app-button-large {
+    width: 30vmax;
 }
 
 .app-button:hover,

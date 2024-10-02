@@ -1,0 +1,55 @@
+.app-card {
+    min-width: 50vw;
+    height: fit-content;
+
+    display: flex;
+    gap: var(--gap);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    flex-flow: row;
+
+    padding: calc(var(--padding) + 10px);
+    margin: var(--margin);
+    border: solid 0.5px var(--bg-color-03);
+    border-radius: calc(var(--radius) + 10px);
+    background-color: var(--bg-color-01);
+
+    margin-bottom: calc(var(--margin) + 10px);
+
+    cursor: pointer;
+}
+
+.app-card-left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.app-card-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+}
+
+.app-card-name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.app-card-category {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.8rem;
+    padding: var(--padding);
+    border-radius: var(--radius);
+    background-color: var(--bg-color-02);
+}
+
+@media (max-width: 700px) {
+    .app-card {
+        flex-direction: column;
+    }
+}

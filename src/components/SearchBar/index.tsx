@@ -1,6 +1,6 @@
 import "./styles.css";
 import { useState } from "react";
-import { AppIcon_CircleClose } from "@/modules/app.modules";
+import { SerenaIconCircleClose } from "@/modules/app.modules";
 import useSearch from "@/hooks/useSearch";
 
 interface SearchBarProps {
@@ -31,7 +31,7 @@ export function SearchBar({ onChange }: SearchBarProps) {
                 type="text"
             />
             {icon && search !== "" ? (
-                <AppIcon_CircleClose
+                <SerenaIconCircleClose
                     size={20}
                     cursor={"pointer"}
                     onClick={clearSearch}

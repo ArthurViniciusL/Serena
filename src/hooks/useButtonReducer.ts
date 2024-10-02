@@ -1,5 +1,5 @@
-import AppRoutes from "../app.routes";
-import { PageName } from "../components/Ui/Feed/ButtonsList";
+import routes from "../app.routes";
+import { PageName } from "../app/pages/(user)/feed/ButtonsList";
 
 /* const initialState = {
     activePage: null,
@@ -11,7 +11,7 @@ function buttonReducer(state, action) {
         case 'FEED': return {
             ...state,
             activePage: PageName.Feed,
-            linkPage: AppRoutes.Feed,
+            linkPage: routes.Feed,
         };
         default:
             break;
