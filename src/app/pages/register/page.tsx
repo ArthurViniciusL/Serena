@@ -45,6 +45,7 @@ export default function Register() {
                 </ul>
             </Header>
           </div>
+
           <section className="bg-gray-50 dark:bg-gray-900 w-full max-h-[88vh]">
                 <div className="flex flex-col items-center justify-center px-6 py-4 mx-auto md:h-auto lg:py-4">
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 lg:max-w-2xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -60,7 +61,6 @@ export default function Register() {
                                         id="email"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="*Digite seu nome..."
-                                        required=""
                                     />
                                 </div>
                                 <div>
@@ -70,7 +70,6 @@ export default function Register() {
                                         id="cpf"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="*Digite seu cpf ou cnpj..."
-                                        required=""
                                     />
                                 </div>
                                 <div>
@@ -80,7 +79,6 @@ export default function Register() {
                                         id="email"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="*Digite seu e-mail..."
-                                        required=""
                                     />
                                 </div>
                                 <div>
@@ -90,7 +88,7 @@ export default function Register() {
                                         id="password"
                                         placeholder="Crie uma senha"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        required=""
+                                        
                                     />
                                 </div>
 
@@ -99,7 +97,7 @@ export default function Register() {
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 >
                                     <option selected>
-                                        *Selecione sua categoria
+                                        * Selecione sua categoria
                                     </option>
                                     <option value="US">Beleza</option>
                                     <option value="CA">Estética</option>
