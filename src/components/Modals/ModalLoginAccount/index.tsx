@@ -16,7 +16,7 @@ export function ModalLoginAccount({ children }: ModalProps) {
             <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Entrar">
-                    <div className="app-modal-content">
+                    <div className="serena-modal-content">
                         <h3 className="content__msg">
                             <span className="content__msg-style">
                                 Bem vindo de volta!

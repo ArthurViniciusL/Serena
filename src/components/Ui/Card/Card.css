@@ -1,4 +1,4 @@
-.app-card {
+.serena-card {
     min-width: 50vw;
     height: fit-content;
 
@@ -21,25 +21,25 @@
     cursor: pointer;
 }
 
-.app-card-left-side {
+.serena-card-left-side {
     display: flex;
     flex-direction: column;
     justify-content: start;
 }
 
-.app-card-right-side {
+.serena-card-right-side {
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: start;
 }
 
-.app-card-name {
+.serena-card-name {
     font-size: large;
     font-weight: bold;
 }
 
-.app-card-category {
+.serena-card-category {
     width: fit-content;
     height: fit-content;
     font-size: 0.8rem;
@@ -49,7 +49,7 @@
 }
 
 @media (max-width: 700px) {
-    .app-card {
+    .serena-card {
         flex-direction: column;
     }
 }

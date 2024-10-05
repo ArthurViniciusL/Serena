@@ -1,4 +1,4 @@
-.app-button {
+.serena-button {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -20,21 +20,21 @@
     background-color: var(--bg-color-02);
 }
 
-.app-button-active {
+.serena-button-active {
     color: var(--font-color-05);
     background-color: var(--bg-color-05);
 }
 
-.app-button-medium {
+.serena-button-medium {
     width: 15vmax;
 }
 
-.app-button-large {
+.serena-button-large {
     width: 30vmax;
 }
 
-.app-button:hover,
-.app-button-active:hover {
+.serena-button:hover,
+.serena-button-active:hover {
     text-decoration: underline;
     cursor: pointer;
     color: var(--bg-color-01);

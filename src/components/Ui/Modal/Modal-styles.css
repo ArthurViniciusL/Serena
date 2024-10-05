@@ -1,4 +1,4 @@
-.app-modal-background {
+.serena-modal-background {
     top: 0;
     left: 0;
     right: 0;
@@ -29,7 +29,7 @@
     }
 }
 
-.app-modal-box {
+.serena-modal-box {
     z-index: 1;
     position: absolute;
     min-width: 50dvw;
@@ -44,22 +44,22 @@
     cursor: auto;
     overflow: hidden;
 
-    .app-modal-header {
+    .serena-modal-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .app-modal-header__span {
+        .serena-modal-header__span {
             width: 5%;
         }
 
-        .app-modal-title-style {
+        .serena-modal-title-style {
             font-weight: bold;
             font-size: var(--sub-title);
         }
     }
 
-    .app-modal-content {
+    .serena-modal-content {
         height: 90%;
         display: flex;
         align-items: center;
@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 700px) {
-    .app-modal-background {
+    .serena-modal-background {
         min-width: 100dvw;
         height: 100dvh;
         background-color: var(--bg-color-01);
@@ -78,7 +78,7 @@
         overflow: hidden;
     }
 
-    .app-modal-box {
+    .serena-modal-box {
         top: 0;
         min-width: 100dvw;
         height: 100dvh;
@@ -86,8 +86,8 @@
         flex-grow: inherit;
         overflow: hidden;
 
-        .app-modal-header {
-            .app-modal-header__span {
+        .serena-modal-header {
+            .serena-modal-header__span {
                 display: none;
             }
         }
@@ -95,12 +95,12 @@
 }
 
 @media (max-height: 500px) {
-    .app-modal-background {
+    .serena-modal-background {
         position: fixed;
         overflow: hidden;
     }
 
-    .app-modal-box {
+    .serena-modal-box {
         height: 90vh;
     }
 }

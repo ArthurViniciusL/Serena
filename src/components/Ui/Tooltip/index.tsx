@@ -7,9 +7,9 @@ interface TooltipProps {
 
 export function Tooltip({ msg, children }: TooltipProps) {
     return (
-        <div className="app-tooltip">
+        <div className="serena-tooltip">
             {children}
-            <span className="app-tooltip__content">{msg}</span>
+            <span className="serena-tooltip__content">{msg}</span>
         </div>
     );
 }

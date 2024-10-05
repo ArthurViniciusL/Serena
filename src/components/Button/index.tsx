@@ -26,12 +26,12 @@ export function Button({
 }: ButtonProps) {
     const borderButton = border ? "solid var(--bg-color-05) 1px" : "none";
 
-    const activeButton = isActive ? "app-button-active" : "";
+    const activeButton = isActive ? "serena-button-active" : "";
 
     return (
         <StyledButton
             onClick={onClick}
-            className={`app-button ${activeButton} ${className}`}
+            className={`serena-button ${activeButton} ${className}`}
             $border={borderButton}
             $bgColor={bgColor}
             $bgColorHover={bgColorHover}

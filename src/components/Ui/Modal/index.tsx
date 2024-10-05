@@ -22,15 +22,15 @@ export function Modal({ modalTitle, children }: ModalProps) {
 
     if (isOpen) {
         return (
-            <div className="app-modal-background" onClick={clickOut}>
+            <div className="serena-modal-background" onClick={clickOut}>
                 <div
-                    className="app-modal-box"
+                    className="serena-modal-box"
                     onMouseEnter={() => setLeaveContent(false)}
                     onMouseLeave={() => setLeaveContent(true)}
                 >
-                    <div className="app-modal-header">
-                        <span className="app-modal-header__span"></span>
-                        <h3 className="app-modal-title-style">{modalTitle}</h3>
+                    <div className="serena-modal-header">
+                        <span className="serena-modal-header__span"></span>
+                        <h3 className="serena-modal-title-style">{modalTitle}</h3>
                         <Button
                             onClick={() => closeModal()}
                             bgColorHover="var(--serena-01)"
@@ -39,7 +39,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
                         </Button>
                     </div>
 
-                    <section className="app-modal-content">{children}</section>
+                    <section className="serena-modal-content">{children}</section>
                 </div>
             </div>
         );

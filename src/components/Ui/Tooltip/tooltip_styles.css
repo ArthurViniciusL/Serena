@@ -1,6 +1,6 @@
 @import url("../../../styles/globals.css");
 
-.app-tooltip {
+.serena-tooltip {
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.app-tooltip__content {
+.serena-tooltip__content {
     visibility: hidden;
     position: absolute;
     z-index: 1;
@@ -31,7 +31,7 @@
     background-color: var(--bg-color-05);
 }
 
-.app-tooltip:hover .app-tooltip__content {
+.serena-tooltip:hover .serena-tooltip__content {
     visibility: visible;
     opacity: 0.8;
     transition:
