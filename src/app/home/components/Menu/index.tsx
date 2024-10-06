@@ -18,56 +18,61 @@ export function Menu() {
         window.addEventListener('resize', updateScreenSize);
     })
 
-    if (screen <= 770) {
+    if (screen >= 770) {
         return (
             <>
-            {/* é provisório ok */}
-                <AlignJustify size={20} />
+                <ul className="flex flex-row gap-[var(--gap)] justify-between">
+                    <li>
+                        <Button>
+                            Sobre
+                        </Button>
+                    </li>
+
+                    <li>
+                        <Button>
+                            Recursos
+                        </Button>
+                    </li>
+
+                    <li>
+                        <Button>
+                            Preços
+                        </Button>
+                    </li>
+
+                    <li>
+                        <Button>
+                            <Tooltip msg="Mais informações">
+                                <IconMoreInfo size={20} />
+                            </Tooltip>
+                        </Button>
+                    </li>
+                </ul>
+
+                <div className="flex flex-row align-baseline gap-[var(--gap)]">
+                    <ModalLoginAccount>
+                        <Button>
+                            Entrar
+                        </Button>
+                    </ModalLoginAccount>
+                    <ModalCreateAccount>
+                        <Button>
+                            Criar conta
+                        </Button>
+                    </ModalCreateAccount>
+                </div>
             </>
         )
     }
-    return (
-        <>
-            <ul className="flex flex-row gap-[var(--gap)] justify-between">
-                <li>
-                    <Button>
-                        Sobre
-                    </Button>
-                </li>
 
-                <li>
-                    <Button>
-                        Recursos
-                    </Button>
-                </li>
+    else {
+        return (
+            <>
+                {/* é provisório ok */}
+                <AlignJustify size={20} />
+            </>
+        );
+    }
 
-                <li>
-                    <Button>
-                        Preços
-                    </Button>
-                </li>
 
-                <li>
-                    <Button>
-                        <Tooltip msg="Mais informações">
-                            <IconMoreInfo size={20} />
-                        </Tooltip>
-                    </Button>
-                </li>
-            </ul>
-
-            <div className="flex flex-row align-baseline gap-[var(--gap)]">
-                <ModalLoginAccount>
-                    <Button>
-                        Entrar
-                    </Button>
-                </ModalLoginAccount>
-                <ModalCreateAccount>
-                    <Button>
-                        Criar conta
-                    </Button>
-                </ModalCreateAccount>
-            </div>
-        </>
-    )
 }
