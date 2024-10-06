@@ -22,7 +22,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
 
     if (isOpen) {
         return (
-            <div className="serena-modal-background" onClick={clickOut}>
+            <dialog className="serena-modal-background" onClick={clickOut}>
                 <div
                     className="serena-modal-box"
                     onMouseEnter={() => setLeaveContent(false)}
@@ -41,7 +41,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
 
                     <section className="serena-modal-content">{children}</section>
                 </div>
-            </div>
+            </dialog>
         );
     }
     return null;

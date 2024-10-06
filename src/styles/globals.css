@@ -4,6 +4,7 @@
 
 @import url('./variables.css');
 @import url('./fonts.css');
+@import url("./serena.css");
 
 
 * {
@@ -37,7 +38,6 @@ main {
 
 section {
     padding: var(--padding);
-
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -47,19 +47,6 @@ section {
 
 aside {
     padding: var(--padding);
-}
-
-.serena-bg-color {
-    color: var(--font-color-01);
-    background-color: var(--bg-color-01);
-}
-
-.serena-b-radius {
-    border-radius: var(--radius);
-}
-
-.serena-shadow-hover:hover {
-    box-shadow: 0px 0px 24px var(--bg-shadow);
 }
 
 h1 {
@@ -86,8 +73,11 @@ p {
 }
 
 a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
+
+
+
 
 .remove-on-mobile {
 }

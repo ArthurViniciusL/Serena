@@ -9,7 +9,7 @@ import { SerenaIconStar } from "@/modules/app.modules";
  */
 
 export {
-    CirclePlus as SerenaIconCirclePlus,
+    CirclePlus as IconMoreInfo,
     CircleX as SerenaIconCircleClose,
     LayoutList as SerenaIconLayoutList,
     CalendarDays as SerenaIconCalendarDays,

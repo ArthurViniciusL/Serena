@@ -1,5 +1,5 @@
 import routes from "../app.routes";
-import { PageName } from "../app/pages/(user)/feed/ButtonsList";
+import { PageName } from "../app/(user)/feed/ButtonsList";
 
 /* const initialState = {
     activePage: null,

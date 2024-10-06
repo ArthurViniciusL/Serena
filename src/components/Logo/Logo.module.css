@@ -1,8 +1,6 @@
 .logoContainer {
     display: flex;
     gap: var(--gap);
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
     width: fit-content;
     height: fit-content;

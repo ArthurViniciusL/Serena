@@ -1,0 +1,32 @@
+.serena-bg-color {
+    color: var(--font-color-01);
+    background-color: var(--bg-color-01);
+}
+
+.serena-b-radius {
+    border-radius: var(--radius);
+}
+
+.serena-shadow-hover:hover {
+    box-shadow: 0px 0px 24px var(--bg-shadow);
+}
+
+
+.serena-bg-color-01 {
+    background-color: var(--bg-color-01);
+}
+
+.serena-bg-color-02 {
+    background-color: var(--bg-color-02);
+}
+
+.serena-bg-color-03 {
+    background-color: var(--bg-color-03);
+}
+.serena-bg-color-04 {
+    background-color: var(--bg-color-04);
+}
+.serena-bg-color-05 {
+    background-color: var(--bg-color-05);
+}
+
