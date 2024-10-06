@@ -1,9 +1,9 @@
 .logoContainer {
+    width: fit-content;
+    height: fit-content;
     display: flex;
     gap: var(--gap);
     flex-direction: row;
-    width: fit-content;
-    height: fit-content;
 }
 
 .title {
@@ -11,11 +11,14 @@
     text-decoration: none;
 }
 
+.logo { 
+    margin: var(--margin);
+}
 
 @media (prefers-color-scheme: dark) {
     .logo {
         border-radius: var(--radius);
-        padding: 2px;
+        padding: 1px;
         background-color: var(--bg-color-05);
     }
 

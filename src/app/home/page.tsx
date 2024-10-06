@@ -20,7 +20,7 @@ export default function Home() {
                 <Menu />
             </Header>
 
-            <main className="serena-bg-color-02">
+            <main className="">
                 <section className={style.content}>
                     <div className={style.boxColumn}>
                         <p className={style.sec01_msg}>Olá, eu sou a</p>

@@ -20,6 +20,8 @@
     background-color: var(--bg-color-02);
 }
 
+/* -btn- */
+
 .serena-button-active {
     color: var(--font-color-05);
     background-color: var(--bg-color-05);

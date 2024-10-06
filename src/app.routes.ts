@@ -1,12 +1,12 @@
 /* @arthur.vsl */
 
 const routes = {
-    Home: "/",
+    Home: "/home",
     Login: "",
 
-    Feed: "/pages/feed",
+    Feed: "/feed",
     Agenda: "/",
-    Profile: "/pages/profile",
+    Profile: "/profile",
 
     Cadastro: "",
 
