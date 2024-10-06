@@ -42,11 +42,6 @@
     --padding-left: 25px;
     --padding-right: 25px;
     --gap: 20px;
-
-    /* Font size */
-    /* --title: xx-large;
-    --sub-title: larger; */
-    /* --normal-text: medium; */
 }
 
 @media (prefers-color-scheme: dark) {

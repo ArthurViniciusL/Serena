@@ -34,7 +34,7 @@ main {
 }
 
 section {
-    padding: var(--padding);
+    padding: calc(var(--padding) + 10px);
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;

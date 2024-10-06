@@ -8,12 +8,12 @@ import { useEffect, useState } from "react";
 
 export function Menu() {
 
-    const [screen, setScreen] = useState(0);
+    const [screen, setScreen] = useState(800);
 
     useEffect(() => {
         function updateScreenSize() {
             setScreen(window.innerWidth);
-            console.log(`Nova largura da tela: ${screen}px`);
+            // console.log(`Nova largura da tela: ${screen}px`);
         }
         window.addEventListener('resize', updateScreenSize);
     })
@@ -51,12 +51,12 @@ export function Menu() {
 
                 <div className="flex flex-row align-baseline gap-[var(--gap)]">
                     <ModalLoginAccount>
-                        <Button>
+                        <Button className="serena-bg-color-01">
                             Entrar
                         </Button>
                     </ModalLoginAccount>
                     <ModalCreateAccount>
-                        <Button>
+                        <Button className="serena-border serena-bg-color-01">
                             Criar conta
                         </Button>
                     </ModalCreateAccount>

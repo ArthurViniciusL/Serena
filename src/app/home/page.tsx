@@ -1,7 +1,8 @@
 "use client";
 
 import style from "./styles/Home.module.css";
-
+import { Logo } from "@/components/Logo";
+import { Menu } from "./components/Menu";
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Ui/Header";
 
@@ -11,12 +12,6 @@ import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 
 import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
 
-import routes from "@/app.routes";
-import { Logo } from "@/components/Logo";
-import { ModalProvider } from "@/context/ModalContext";
-import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
-import { Menu } from "./components/Menu";
-
 export default function Home() {
     return (
         <>
@@ -25,7 +20,7 @@ export default function Home() {
                 <Menu />
             </Header>
 
-            <main>
+            <main className="serena-bg-color-02">
                 <section className={style.content}>
                     <div className={style.boxColumn}>
                         <p className={style.sec01_msg}>Olá, eu sou a</p>

@@ -19,20 +19,18 @@ export function Button({
     children,
     className,
     isActive,
-    border,
     bgColor,
     bgColorHover,
     fontColorHover,
 }: ButtonProps) {
-    const borderButton = border ? "solid var(--bg-color-05) 1px" : "none";
+    // const borderButton = border ? "solid var(--bg-color-05) 1px" : "none";
 
     const activeButton = isActive ? "serena-button-active" : "";
 
     return (
         <StyledButton
             onClick={onClick}
-            className={`serena-button ${activeButton} ${className}`}
-            $border={borderButton}
+            className={`serena-button ${className}`}
             $bgColor={bgColor}
             $bgColorHover={bgColorHover}
             $fontColorHover={fontColorHover}
