@@ -1,6 +1,6 @@
 "use client";
 
-import style from "./Home.module.css";
+import style from "./styles/Home.module.css";
 
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Ui/Header";
@@ -25,79 +25,54 @@ export default function Home() {
                 <Menu />
             </Header>
 
-            <main className="app-main">
-                <section className="app-section home-section home-content__section-01">
-                    <div className="home-content-01__intro">
-                        <p className="home-content-01__msg">Olá, eu sou a</p>
-                        <div className="home-content__name-container">
-                            <p className="home-content__name">Serena</p>
-                            <p className="home-content__emoji">👋</p>
-                        </div>
-                        <p className="home-content-01__msg">
+            <main>
+                <section className={style.content}>
+                    <div className={style.boxColumn}>
+                        <p className={style.sec01_msg}>Olá, eu sou a</p>
+                        <h2 className={`serena-ft-red-02 ${style.name}`}>
+                            Serena <span className={style.emoji}>👋</span>
+                        </h2>
+
+                        <p className={style.sec01_msg}>
                             a nova parceira do seu negócio!
                         </p>
                     </div>
                 </section>
 
-                <section className="app-section home-section home-content__section-02">
-                    <div className="home-content-02__intro">
-                        <div className="home-content-02__text-container">
-                            <p className="home-content-02__msg">
-                                Simplifique seus agendamentos com a{" "}
-                                <span className="serena-style-font">
-                                    Serena
-                                </span>{" "}
-                                e tenha controle total de horários.
+                <section className={style.content}>
+                    <div className={style.boxRow}>
+                        <div className={style.wrapperText}>
+                            <p>
+                                Simplifique seus agendamentos com a <span className="serena-ft-red-02 font-semibold">Serena</span> e tenha controle total de horários.
                             </p>
-                            <p className="home-content-02__msg">
-                                A{" "}
-                                <span className="serena-style-font">
-                                    Serena
-                                </span>{" "}
-                                oferece um sistema intuitivo e eficiente para
-                                que você possa organizar seus compromissos e se
-                                concentrar no que realmente importa: atender bem
-                                seus clientes.
+                            <p>
+                                A <span className="serena-ft-red-02 font-semibold">Serena</span> oferece um sistema intuitivo e eficiente para que você possa organizar seus compromissos e se concentrar no que realmente importa: atender bem seus clientes.
                             </p>
                         </div>
-                        <div className="home-content-02__img-container">
-                            <Image
-                                src={home_banner_01}
-                                width={500}
-                                height={500}
-                                alt="home_banner_01"
-                                priority={true}
-                            />
-                        </div>
+                        <Image
+                            id={style.img}
+                            src={home_banner_01}
+                            width={500}
+                            height={500}
+                            alt="home_banner_01"
+                            priority={true}
+                        />
                     </div>
                 </section>
 
-                <section className="app-section home-section home-content__section-03">
-                    <div className="home-content-03__intro">
-                        <div className="home-content-03__img-container">
-                            <Image
-                                src={serena_asset_4}
-                                width={500}
-                                height={500}
-                                alt=""
-                                priority={true}
-                            />
-                        </div>
+                <section className={style.content}>
+                    <div className={style.boxRow}>
+                        <Image
+                            id={style.img}
+                            src={serena_asset_4}
+                            width={400}
+                            height={400}
+                            alt="maco serena"
+                            priority={true}
+                        />
 
-                        <div className="home-content-03__text-container">
-                            {" "}
-                            {/*  */}
-                            <p className="home-content-03__msg">
-                                <span className="serena-style-font">
-                                    Serena{" "}
-                                </span>
-                                foi desenvolvido para prestadores de serviços
-                                que buscam otimizar o controle de suas agendas e
-                                melhorar a comunicação com os clientes. Com a
-                                Serena, você agenda compromissos com facilidade,
-                                gerencia horários, e recebe relatórios
-                                detalhados sobre seus atendimentos, tudo em uma
-                                única plataforma.
+                        <div className={style.wrapperText}>
+                            <p className="home-content-03__msg"> <span className="serena-ft-red-02 font-semibold">Serena</span> foi desenvolvido para prestadores de serviços que buscam otimizar o controle de suas agendas e melhorar a comunicação com os clientes. Com a <span className="serena-ft-red-02 font-semibold">Serena</span>, você agenda compromissos com facilidade, gerencia horários, e recebe relatórios detalhados sobre seus atendimentos, tudo em uma única plataforma.
                             </p>
                             <ModalCreateAccount>
                                 <Button className="app-button-large">

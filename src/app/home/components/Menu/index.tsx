@@ -68,7 +68,7 @@ export function Menu() {
     else {
         return (
             <>
-                {/* é provisório ok */}
+                {/* é provisório ok, isso vai virar um outro componente chamado "MobileMenu" que carrega um children */}
                 <AlignJustify size={20} />
             </>
         );
