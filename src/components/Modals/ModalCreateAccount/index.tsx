@@ -36,13 +36,13 @@ export function ModalCreateAccount({ children }: ModalProps) {
 
                         <div className="buttons-container">
                             <a href="">
-                                <Button>Serviço</Button>
+                                <Button className="">Serviço</Button>
                             </a>
                             <p style={{ color: "var(--font-color-04)" }}>ou</p>
                             <a href="">
                                 <Button>Cliente</Button>
                             </a>
-                            
+
                         </div>
                     </div>
                 </Modal>

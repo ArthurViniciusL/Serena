@@ -3,12 +3,11 @@
 import style from "./Header.module.css"
 
 interface HeaderProps {
-    className: string;
-    colorFill?: string;
+    className?: string;
     children: React.ReactNode;
 }
 
-export function Header({ className, colorFill, children }: HeaderProps) {
+export function Header({ className, children }: HeaderProps) {
     return (
         <header className={style.container}>
             <section
