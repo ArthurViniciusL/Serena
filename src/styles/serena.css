@@ -30,3 +30,52 @@
     background-color: var(--bg-color-05);
 }
 
+.serena-bg-color-06 {
+    background-color: var(--bg-color-06);
+}
+.serena-bg-color-07 {
+    background-color: var(--bg-color-07);
+}
+.serena-bg-color-08 {
+    background-color: var(--bg-color-08);
+}
+
+.serena-ft-color-01 {
+    color: var(--font-color-01);
+}
+
+.serena-ft-color-02 {
+    color: var(--font-color-02);
+}
+
+.serena-ft-color-03 {
+    color: var(--font-color-03);
+}
+.serena-ft-color-04 {
+    color: var(--font-color-04);
+}
+
+.serena-ft-color-05 {
+    color: var(--font-color-05);
+}
+
+.serena-ft-color-06 {
+    color: var(--font-color-06);
+}
+
+.serena-ft-color-07 {
+    color: var(--font-color-07);
+}
+
+.serena-ft-color-08 {
+    color: var(--font-color-08);
+}
+
+
+.serena-ft-red-02 { 
+    color: var(--serena-02);
+}
+
+
+
+

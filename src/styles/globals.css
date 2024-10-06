@@ -26,9 +26,6 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-body {
-    
-}
 
 main {
     padding: 20px;
@@ -55,7 +52,7 @@ h1 {
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2rem;
     /* font-size: var(--sub-title); */
     
