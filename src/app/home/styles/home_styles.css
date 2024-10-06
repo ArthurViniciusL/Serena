@@ -1,4 +1,4 @@
-.home-header__content {
+/* .home-header__content {
     display: flex;
     gap: var(--gap);
     flex-direction: row;
@@ -96,7 +96,6 @@
     }
 
     .home-content-03__msg {
-        /* font-size: x-large; */
         font-size: 1.2em;
         margin-bottom: 20px;
     }
@@ -107,7 +106,6 @@
 
 @media (max-width: 700px) {
     .home-buttons__list {
-        /* display: none; */
     }
 
     .home-section {
@@ -134,3 +132,4 @@
         display: none;
     }
 }
+ */

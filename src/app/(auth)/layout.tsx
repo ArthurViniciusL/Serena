@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
-            <body className="app-bg-color">
+            <body className="serena-bg-color">
                 <Header colorFill="var(bg-color-01)">
                     <LogoTipo />
                 </Header>

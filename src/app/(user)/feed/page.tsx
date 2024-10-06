@@ -2,16 +2,13 @@
 
 import routes from "@/app.routes";
 import useSearch from "@/hooks/useSearch";
-import { Button } from "@/components/Button";
 import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
-import { SerenaIconListFilter } from "@/modules/app.modules";
 import { useEffect, useState } from "react";
 import { Menu } from "@/components/Ui/Menu";
 import { CardServiceProvider } from "../components/CardServiceProvider";
 import { useModal } from "@/hooks/useModal";
 import { DetailsServiceProvider } from "@/components/Modals/DetailsServiceProvider";
-import { Input } from "@/components/Input";
 
 export default function Feed() {
     const { setPageName } = usePageName();
@@ -81,8 +78,8 @@ export default function Feed() {
 
                 </Menu>
 
-                <main className="app-main">
-                    <section className="app-section flex items-center justify-center">
+                <main className="serena-main">
+                    <section className="serena-section flex items-center justify-center">
                         <ul>
                             {dataFilter.map((provider: any) => (
                                 <li key={provider.id}>
@@ -110,7 +107,7 @@ export default function Feed() {
         );
     } else {
         return (
-            <section className="app-section flex items-center justify-center h-[90vh] bg-transparent">
+            <section className="serena-section flex items-center justify-center h-[90vh] bg-transparent">
                 <span className="loading loading-ring loading-lg"></span>
             </section>
         );

@@ -1,6 +1,6 @@
+import { ModalProvider } from "@/context/ModalContext";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { ModalProvider } from "@/context/ModalContext";
 
 export const metadata: Metadata = {
     title: "Serena",
@@ -13,9 +13,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-br" className="app-bg-color">
-            <body className="app-bg-color">
-                <ModalProvider>{children}</ModalProvider>
+        <html lang="pt-br" className="serena-bg-color">
+            <body className="serena-bg-color">
+                <ModalProvider>
+                    {children}
+                </ModalProvider>
             </body>
         </html>
     );

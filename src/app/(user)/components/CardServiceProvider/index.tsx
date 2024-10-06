@@ -21,12 +21,12 @@ export function CardServiceProvider({
 
     return (
         <Card>
-            <div onClick={onClick} className="app-card-left-side">
+            <div onClick={onClick} className="serena-card-left-side">
                 <div className=" flex flex-row justify-start gap-[var(--gap)]">
                     <Avatar src="" alt={`avatar de  ${name}`} />
                     <div className="flex flex-col items-start gap-2">
                         <div className="flex flex-row gap-[var(--gap)]">
-                            <h3 className="app-card-name">{name}</h3>
+                            <h3 className="serena-card-name">{name}</h3>
                             <SerenaIconBadgeCheck
                                 stroke="var(--serena-01)"
                                 size={20}
@@ -38,7 +38,7 @@ export function CardServiceProvider({
                     </div>
                 </div>
             </div>
-            <div className="app-card-right-side gap-4">
+            <div className="serena-card-right-side gap-4">
                 <div className="cursor">
                     <Reviews nota={review} />
                     <SerenaIconStar
@@ -47,7 +47,7 @@ export function CardServiceProvider({
                         size={20}
                     />
                 </div>
-                <span className="app-card-category">{category}</span>
+                <span className="serena-card-category">{category}</span>
             </div>
         </Card>
     );
