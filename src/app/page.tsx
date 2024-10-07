@@ -1,8 +1,9 @@
 "use client";
 
 import routes from "@/app.routes";
+import { Loading } from "@/components/Loading";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Root() {
 
@@ -13,6 +14,8 @@ export default function Root() {
     });
 
     return (
-        <></>
+        <>
+            <Loading type="screen" />
+        </>
     )
 }

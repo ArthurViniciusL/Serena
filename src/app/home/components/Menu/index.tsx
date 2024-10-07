@@ -41,22 +41,22 @@ export function Menu() {
                     </li>
 
                     <li>
-                        <Button>
-                            <Tooltip msg="Mais informações">
+                        <Tooltip msg="Mais informações">
+                            <Button>
                                 <IconMoreInfo size={20} />
-                            </Tooltip>
-                        </Button>
+                            </Button>
+                        </Tooltip>
                     </li>
                 </ul>
 
                 <div className="flex flex-row align-baseline gap-[var(--gap)]">
                     <ModalLoginAccount>
-                        <Button className="serena-bg-color-01">
+                        <Button bgColor="var(--bg-color-01)">
                             Entrar
                         </Button>
                     </ModalLoginAccount>
                     <ModalCreateAccount>
-                        <Button className="serena-border serena-bg-color-01">
+                        <Button bgColor="var(--bg-color-01)" border={true}>
                             Criar conta
                         </Button>
                     </ModalCreateAccount>

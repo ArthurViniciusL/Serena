@@ -73,7 +73,7 @@ export function ButtonsList() {
                 onMouseLeave={() => handleIconDoor(false)}
             >
                 <Button
-                    bgColorHover="var(--serena-01)"
+                    bgColorHover="var(--serena-red-01)"
                     onClick={() => handleIconDoor(true)}
                 >
                     {iconExit}

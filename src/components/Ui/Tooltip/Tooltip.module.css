@@ -1,4 +1,4 @@
-.serena-tooltip {
+.container {
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.serena-tooltip__content {
+.box {
     visibility: hidden;
     position: absolute;
     z-index: 1;
@@ -29,7 +29,7 @@
     background-color: var(--bg-color-05);
 }
 
-.serena-tooltip:hover .serena-tooltip__content {
+.container:hover .box {
     visibility: visible;
     opacity: 0.8;
     transition:

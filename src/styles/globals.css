@@ -55,11 +55,11 @@ h2 {
     font-weight: 700;
     font-size: 2rem;
     /* font-size: var(--sub-title); */
-    
+
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -71,23 +71,4 @@ p {
 
 a:hover {
     /* text-decoration: underline; */
-}
-
-
-
-
-.remove-on-mobile {
-}
-
-.show-on-mobile {
-}
-
-@media (max-width: 700px) {
-    .remove-on-mobile {
-        display: none;
-    }
-
-    .show-on-mobile {
-        display: flex;
-    }
 }

@@ -11,6 +11,7 @@ import home_banner_01 from "@/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 
 import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
+import { Test } from "@/components/Teste";
 
 export default function Home() {
     return (
@@ -67,10 +68,10 @@ export default function Home() {
                         />
 
                         <div className={style.wrapperText}>
-                            <p className="home-content-03__msg"> <span className="serena-ft-red-02 font-semibold">Serena</span> foi desenvolvido para prestadores de serviços que buscam otimizar o controle de suas agendas e melhorar a comunicação com os clientes. Com a <span className="serena-ft-red-02 font-semibold">Serena</span>, você agenda compromissos com facilidade, gerencia horários, e recebe relatórios detalhados sobre seus atendimentos, tudo em uma única plataforma.
+                            <p> <span className="serena-ft-red-02 font-semibold">Serena</span> foi desenvolvido para prestadores de serviços que buscam otimizar o controle de suas agendas e melhorar a comunicação com os clientes. Com a <span className="serena-ft-red-02 font-semibold">Serena</span>, você agenda compromissos com facilidade, gerencia horários, e recebe relatórios detalhados sobre seus atendimentos, tudo em uma única plataforma.
                             </p>
                             <ModalCreateAccount>
-                                <Button className="app-button-large">
+                                <Button className="serena-btn-large">
                                     Criar conta
                                 </Button>
                             </ModalCreateAccount>

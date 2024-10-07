@@ -9,6 +9,7 @@ import { Menu } from "@/components/Ui/Menu";
 import { CardServiceProvider } from "../components/CardServiceProvider";
 import { useModal } from "@/hooks/useModal";
 import { DetailsServiceProvider } from "@/components/Modals/DetailsServiceProvider";
+import { Loading } from "@/components/Loading";
 
 export default function Feed() {
     const { setPageName } = usePageName();
@@ -75,7 +76,6 @@ export default function Feed() {
                     </Button> */}
 
                     {/* <Input onChange={handleSearch} placeholder="Algo" type="search"/> */}
-
                 </Menu>
 
                 <main className="serena-main">
@@ -107,9 +107,9 @@ export default function Feed() {
         );
     } else {
         return (
-            <section className="serena-section flex items-center justify-center h-[90vh] bg-transparent">
-                <span className="loading loading-ring loading-lg"></span>
-            </section>
+           
+                <Loading type="screen"/>
+           
         );
     }
 }

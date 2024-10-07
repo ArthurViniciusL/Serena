@@ -1,4 +1,4 @@
-import "./tooltip_styles.css";
+import style from "./Tooltip.module.css";
 
 interface TooltipProps {
     msg: string;
@@ -7,9 +7,9 @@ interface TooltipProps {
 
 export function Tooltip({ msg, children }: TooltipProps) {
     return (
-        <div className="serena-tooltip">
+        <div className={style.container}>
             {children}
-            <span className="serena-tooltip__content">{msg}</span>
+            <span className={style.box}>{msg}</span>
         </div>
     );
 }
