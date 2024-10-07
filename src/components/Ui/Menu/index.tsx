@@ -3,6 +3,7 @@ import { AlignJustify, X } from "lucide-react";
 import menu from "./Menu.module.css"
 import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
+import { IconClose, IconOpenMenu } from "@/modules/app.modules";
 
 interface MenuProps {
     children: React.ReactNode;
@@ -47,7 +48,7 @@ export function Menu({ children }: MenuProps) {
                         <main className={menu.mobile}>
                                 <span className={menu.closeContent}>
                                     <Button onClick={handleMenuIsClick}>
-                                        <X />
+                                        <IconClose size={20} />
                                     </Button>
                                 </span>
                                 <nav className={''}>
@@ -58,7 +59,7 @@ export function Menu({ children }: MenuProps) {
                         :
 
                         <Button onClick={handleMenuIsClick}>
-                            <AlignJustify size={20} />
+                            <IconOpenMenu size={20} />
                         </Button>
                 }
             </>
