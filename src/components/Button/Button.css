@@ -1,14 +1,18 @@
 @import url('../../styles/globals.css');
 
 .serena-btn {
+    width: fit-content;
+    height: fit-content;
+
     display: flex;
-    flex-direction: row;
     gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    width: fit-content;
-    height: fit-content;
+    overflow: auto;
+    
     cursor: pointer;
     padding: var(--padding);
     border-radius: var(--radius);
@@ -16,10 +20,6 @@
     font-family: "Source Sans 3";
     font-size: large;
     font-weight: normal;
-    
-    /* border: none; */
-    /* color: var(--font-color-01);*/
-    /*  background-color: var(--bg-color-02); */
 }
 
 .serena-btn:hover {
