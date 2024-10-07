@@ -5,11 +5,12 @@ import useSearch from "@/hooks/useSearch";
 import { SearchBar } from "@/components/SearchBar";
 import { usePageName } from "@/hooks/usePageName";
 import { useEffect, useState } from "react";
-import { Menu } from "@/components/Ui/Menu";
-import { CardServiceProvider } from "../components/CardServiceProvider";
+import { CardProfile } from "./components/CardProfile";
 import { useModal } from "@/hooks/useModal";
-import { DetailsServiceProvider } from "@/components/Modals/DetailsServiceProvider";
+
 import { Loading } from "@/components/Loading";
+import { ModalPorfileDetails } from "@/components/Modals/ModalDetailsServiceProvider";
+import { OptionsMenu } from "./components/OptionsMenu";
 
 export default function Feed() {
     const { setPageName } = usePageName();
@@ -22,6 +23,8 @@ export default function Feed() {
     const dataFilter = servicesProviders.filter((providers: any) =>
         providers.name.toLowerCase().includes(search.toLowerCase()),
     );
+
+    const seletUser = servicesProviders.find((u: any) => u.id === infoId);
 
     useEffect(() => {
         setPageName(routes.Feed);
@@ -62,36 +65,29 @@ export default function Feed() {
 
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 
-    const seletUser = servicesProviders.find((u: any) => u.id === infoId);
-
     if (isLoad) {
         return (
-            <div>
-                <Menu>
+            <>
+                {/* sub menu provisorio */}
+                <>
                     <SearchBar onChange={handleSearch} />
-                    
-                    {/* <Button>
-                        <SerenaIconListFilter />
-                        Filtrar categoria
-                    </Button> */}
-
-                    {/* <Input onChange={handleSearch} placeholder="Algo" type="search"/> */}
-                </Menu>
+                    <OptionsMenu />
+                </>
 
                 <main className="serena-main">
-                    <section className="serena-section flex items-center justify-center">
+                    <section className="flex items-center justify-center">
                         <ul>
                             {dataFilter.map((provider: any) => (
                                 <li key={provider.id}>
                                     {
-                                        <DetailsServiceProvider data={seletUser}>
-                                            <CardServiceProvider
+                                        <ModalPorfileDetails data={seletUser}>
+                                            <CardProfile
                                                 name={provider.name}
                                                 review={provider.review}
                                                 category={provider.category}
                                                 onClick={() => selectContentInfo(provider.id)}
                                             />
-                                        </DetailsServiceProvider>
+                                        </ModalPorfileDetails>
                                     }
                                 </li>
                             ))}
@@ -103,13 +99,13 @@ export default function Feed() {
                         ) : null}
                     </section>
                 </main>
-            </div>
+            </>
         );
     } else {
         return (
-           
-                <Loading type="screen"/>
-           
+
+            <Loading type="screen" />
+
         );
     }
 }
