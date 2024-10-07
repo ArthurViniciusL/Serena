@@ -12,13 +12,18 @@ export {
     CirclePlus as IconMoreInfo,
     
     CircleX as IconClose,
+    Menu as IconOpenMenu,
+
     LayoutList as IconLayoutList,
     CalendarDays as IconCalendar,
     CircleUserRound as IconUser,
     DoorClosed as IconClosedDoor,
     DoorOpen as IconOpenDoor,
     ListFilter as IconFilter,
+
     Star as SerenaIconStar,
     BadgeCheck as SerenaIconBadgeCheck,
     Image as SerenaIconImage,
+
+    
 } from "lucide-react";
