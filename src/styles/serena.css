@@ -1,3 +1,22 @@
+.serena-responsive-content {
+    margin: var(--margin);
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: var(--gap);
+    overflow: auto;
+    flex-flow: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width: 770px) {
+    .serena-responsive-content {
+        flex-direction: column;
+    }
+}
+
 .serena-bg-color {
     color: var(--font-color-01);
     background-color: var(--bg-color-01);
