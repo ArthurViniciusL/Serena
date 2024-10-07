@@ -1,5 +1,5 @@
 .search-bar-container {
-    min-width: 30vw;
+    width: 30vmax;
     height: fit-content;
     padding: var(--padding);
     border-radius: var(--radius);
