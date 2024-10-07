@@ -1,6 +1,6 @@
 import modal from "./Modal.module.css";
 import { Button } from "../../Button";
-import { SerenaIconCircleClose } from "@/modules/app.modules";
+import { IconClose } from "@/modules/app.modules";
 import { useModal } from "@/hooks/useModal";
 import { useState } from "react";
 
@@ -35,7 +35,7 @@ export function Modal({ modalTitle, children }: ModalProps) {
                             onClick={() => closeModal()}
                             bgColorHover="var(--serena-red-01)"
                         >
-                            <SerenaIconCircleClose size={20} />
+                            <IconClose size={20} />
                         </Button>
                     </header>
 
