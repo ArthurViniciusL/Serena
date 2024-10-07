@@ -12,7 +12,7 @@ export {
     CirclePlus as IconMoreInfo,
     
     CircleX as IconClose,
-    Menu as IconOpenMenu,
+    Menu as IconMobileMenu,
 
     LayoutList as IconLayoutList,
     CalendarDays as IconCalendar,

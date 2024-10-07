@@ -3,7 +3,7 @@ import { AlignJustify, X } from "lucide-react";
 import menu from "./Menu.module.css"
 import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
-import { IconClose, IconOpenMenu } from "@/modules/app.modules";
+import { IconClose, IconMobileMenu } from "@/modules/app.modules";
 
 interface MenuProps {
     children: React.ReactNode;
@@ -59,7 +59,7 @@ export function Menu({ children }: MenuProps) {
                         :
 
                         <Button onClick={handleMenuIsClick}>
-                            <IconOpenMenu size={20} />
+                            <IconMobileMenu size={20} />
                         </Button>
                 }
             </>
