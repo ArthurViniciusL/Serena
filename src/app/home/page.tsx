@@ -11,7 +11,6 @@ import home_banner_01 from "@/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 
 import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
-import { Test } from "@/components/Teste";
 
 export default function Home() {
     return (

@@ -19,7 +19,7 @@ export default function RootLayout({
         <html lang="pt-br" className="">
             <body className="serena-bg-color">
                 <PageNameProvider>
-                    <Header>
+                    <Header className="serena-bg-color-01">
                         <Logo type="LogoTipo"/>
                         <ButtonsList />
                     </Header>

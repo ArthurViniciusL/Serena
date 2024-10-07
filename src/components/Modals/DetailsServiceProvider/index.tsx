@@ -1,5 +1,10 @@
+import modal from "@/components/Ui/Modal/ui_modal.module.css";
+
+import detailsSP from "./Details.module.css"
+
 import { Modal, ModalProps } from "@/components/Ui/Modal";
 import { useModal } from "@/hooks/useModal";
+
 interface DetailsServiceProviderProps {
     data: any /* {
         id: number;
@@ -22,16 +27,16 @@ export function DetailsServiceProvider({ children, data }: props) {
             <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Detalhes">
-                    <div className="">
-                        <div className="flex gap-4 flex-col">
-                            <span className="flex p-2 content-start align-bottom gap-2 border-solid border-b-2 border-[var(--bg-color-02)]">
-                                <h3 className="font-semibold">Nome:</h3>
-                                {data.name}
-                            </span>
-                            <span className="flex p-2 content-start align-bottom gap-2 border-solid border-b-2 border-[var(--bg-color-02)]">
-                                <h3 className="font-semibold">Descrição:</h3>
-                                {data.description}
-                            </span>
+                    <div className={modal.box}>
+                        <ul className={detailsSP.content}>
+                            <li className={detailsSP.contentText}>
+                                <p className="font-semibold">Nome:</p>
+                                <p>{data.name}</p>
+                            </li>
+                            <li className={detailsSP.contentText}>
+                                <p className="font-semibold">Descrição:</p>
+                                <p>{data.description}</p>
+                            </li>
 
                             {/* <p>
                                 Serviços:
@@ -45,7 +50,7 @@ export function DetailsServiceProvider({ children, data }: props) {
                                     <li>Preço: R$ {service.price}</li>
                                 </ul>
                             ))} */}
-                        </div>
+                        </ul>
                     </div>
                 </Modal>
             ) : null}

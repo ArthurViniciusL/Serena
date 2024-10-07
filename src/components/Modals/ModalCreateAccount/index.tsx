@@ -1,4 +1,4 @@
-import "@/components/Modals/modals_styles.css";
+import modal from "@/components/Ui/Modal/ui_modal.module.css"
 
 import { Button } from "../../Button";
 import { Modal, ModalProps } from "../../Ui/Modal";
@@ -16,17 +16,13 @@ export function ModalCreateAccount({ children }: ModalProps) {
             <span onClick={() => openModal(thisModalName)}>{children}</span>
             {modalName === thisModalName ? (
                 <Modal modalTitle="Criar conta">
-                    <div className="serena-modal-content">
-                        <h3 className="content__msg">
-                            <span className="content__msg-style">
-                                {" "}
-                                Seja bem vindo!
-                            </span>{" "}
-                            Que tipo de conta você quer criar?
+                    <div className={modal.box}>
+                        <h3 className={modal.contentMsg}>
+                            <span className="font-semibold">Seja bem vindo!</span> Que tipo de conta você quer criar?
                         </h3>
 
                         <Image
-                            className="content__img"
+                            className={modal.contentImg}
                             src={serena_asset_2}
                             width={200}
                             height={200}
@@ -34,15 +30,10 @@ export function ModalCreateAccount({ children }: ModalProps) {
                             priority={true}
                         />
 
-                        <div className="buttons-container">
-                            <a href="">
-                                <Button className="">Serviço</Button>
-                            </a>
-                            <p style={{ color: "var(--font-color-04)" }}>ou</p>
-                            <a href="">
-                                <Button>Cliente</Button>
-                            </a>
-
+                        <div className={modal.contentBtn}>
+                            <Button className="serena-btn-medium">Serviço</Button>
+                            <p className="serena-ft-color-04">ou</p>
+                            <Button className="serena-btn-medium">Cliente</Button>
                         </div>
                     </div>
                 </Modal>

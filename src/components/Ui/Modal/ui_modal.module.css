@@ -1,0 +1,37 @@
+.box {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    overflow: auto;
+    gap: var(--gap);
+    align-items: center;
+    flex-direction: column;
+}
+
+.contentMsg {
+    text-align: center;
+    padding: auto;
+}
+
+.contentImg {
+    min-width: 7.5rem;
+    height: auto;
+}
+
+.contentBtn {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media (max-width: 700px) {
+    .contentBtn {
+        flex-direction: column;
+    }
+}

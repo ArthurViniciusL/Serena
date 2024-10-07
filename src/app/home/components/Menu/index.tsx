@@ -17,8 +17,8 @@ export function Menu() {
         }
         window.addEventListener('resize', updateScreenSize);
     })
-
-    if (screen >= 770) {
+/* screen >= 770 */
+    if (true) {
         return (
             <>
                 <ul className="flex flex-row gap-[var(--gap)] justify-between">

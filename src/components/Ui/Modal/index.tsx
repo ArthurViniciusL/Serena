@@ -1,4 +1,4 @@
-import "./Modal-styles.css";
+import modal from "./Modal.module.css";
 import { Button } from "../../Button";
 import { SerenaIconCircleClose } from "@/modules/app.modules";
 import { useModal } from "@/hooks/useModal";
@@ -22,25 +22,25 @@ export function Modal({ modalTitle, children }: ModalProps) {
 
     if (isOpen) {
         return (
-            <dialog className="serena-modal-background" onClick={clickOut}>
-                <div
-                    className="serena-modal-box"
+            <dialog className={modal.container} onClick={clickOut}>
+                <main
+                    className={modal.box}
                     onMouseEnter={() => setLeaveContent(false)}
                     onMouseLeave={() => setLeaveContent(true)}
                 >
-                    <div className="serena-modal-header">
-                        <span className="serena-modal-header__span"></span>
-                        <h3 className="">{modalTitle}</h3>
+                    <header className={modal.header}>
+                        <span className={modal.span}></span>
+                        <h2 className="font-bold">{modalTitle}</h2>
                         <Button
                             onClick={() => closeModal()}
-                            bgColorHover="var(--serena-01)"
+                            bgColorHover="var(--serena-red-01)"
                         >
                             <SerenaIconCircleClose size={20} />
                         </Button>
-                    </div>
+                    </header>
 
-                    <section className="serena-modal-content">{children}</section>
-                </div>
+                    <section className={modal.content}>{children}</section>
+                </main>
             </dialog>
         );
     }
