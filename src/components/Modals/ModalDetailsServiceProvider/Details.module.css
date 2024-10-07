@@ -6,6 +6,7 @@
 
 .contentText {
     display: flex;
+    flex-wrap: wrap;
     padding: var(--padding);
     gap: 6px;
     align-items: baseline;

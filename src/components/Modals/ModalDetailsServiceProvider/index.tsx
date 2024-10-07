@@ -5,7 +5,7 @@ import detailsSP from "./Details.module.css"
 import { Modal, ModalProps } from "@/components/Ui/Modal";
 import { useModal } from "@/hooks/useModal";
 
-interface DetailsServiceProviderProps {
+interface ModalPorfileDetailsProps {
     data: any /* {
         id: number;
         name: string;
@@ -15,12 +15,12 @@ interface DetailsServiceProviderProps {
     // onClick: () => void;
 }
 
-type props = DetailsServiceProviderProps & ModalProps;
+type props = ModalPorfileDetailsProps & ModalProps;
 
-export function DetailsServiceProvider({ children, data }: props) {
+export function ModalPorfileDetails({ children, data }: props) {
 
     const { modalName, openModal } = useModal();
-    const thisModalName = "DetailsServiceProvider";
+    const thisModalName = "ModalPorfileDetails";
 
     return (
         <>
