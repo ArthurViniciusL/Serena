@@ -2,7 +2,7 @@
 
 import style from "./styles/Home.module.css";
 import { Logo } from "@/components/Logo";
-import { Menu } from "./components/Menu";
+import { HomeInfo } from "./components/HomeInfo";
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Ui/Header";
 
@@ -11,13 +11,18 @@ import home_banner_01 from "@/assets/images/home_banner_01.svg";
 import serena_asset_4 from "@/assets/images/serena_asset_4.svg";
 
 import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
+import { Menu } from "@/components/Ui/Menu";
+import { AuthenticationButtons } from "./components/AuthenticationButtons";
 
 export default function Home() {
     return (
         <>
             <Header className="serena-bg-color-02">
                 <Logo type="LogoTipo" />
-                <Menu />
+                <Menu>
+                    <HomeInfo />
+                    <AuthenticationButtons />
+                </Menu>
             </Header>
 
             <main className="">
