@@ -17,7 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
     .logo {
-        border-radius: var(--radius);
+        border-radius: var(--radius-01);
         padding: 1px;
         background-color: var(--bg-color-05);
     }

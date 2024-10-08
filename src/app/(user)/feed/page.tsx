@@ -74,8 +74,10 @@ export default function Feed() {
                     <OptionsMenu />
                 </>
 
-                <main className="serena-main">
-                    <section className="flex items-center justify-center">
+                <main className="" style={{
+                    marginBottom: "30px"
+                }}>
+                    <section className="flex items-center justify-center ">
                         <ul>
                             {dataFilter.map((provider: any) => (
                                 <li key={provider.id}>

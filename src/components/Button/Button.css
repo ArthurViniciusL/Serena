@@ -15,7 +15,7 @@
     
     cursor: pointer;
     padding: var(--padding);
-    border-radius: var(--radius);
+    border-radius: var(--radius-01);
     
     font-family: "Source Sans 3";
     font-size: large;

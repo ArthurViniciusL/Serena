@@ -23,7 +23,7 @@
 }
 
 .serena-b-radius {
-    border-radius: var(--radius);
+    border-radius: var(--radius-01);
 }
 
 .serena-shadow-hover:hover {

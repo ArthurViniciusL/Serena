@@ -1,4 +1,5 @@
 import { ModalProvider } from "@/context/ModalContext";
+import { ScreenProvider } from "@/context/ScreenContext";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 
@@ -14,11 +15,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br" className="serena-bg-color">
-            <body className="serena-bg-color">
-                <ModalProvider>
-                    {children}
-                </ModalProvider>
-            </body>
+            <ScreenProvider>
+                <body className="serena-bg-color">
+                    <ModalProvider>
+                        {children}
+                    </ModalProvider>
+                </body>
+            </ScreenProvider>
         </html>
     );
 }

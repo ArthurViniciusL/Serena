@@ -5,7 +5,7 @@
     gap: var(--gap);
     flex-wrap: wrap;
     align-items: center;
-    border-radius: var(--radius);
+    border-radius: var(--radius-01);
 }
 
 .boxColumn {

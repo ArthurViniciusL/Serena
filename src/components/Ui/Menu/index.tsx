@@ -4,6 +4,7 @@ import menu from "./Menu.module.css"
 import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
 import { IconClose, IconMobileMenu } from "@/modules/app.modules";
+import { useScreen } from "@/hooks/useScreen";
 
 interface MenuProps {
     children: React.ReactNode;
@@ -11,22 +12,23 @@ interface MenuProps {
 
 export function Menu({ children }: MenuProps) {
 
-    const [screen, setScreen] = useState<number>(800);
+    const { screen } = useScreen();
+
+    // const [screen, setScreen] = useState<number>(0);
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
-    useEffect(() => {
+/*     useEffect(() => {
         function updateScreenSize() {
             setScreen(window.innerWidth);
             // console.log(`Nova largura da tela: ${screen}px`);
         }
         window.addEventListener('resize', updateScreenSize);
-    });
+    }); */
 
     function handleMenuIsClick() {
         setMenuIsOpen(!menuIsOpen)
     }
 
-    /* screen >= 770 */
     if (screen >= 770) {
         return (
             <>
@@ -46,14 +48,14 @@ export function Menu({ children }: MenuProps) {
                 {
                     menuIsOpen ?
                         <main className={menu.mobile}>
-                                <span className={menu.closeContent}>
-                                    <Button onClick={handleMenuIsClick}>
-                                        <IconClose size={20} />
-                                    </Button>
-                                </span>
-                                <nav className={''}>
-                                    {children}
-                                </nav>
+                            <span className={menu.closeContent}>
+                                <Button onClick={handleMenuIsClick}>
+                                    <IconClose size={20} />
+                                </Button>
+                            </span>
+                            <nav className={''}>
+                                {children}
+                            </nav>
                         </main>
 
                         :

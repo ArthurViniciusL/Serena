@@ -1,11 +1,11 @@
 "use client";
 
 import {
-    SerenaIconCalendarDays,
-    SerenaIconCircleUserRound,
-    SerenaIconDoorClosed,
-    SerenaIconDoorOpen,
-    SerenaIconLayoutList,
+    IconCalendar,
+    IconUser,
+    IconClosedDoor,
+    IconOpenDoor,
+    IconLayoutList,
 } from "@/modules/app.modules";
 
 import { Button } from "../../../../../components/Button";
@@ -28,9 +28,9 @@ export function ButtonsList() {
     const iconsSize = 24;
     const [iconDoor, setIconDoor] = useState<boolean>(false);
     const iconExit = iconDoor ? (
-        <SerenaIconDoorOpen size={iconsSize} />
+        <IconOpenDoor size={iconsSize} />
     ) : (
-        <SerenaIconDoorClosed size={iconsSize} />
+        <IconClosedDoor size={iconsSize} />
     );
 
     function handleIconDoor(status: boolean) {
@@ -48,7 +48,7 @@ export function ButtonsList() {
                         handleButtonClick(routes.Feed);
                     }}
                 >
-                    <SerenaIconLayoutList size={iconsSize} />
+                    <IconLayoutList size={iconsSize} />
                     Lista de servições
                 </Button>
             </li>
@@ -57,7 +57,7 @@ export function ButtonsList() {
                     isActive={currentPage === routes.Agenda}
                     onClick={() => handleButtonClick(routes.Agenda)}
                 >
-                    <SerenaIconCalendarDays size={iconsSize} />
+                    <IconCalendar size={iconsSize} />
                     Minha agenda
                 </Button>
             </li>
@@ -66,7 +66,7 @@ export function ButtonsList() {
                     isActive={currentPage === routes.Profile}
                     onClick={() => handleButtonClick(routes.Profile)}
                 >
-                    <SerenaIconCircleUserRound size={iconsSize} />
+                    <IconUser size={iconsSize} />
                     Meu perfil
                 </Button>
             </li>
