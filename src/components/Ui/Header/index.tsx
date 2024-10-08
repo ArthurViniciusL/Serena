@@ -1,21 +1,19 @@
 "use client";
 
-import "./header_styles.css";
+import style from "./Header.module.css"
 
 interface HeaderProps {
-    colorFill: string;
+    className?: string;
     children: React.ReactNode;
 }
 
-export function Header({ colorFill, children }: HeaderProps) {
+export function Header({ className, children }: HeaderProps) {
     return (
-        <header className="header-box">
-            <div
-                className="header-box__content "
-                style={{ backgroundColor: colorFill }}
-            >
+        <header className={style.container}>
+            <section
+                className={`${className} ${style.content}`}>
                 {children}
-            </div>
-        </header>
+            </section>
+        </header >
     );
 }

@@ -1,4 +1,4 @@
-import "./button_styles.css";
+import "./Button.css";
 import styled from "styled-components";
 
 interface StyleProps {

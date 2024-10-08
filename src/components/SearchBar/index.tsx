@@ -1,6 +1,6 @@
-import "./styles.css";
+import searchBar from "./SearchBar.module.css"
 import { useState } from "react";
-import { SerenaIconCircleClose } from "@/modules/app.modules";
+import { IconClose } from "@/modules/app.modules";
 import useSearch from "@/hooks/useSearch";
 
 interface SearchBarProps {
@@ -22,22 +22,22 @@ export function SearchBar({ onChange }: SearchBarProps) {
 
     /*  value={search}  placeholder={placeholder} */
     return (
-        <div onClick={handleIconClose} className="search-bar-container">
+        <div onClick={handleIconClose} className={searchBar.container}>
             <input
-                className="container__input"
+                className={searchBar.input}
                 value={search}
                 placeholder="Pesquisar..."
                 onChange={onChange}
                 type="text"
             />
             {icon && search !== "" ? (
-                <SerenaIconCircleClose
+                <IconClose
                     size={20}
                     cursor={"pointer"}
                     onClick={clearSearch}
                 />
             ) : (
-                ""
+                null
             )}
         </div>
     );

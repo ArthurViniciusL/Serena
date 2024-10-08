@@ -9,15 +9,21 @@ import { SerenaIconStar } from "@/modules/app.modules";
  */
 
 export {
-    CirclePlus as SerenaIconCirclePlus,
-    CircleX as SerenaIconCircleClose,
-    LayoutList as SerenaIconLayoutList,
-    CalendarDays as SerenaIconCalendarDays,
-    CircleUserRound as SerenaIconCircleUserRound,
-    DoorClosed as SerenaIconDoorClosed,
-    DoorOpen as SerenaIconDoorOpen,
-    ListFilter as SerenaIconListFilter,
+    CirclePlus as IconMoreInfo,
+    
+    CircleX as IconClose,
+    Menu as IconMobileMenu,
+
+    LayoutList as IconLayoutList,
+    CalendarDays as IconCalendar,
+    CircleUserRound as IconUser,
+    DoorClosed as IconClosedDoor,
+    DoorOpen as IconOpenDoor,
+    ListFilter as IconFilter,
+
     Star as SerenaIconStar,
     BadgeCheck as SerenaIconBadgeCheck,
     Image as SerenaIconImage,
+
+    
 } from "lucide-react";

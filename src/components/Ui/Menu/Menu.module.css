@@ -1,0 +1,47 @@
+.content {
+    width: fit-content;
+    width: 100%;
+    margin-left: var(--margin);
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+
+}
+
+.mobile {
+    top: 0;
+    left: 1;
+    right: 0;
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--bg-color-02);
+
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeContent {
+    top: 0;
+    position: fixed;
+    margin-top: var(--margin);
+    width: 100%;
+    height: fit-content;
+    padding: var(--padding);
+    padding-right: 20px;
+
+    display: flex;
+    gap: var(--gap);
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* .content > * {
+    margin-right: 10px;
+} */

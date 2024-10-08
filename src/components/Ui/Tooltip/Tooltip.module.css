@@ -1,0 +1,38 @@
+.container {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+
+    margin-top: 130px;
+    padding: var(--padding);
+    border-radius: var(--radius-01);
+
+    opacity: 0;
+    font-size: var(--normal-text);
+
+    color: var(--font-color-05);
+    background-color: var(--bg-color-05);
+}
+
+.container:hover .box {
+    visibility: visible;
+    opacity: 0.8;
+    transition:
+        opacity 0.5s ease-in-out,
+        visibility 0s;
+}

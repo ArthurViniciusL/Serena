@@ -1,0 +1,25 @@
+.logoContainer {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: var(--gap);
+    flex-direction: row;
+}
+
+.title {
+    color: var(--serena-red-02);
+    text-decoration: none;
+}
+
+.logo { 
+    margin: var(--margin);
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        border-radius: var(--radius-01);
+        padding: 1px;
+        background-color: var(--bg-color-05);
+    }
+
+}

@@ -5,5 +5,5 @@ export interface CardProps {
 }
 
 export function Card({ children }: CardProps) {
-    return <div className="app-card">{children}</div>;
+    return <div className="serena-card">{children}</div>;
 }

@@ -1,0 +1,53 @@
+@import url('../../styles/globals.css');
+
+.serena-btn {
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto;
+    
+    cursor: pointer;
+    padding: var(--padding);
+    border-radius: var(--radius-01);
+    
+    font-family: "Source Sans 3";
+    font-size: large;
+    font-weight: normal;
+}
+
+.serena-btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--bg-color-01);
+    background-color: var(--font-color-01);
+}
+
+.serena-btn-medium {
+    width: 18vmax;
+}
+
+.serena-btn-large {
+    width: 30vmax;
+}
+
+.serena-btn-active-white {
+    color: var(--font-color-01);
+    background-color: var(--bg-color-01);
+}
+
+.serena-btn-active-black {
+    color: var(--font-color-05);
+    background-color: var(--bg-color-05);
+}
+
+.serena-btn-active-red {
+    color: var(--font-color-05);
+    background-color: var(--serena-red-02);
+}
