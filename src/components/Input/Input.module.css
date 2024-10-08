@@ -1,0 +1,35 @@
+.container {
+    position: relative;
+    margin: 20px;
+}
+
+.content {
+    display: block;
+    width: 50vmax;
+    padding: var(--padding);
+    font-size: var(--normal-text);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--bg-color-04);
+    background-color: transparent;
+}
+
+.highlightLine {
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--bg-color-05);
+    transition: all 0.3s ease;
+}
+
+.content:focus ~ .input-label {
+    top: -20px;
+    font-size: var(--small-text);
+    color: var(--font-color-01);
+}
+
+.content:focus ~ .highlightLine {
+    width: 50vmax; /* Alinhao com a largura do content */
+}

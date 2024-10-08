@@ -1,4 +1,4 @@
-import "./input_styles.css";
+import input from "./Input.module.css"
 
 type inputTypes =
     | "name"
@@ -17,15 +17,14 @@ interface InputProps {
 
 export function Input({ type, placeholder, onChange }: InputProps) {
     return (
-        <div className="input-container">
+        <div className={input.container}>
             <input
+                className={input.content}
                 onChange={onChange}
                 placeholder={placeholder}
-                className="input-field"
                 type={type}
             />
-
-            <span className="input-highlight"></span>
+            <span className={input.highlightLine}></span>
         </div>
     );
 }

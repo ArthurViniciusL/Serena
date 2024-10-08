@@ -24,7 +24,6 @@ export default function Home() {
                     <AuthenticationButtons />
                 </Menu>
             </Header>
-
             <main className="">
                 <section className={style.content}>
                     <div className={style.boxColumn}>
