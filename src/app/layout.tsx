@@ -14,9 +14,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-br" className="serena-bg-color">
+        <html lang="pt-br">
             <ScreenProvider>
-                <body className="serena-bg-color">
+                <body>
                     <ModalProvider>
                         {children}
                     </ModalProvider>

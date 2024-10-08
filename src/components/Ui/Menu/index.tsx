@@ -47,16 +47,16 @@ export function Menu({ children }: MenuProps) {
 
                 {
                     menuIsOpen ?
-                        <main className={menu.mobile}>
-                            <span className={menu.closeContent}>
+                        <aside className={menu.mobile}>
+                            <header className={menu.closeContent}>
                                 <Button onClick={handleMenuIsClick}>
                                     <IconClose size={20} />
                                 </Button>
-                            </span>
+                            </header>
                             <nav className={''}>
                                 {children}
                             </nav>
-                        </main>
+                        </aside>
 
                         :
 

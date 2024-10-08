@@ -82,7 +82,7 @@ export function PagesMenu() {
 
     else {
         return (
-            <nav className={menu.mobileContainer}>
+            <footer className={menu.mobileContainer}>
                 <ul className={menu.mobileBox}>
                     <li>
                         <Button
@@ -120,7 +120,7 @@ export function PagesMenu() {
                         </Button>
                     </li>
                 </ul>
-            </nav>
+            </footer>
         );
     }
 

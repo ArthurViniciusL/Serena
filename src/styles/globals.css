@@ -6,7 +6,6 @@
 @import url('./fonts.css');
 @import url("./serena.css");
 
-
 * {
     border: 0;
     margin: 0;
@@ -27,11 +26,16 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+body {
+    background-color: var(--bg-color-01);
+}
+
 
 main {
     padding: 20px;
     width: 100%;
     /* height: 100dvh; */
+    background-color: var(--bg-color-01);
 }
 
 section {
@@ -39,8 +43,8 @@ section {
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
-    /* align-items: center; */
     justify-content: center;
+    background-color: var(--bg-color-01);
 }
 
 aside {
