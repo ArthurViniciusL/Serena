@@ -20,8 +20,7 @@ export default function UserLayout({
     return (
         <html lang="pt-br" className="">
             <ScreenProvider>
-                <body className="serena-bg-color">
-
+                <body className="">
                     <PageNameProvider>
                         <Header className="serena-bg-color-01">
                             <Logo type="LogoTipo" />
