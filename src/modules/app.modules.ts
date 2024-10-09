@@ -17,6 +17,6 @@ export {
     DoorOpen as IconOpenDoor,
     ListFilter as IconFilter,
     Star as IconReview,
-    BadgeCheck as SerenaIconBadgeCheck,
+    BadgeCheck as IconBadgeCheck,
     Image as SerenaIconImage,
 } from "lucide-react";
