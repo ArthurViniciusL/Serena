@@ -4,14 +4,16 @@ import detailsSP from "./Details.module.css";
 
 import { Modal, ModalProps } from "@/components/Ui/Modal";
 import { useModal } from "@/hooks/useModal";
+import { Loading } from "@/components/Loading";
 
 interface ModalPorfileDetailsProps {
-    data: any /* {
+    // ou any
+    data: {
         id: number;
         name: string;
         description: string;
-        services: string;
-    }; */;
+        services: string; // [{}]
+    };
     // onClick: () => void;
 }
 
@@ -21,6 +23,7 @@ export function ModalPorfileDetails({ children, data }: props) {
     const { modalName, openModal } = useModal();
     const thisModalName = "ModalPorfileDetails";
 
+    //console.log(infoId)
     return (
         <>
             <span onClick={() => openModal(thisModalName)}>{children}</span>

@@ -16,22 +16,21 @@ export default function Feed() {
     const { setPageName } = usePageName();
     const { search, setSearch } = useSearch();
 
-    const { selectContentInfo, infoId } = useModal();
-
     const [isLoad, setIsLoad] = useState(false);
     const [servicesProviders, setServicesProviders] = useState<any>([]);
     const dataFilter = servicesProviders.filter((providers: any) =>
         providers.name.toLowerCase().includes(search.toLowerCase()),
     );
 
+    const { selectContentInfo, infoId } = useModal();
     const seletUser = servicesProviders.find((u: any) => u.id === infoId);
 
+    
     useEffect(() => {
         setPageName(routes.Feed);
-
+        
         const controller = new AbortController();
-        const signal = controller.signal;
-
+        const signal = controller.signal;        
         async function fetchData() {
             try {
                 const response = await fetch(
@@ -57,11 +56,13 @@ export default function Feed() {
             /* canceling the api request, in case the user cancels the page call */
             controller.abort();
         };
-    }, []);
+    },[isLoad]);
 
     function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
         setSearch(e.target.value);
     }
+
+    
 
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 

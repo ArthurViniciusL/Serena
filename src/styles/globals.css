@@ -15,10 +15,11 @@
 }
 
 html {
+    width: 100dvw;
+    height: 100dvh;
     scrollbar-width: none;
-    font-family: "Source Sans 3";
     scroll-behavior: smooth;
-    color: var(--font-color-01);
+    font-family: "Source Sans 3";
     background-color: var(--bg-color-01);
 }
 
@@ -27,12 +28,15 @@ html::-webkit-scrollbar {
 }
 
 body {
+    width: 100%;
+    height: 100dvh;
     background-color: var(--bg-color-01);
 }
 
 main {
     padding: 20px;
     width: 100%;
+    height: fit-content;
     /* height: 100dvh; */
     background-color: var(--bg-color-01);
 }
@@ -53,25 +57,27 @@ aside {
 h1 {
     font-weight: 700;
     font-size: 2.8rem;
+    color: var(--font-color-01);
 }
 
 h2 {
     font-weight: 700;
     font-size: 2rem;
-    /* font-size: var(--sub-title); */
+    color: var(--font-color-01);
 }
 
 h3 {
     font-size: 1.4rem;
-    /* font-weight: bold; */
+    color: var(--font-color-01);
 }
 
 p {
     font-weight: normal;
     font-size: 1.3rem;
     margin-bottom: var(--Margin);
+    color: var(--font-color-01);
 }
 
-a:hover {
-    /* text-decoration: underline; */
+button:hover {
+    text-decoration: underline;
 }

@@ -38,7 +38,7 @@
     width: 50dvw;
     height: 80dvh;
     padding: var(--padding);
-    border-radius: var(--radius-01);
+    border-radius: var(--radius-02);
     background-color: var(--bg-color-01);
 
     display: flex;
