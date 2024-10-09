@@ -1,3 +1,8 @@
+.footer {
+    width: fit-content;
+    height: fit-content;
+}
+
 .mobileContainer {
     position: fixed;
     left: 0;

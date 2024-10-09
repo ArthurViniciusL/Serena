@@ -12,21 +12,20 @@ interface MenuProps {
 
 export function Menu({ children }: MenuProps) {
     const { screen } = useScreen();
-
-    // const [screen, setScreen] = useState<number>(0);
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
-
-    /*     useEffect(() => {
-        function updateScreenSize() {
-            setScreen(window.innerWidth);
-            // console.log(`Nova largura da tela: ${screen}px`);
-        }
-        window.addEventListener('resize', updateScreenSize);
-    }); */
 
     function handleMenuIsClick() {
         setMenuIsOpen(!menuIsOpen);
     }
+
+    /* if (screen === 0) {
+        return (
+            <>
+                <div className="skeleton h-12 w-24"></div>
+                <div className="skeleton h-12 w-24"></div>
+            </>
+        )
+    } */
 
     if (screen >= 770) {
         return (
@@ -37,8 +36,6 @@ export function Menu({ children }: MenuProps) {
     } else {
         return (
             <>
-                {/* é provisório ok, isso vai virar um outro componente chamado "MobileMenu" que carrega um children */}
-
                 {menuIsOpen ? (
                     <aside className={menu.mobile}>
                         <header className={menu.closeContent}>

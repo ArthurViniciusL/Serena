@@ -11,9 +11,25 @@
     justify-content: center;
 }
 
+.serena-active-on-desktop {
+    display: flex;
+}
+
+.serena-active-on-mobile {
+    display: none;
+}
+
 @media (max-width: 770px) {
     .serena-responsive-content {
         flex-direction: column;
+    }
+
+    .serena-active-on-desktop {
+        display: none;
+    }
+    
+    .serena-active-on-mobile {
+        display: flex;
     }
 }
 

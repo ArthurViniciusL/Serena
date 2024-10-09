@@ -4,7 +4,7 @@ import { Header } from "@/components/Ui/Header";
 import { PageNameProvider } from "@/context/PageNameContext";
 import { SearchBarProvider } from "@/context/SearchContext";
 import { Logo } from "@/components/Logo";
-import { PagesMenu } from "./components/PagesMenu";
+import { PagesMenuDesktop, PagesMenuMobile } from "./components/PagesMenu";
 import { Menu } from "@/components/Ui/Menu";
 import { ScreenProvider } from "@/context/ScreenContext";
 export const metadata: Metadata = {
@@ -24,11 +24,10 @@ export default function UserLayout({
                     <PageNameProvider>
                         <Header className="serena-bg-color-01">
                             <Logo type="LogoTipo" />
-                            <span></span>
-                            <PagesMenu />
-                            {/*  </Menu> */}
+                            <PagesMenuDesktop />
                         </Header>
                         <SearchBarProvider>{children}</SearchBarProvider>
+                        <PagesMenuMobile />
                     </PageNameProvider>
                 </body>
             </ScreenProvider>
