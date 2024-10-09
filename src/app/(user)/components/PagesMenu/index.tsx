@@ -44,7 +44,7 @@ export function PagesMenu() {
         return (
             // serena-active-on-desktop
             <>
-                <nav className="">
+                <nav className="serena-active-on-desktop">
                     <ul className="serena-responsive-content">
                         <li>
                             <Button
@@ -92,7 +92,7 @@ export function PagesMenu() {
     } else {
         return (
             <>
-                <nav className={menu.mobileContainer}>
+                <nav className={`serena-active-on-mobile ${menu.mobileContainer}`}>
                     <ul className={menu.mobileBox}>
                         <li>
                             <Button

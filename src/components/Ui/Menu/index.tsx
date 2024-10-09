@@ -18,26 +18,17 @@ export function Menu({ children }: MenuProps) {
         setMenuIsOpen(!menuIsOpen);
     }
 
-    /* if (screen === 0) {
-        return (
-            <>
-                <div className="skeleton h-12 w-24"></div>
-                <div className="skeleton h-12 w-24"></div>
-            </>
-        )
-    } */
-
     if (screen >= 770) {
         return (
             <>
-                <nav className={menu.content}>{children}</nav>
+                <nav className={`serena-active-on-desktop ${menu.content}`}>{children}</nav>
             </>
         );
     } else {
         return (
             <>
                 {menuIsOpen ? (
-                    <aside className={menu.mobile}>
+                    <aside className={`serena-active-on-mobile ${menu.mobile}`}>
                         <header className={menu.closeContent}>
                             <Button onClick={handleMenuIsClick}>
                                 <IconClose size={20} />

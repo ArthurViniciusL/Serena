@@ -5,7 +5,6 @@ import { PageNameProvider } from "@/context/PageNameContext";
 import { SearchBarProvider } from "@/context/SearchContext";
 import { Logo } from "@/components/Logo";
 import { PagesMenu } from "./components/PagesMenu";
-import { Menu } from "@/components/Ui/Menu";
 import { ScreenProvider } from "@/context/ScreenContext";
 export const metadata: Metadata = {
     title: "Serena",
