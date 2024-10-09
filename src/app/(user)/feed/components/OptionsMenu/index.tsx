@@ -5,9 +5,9 @@ export function OptionsMenu() {
     return (
         <>
             <Button bgColorHover="var(--serena-red-02)">
-                <IconFilter/>
+                <IconFilter />
                 Filtrar categoria
             </Button>
         </>
-    )
+    );
 }

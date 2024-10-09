@@ -1,6 +1,6 @@
 import modal from "@/components/Ui/Modal/ui_modal.module.css";
 
-import detailsSP from "./Details.module.css"
+import detailsSP from "./Details.module.css";
 
 import { Modal, ModalProps } from "@/components/Ui/Modal";
 import { useModal } from "@/hooks/useModal";
@@ -11,14 +11,13 @@ interface ModalPorfileDetailsProps {
         name: string;
         description: string;
         services: string;
-    }; */
+    }; */;
     // onClick: () => void;
 }
 
 type props = ModalPorfileDetailsProps & ModalProps;
 
 export function ModalPorfileDetails({ children, data }: props) {
-
     const { modalName, openModal } = useModal();
     const thisModalName = "ModalPorfileDetails";
 

@@ -7,21 +7,15 @@ export function HomeInfo() {
         <>
             <ul className="serena-responsive-content">
                 <li>
-                    <Button>
-                        Sobre
-                    </Button>
+                    <Button>Sobre</Button>
                 </li>
 
                 <li>
-                    <Button>
-                        Recursos
-                    </Button>
+                    <Button>Recursos</Button>
                 </li>
 
                 <li>
-                    <Button>
-                        Preços
-                    </Button>
+                    <Button>Preços</Button>
                 </li>
 
                 <li>
@@ -33,5 +27,5 @@ export function HomeInfo() {
                 </li>
             </ul>
         </>
-    )
+    );
 }

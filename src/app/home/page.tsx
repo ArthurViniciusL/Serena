@@ -42,10 +42,21 @@ export default function Home() {
                     <div className={style.boxRow}>
                         <div className={style.wrapperText}>
                             <p>
-                                Simplifique seus agendamentos com a <span className="serena-ft-red-02 font-semibold">Serena</span> e tenha controle total de horários.
+                                Simplifique seus agendamentos com a{" "}
+                                <span className="serena-ft-red-02 font-semibold">
+                                    Serena
+                                </span>{" "}
+                                e tenha controle total de horários.
                             </p>
                             <p>
-                                A <span className="serena-ft-red-02 font-semibold">Serena</span> oferece um sistema intuitivo e eficiente para que você possa organizar seus compromissos e se concentrar no que realmente importa: atender bem seus clientes.
+                                A{" "}
+                                <span className="serena-ft-red-02 font-semibold">
+                                    Serena
+                                </span>{" "}
+                                oferece um sistema intuitivo e eficiente para
+                                que você possa organizar seus compromissos e se
+                                concentrar no que realmente importa: atender bem
+                                seus clientes.
                             </p>
                         </div>
                         <Image
@@ -71,7 +82,21 @@ export default function Home() {
                         />
 
                         <div className={style.wrapperText}>
-                            <p> <span className="serena-ft-red-02 font-semibold">Serena</span> foi desenvolvido para prestadores de serviços que buscam otimizar o controle de suas agendas e melhorar a comunicação com os clientes. Com a <span className="serena-ft-red-02 font-semibold">Serena</span>, você agenda compromissos com facilidade, gerencia horários, e recebe relatórios detalhados sobre seus atendimentos, tudo em uma única plataforma.
+                            <p>
+                                {" "}
+                                <span className="serena-ft-red-02 font-semibold">
+                                    Serena
+                                </span>{" "}
+                                foi desenvolvido para prestadores de serviços
+                                que buscam otimizar o controle de suas agendas e
+                                melhorar a comunicação com os clientes. Com a{" "}
+                                <span className="serena-ft-red-02 font-semibold">
+                                    Serena
+                                </span>
+                                , você agenda compromissos com facilidade,
+                                gerencia horários, e recebe relatórios
+                                detalhados sobre seus atendimentos, tudo em uma
+                                única plataforma.
                             </p>
                             <ModalCreateAccount>
                                 <Button className="serena-btn-large">

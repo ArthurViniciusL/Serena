@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    gap: 4px;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.average {
+    font-size: 1rem;
+}
+
+.icons {
+    display: flex;
+    gap: 4px;
+    overflow: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}

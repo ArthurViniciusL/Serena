@@ -15,7 +15,7 @@
                 "afternoon": "13:00 - 18:00"
             },
             "description": "Especializados em cortes e tratamentos capilares.",
-            "review": 4.8,
+            "review": 5.3,
             "services": [
                 {
                     "id": 1,
@@ -40,7 +40,7 @@
                 "afternoon": "13:00 - 18:00"
             },
             "description": "Cortes modernos e atendimento premium.",
-            "review": 4.9,
+            "review": 2.9,
             "services": [
                 {
                     "id": 1,
@@ -65,7 +65,7 @@
                 "afternoon": "14:00 - 17:00"
             },
             "description": "Especialistas em manutenção e reparos rápidos de veículos.",
-            "review": 4.7,
+            "review": 0.0,
             "services": [
                 {
                     "id": 1,
@@ -90,7 +90,7 @@
                 "afternoon": "16:00 - 21:00"
             },
             "description": "Treinamento personalizado com foco em resultados e saúde.",
-            "review": 4.9,
+            "review": 4.7,
             "services": [
                 {
                     "id": 1,

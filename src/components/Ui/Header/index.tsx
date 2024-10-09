@@ -1,6 +1,6 @@
 "use client";
 
-import style from "./Header.module.css"
+import style from "./Header.module.css";
 
 interface HeaderProps {
     className?: string;
@@ -10,10 +10,9 @@ interface HeaderProps {
 export function Header({ className, children }: HeaderProps) {
     return (
         <header className={style.container}>
-            <section
-                className={`${className} ${style.content}`}>
+            <section className={`${className} ${style.content}`}>
                 {children}
             </section>
-        </header >
+        </header>
     );
 }

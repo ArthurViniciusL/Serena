@@ -17,9 +17,7 @@ export default function RootLayout({
         <html lang="pt-br">
             <ScreenProvider>
                 <body>
-                    <ModalProvider>
-                        {children}
-                    </ModalProvider>
+                    <ModalProvider>{children}</ModalProvider>
                 </body>
             </ScreenProvider>
         </html>

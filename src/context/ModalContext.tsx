@@ -12,7 +12,7 @@ export function ModalProvider({ children }: ModalProviderProps) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [modalName, setModalName] = useState<string>("");
     const [infoId, setinfoId] = useState<number>(0);
-    
+
     // const [data, setData] = useState<object>([]);
 
     function openModal(modalName: string) {

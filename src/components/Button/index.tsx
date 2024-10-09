@@ -1,13 +1,13 @@
 "use client";
-import "./Button.css"
+import "./Button.css";
 import StyledButton from "./styles";
 
 interface ButtonProps {
     onClick?: () => void;
     children: React.ReactNode;
     className?: string;
-    
-    border?: boolean,
+
+    border?: boolean;
     bgColor?: string;
     bgColorHover?: string;
     fontColorHover?: string;
@@ -25,15 +25,15 @@ export function Button({
     bgColorHover,
     fontColorHover,
 }: ButtonProps) {
-
-    const activeButton =isActive ? className = "serena-btn-active-black" : '';
-    const activeBorder = border ? "solid 1px var(--bg-color-05)" : '';
+    const activeButton = isActive
+        ? (className = "serena-btn-active-black")
+        : "";
+    const activeBorder = border ? "solid 1px var(--bg-color-05)" : "";
 
     return (
         <StyledButton
             onClick={onClick}
             className={`serena-btn serena-bg-color-02 ${className} `}
-
             $border={activeBorder}
             $bgColor={`${bgColor}`}
             $bgColorHover={`${bgColorHover}`}

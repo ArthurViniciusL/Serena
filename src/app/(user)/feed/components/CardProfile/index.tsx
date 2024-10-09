@@ -1,9 +1,9 @@
 import "@/components/Ui/Card/Card.css";
 
 import { Card } from "@/components/Ui/Card";
-import { SerenaIconBadgeCheck, SerenaIconStar } from "@/modules/app.modules";
+import { SerenaIconBadgeCheck } from "@/modules/app.modules";
 import { Avatar } from "@/components/Ui/Avatar";
-import { Reviews } from "@/components/Rating";
+import { Reviews } from "@/components/Review";
 
 interface CardProfileProps {
     name: string;
@@ -16,9 +16,8 @@ export function CardProfile({
     name,
     category,
     review,
-    onClick
+    onClick,
 }: CardProfileProps) {
-
     return (
         <Card>
             <div onClick={onClick} className="serena-card-left-side">
@@ -32,21 +31,12 @@ export function CardProfile({
                                 size={20}
                             />
                         </div>
-                        <button>
-                            Ver detalhes
-                        </button>
+                        <button>Ver detalhes</button>
                     </div>
                 </div>
             </div>
             <div className="serena-card-right-side gap-4">
-                <div className="cursor">
-                    <Reviews nota={review} />
-                    <SerenaIconStar
-                        fill="var(--serena-yellow)"
-                        stroke=""
-                        size={20}
-                    />
-                </div>
+                <Reviews scoreServiceProvider={review} />
                 <span className="serena-card-category">{category}</span>
             </div>
         </Card>

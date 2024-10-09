@@ -38,7 +38,7 @@
     width: 50%;
     text-align: justify;
     height: fit-content;
-    
+
     display: flex;
     gap: var(--gap);
     flex-direction: column;
@@ -50,12 +50,10 @@
     border: red solid;
 }
 
-@media (max-width: 780px),
-(max-width: 1050px) {
-
+@media (max-width: 780px), (max-width: 1050px) {
     .content {
         height: 65dvh;
-        margin-bottom: 40px;        
+        margin-bottom: 40px;
     }
 
     .boxColum,
@@ -85,7 +83,6 @@
         width: 30%;
         height: fit-content;
     }
-
 }
 
 @media (max-width: 400px) {

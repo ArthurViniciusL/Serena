@@ -1,4 +1,4 @@
-@import url('../../styles/globals.css');
+@import url("../../styles/globals.css");
 
 .serena-btn {
     width: fit-content;
@@ -12,11 +12,11 @@
     justify-content: center;
 
     overflow: auto;
-    
+
     cursor: pointer;
     padding: var(--padding);
     border-radius: var(--radius-01);
-    
+
     font-family: "Source Sans 3";
     font-size: large;
     font-weight: normal;

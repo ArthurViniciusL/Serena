@@ -74,9 +74,12 @@ export default function Feed() {
                     <OptionsMenu />
                 </>
 
-                <main className="" style={{
-                    marginBottom: "30px"
-                }}>
+                <main
+                    className=""
+                    style={{
+                        marginBottom: "30px",
+                    }}
+                >
                     <section className="flex items-center justify-center ">
                         <ul>
                             {dataFilter.map((provider: any) => (
@@ -87,7 +90,11 @@ export default function Feed() {
                                                 name={provider.name}
                                                 review={provider.review}
                                                 category={provider.category}
-                                                onClick={() => selectContentInfo(provider.id)}
+                                                onClick={() =>
+                                                    selectContentInfo(
+                                                        provider.id,
+                                                    )
+                                                }
                                             />
                                         </ModalPorfileDetails>
                                     }
@@ -104,10 +111,6 @@ export default function Feed() {
             </>
         );
     } else {
-        return (
-
-            <Loading type="screen" />
-
-        );
+        return <Loading type="screen" />;
     }
 }

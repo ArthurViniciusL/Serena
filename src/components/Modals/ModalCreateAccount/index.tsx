@@ -1,4 +1,4 @@
-import modal from "@/components/Ui/Modal/ui_modal.module.css"
+import modal from "@/components/Ui/Modal/ui_modal.module.css";
 
 import { Button } from "../../Button";
 import { Modal, ModalProps } from "../../Ui/Modal";
@@ -18,7 +18,10 @@ export function ModalCreateAccount({ children }: ModalProps) {
                 <Modal modalTitle="Criar conta">
                     <div className={modal.box}>
                         <h3 className={modal.contentMsg}>
-                            <span className="font-semibold">Seja bem vindo!</span> Que tipo de conta você quer criar?
+                            <span className="font-semibold">
+                                Seja bem vindo!
+                            </span>{" "}
+                            Que tipo de conta você quer criar?
                         </h3>
 
                         <Image
@@ -31,9 +34,13 @@ export function ModalCreateAccount({ children }: ModalProps) {
                         />
 
                         <div className={modal.contentBtn}>
-                            <Button className="serena-btn-medium">Serviço</Button>
+                            <Button className="serena-btn-medium">
+                                Serviço
+                            </Button>
                             <p className="serena-ft-color-04">ou</p>
-                            <Button className="serena-btn-medium">Cliente</Button>
+                            <Button className="serena-btn-medium">
+                                Cliente
+                            </Button>
                         </div>
                     </div>
                 </Modal>

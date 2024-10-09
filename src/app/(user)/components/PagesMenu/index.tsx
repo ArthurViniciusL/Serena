@@ -4,12 +4,17 @@ import routes from "@/app.routes";
 import { Button } from "@/components/Button";
 import { usePageName } from "@/hooks/usePageName";
 import { useScreen } from "@/hooks/useScreen";
-import { IconCalendar, IconClosedDoor, IconLayoutList, IconOpenDoor, IconUser } from "@/modules/app.modules";
+import {
+    IconCalendar,
+    IconClosedDoor,
+    IconLayoutList,
+    IconOpenDoor,
+    IconUser,
+} from "@/modules/app.modules";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export function PagesMenu() {
-
     const { currentPage, setPageName } = usePageName();
     const { screen } = useScreen();
 
@@ -77,10 +82,8 @@ export function PagesMenu() {
                     </Button>
                 </li>
             </ul>
-        )
-    }
-
-    else {
+        );
+    } else {
         return (
             <footer className={menu.mobileContainer}>
                 <ul className={menu.mobileBox}>
@@ -123,5 +126,4 @@ export function PagesMenu() {
             </footer>
         );
     }
-
 }

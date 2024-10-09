@@ -8,7 +8,7 @@ interface ScreenProviderProps {
     children: React.ReactNode;
 }
 
-export function ScreenProvider({children}:ScreenProviderProps) {
+export function ScreenProvider({ children }: ScreenProviderProps) {
     const [screen, setScreen] = useState<number>(800);
 
     useEffect(() => {
@@ -16,12 +16,12 @@ export function ScreenProvider({children}:ScreenProviderProps) {
             setScreen(window.innerWidth);
             // console.log(`Nova largura da tela: ${screen}px`);
         }
-        window.addEventListener('resize', updateScreenSize);
+        window.addEventListener("resize", updateScreenSize);
     });
-    
+
     return (
-        <ScreenContext.Provider value={{screen}}>
+        <ScreenContext.Provider value={{ screen }}>
             {children}
         </ScreenContext.Provider>
-    )
+    );
 }

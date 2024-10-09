@@ -18,7 +18,10 @@ export function ModalLoginAccount({ children }: ModalProps) {
                 <Modal modalTitle="Entrar">
                     <div className={modal.box}>
                         <h3 className={modal.contentMsg}>
-                            <span className="font-semibold">Bem vindo de volta!</span> Qual o seu tipo de conta?
+                            <span className="font-semibold">
+                                Bem vindo de volta!
+                            </span>{" "}
+                            Qual o seu tipo de conta?
                         </h3>
 
                         <Image
@@ -30,9 +33,13 @@ export function ModalLoginAccount({ children }: ModalProps) {
                             priority={true}
                         />
                         <div className={modal.contentBtn}>
-                            <Button className="serena-btn-medium">Serviço</Button>
+                            <Button className="serena-btn-medium">
+                                Serviço
+                            </Button>
                             <p className="serena-ft-color-04">ou</p>
-                            <Button className="serena-btn-medium">Cliente</Button>
+                            <Button className="serena-btn-medium">
+                                Cliente
+                            </Button>
                         </div>
                     </div>
                 </Modal>

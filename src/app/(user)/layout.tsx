@@ -24,10 +24,9 @@ export default function UserLayout({
                     <PageNameProvider>
                         <Header className="serena-bg-color-01">
                             <Logo type="LogoTipo" />
-                            
-                                <span></span>
-                                <PagesMenu />
-                           {/*  </Menu> */}
+                            <span></span>
+                            <PagesMenu />
+                            {/*  </Menu> */}
                         </Header>
                         <SearchBarProvider>{children}</SearchBarProvider>
                     </PageNameProvider>

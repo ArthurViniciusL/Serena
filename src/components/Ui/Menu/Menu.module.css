@@ -5,7 +5,6 @@
     display: flex;
     gap: var(--gap);
     justify-content: space-between;
-
 }
 
 .mobile {
@@ -40,7 +39,6 @@
     align-items: center;
     justify-content: flex-end;
 }
-
 
 /* .content > * {
     margin-right: 10px;

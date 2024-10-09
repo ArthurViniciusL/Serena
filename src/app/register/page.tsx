@@ -19,33 +19,32 @@ import { ButtonsList } from "../home/components/ButtonsList";
 export default function Register() {
     return (
         <div>
-          <div className="max-h-[12vh]">
+            <div className="max-h-[12vh]">
+                <Header colorFill="var(--bg-color-02)">
+                    <div className="home-header__content">
+                        <a href={routes.Home}>
+                            <LogoMarca />
+                        </a>
+                        <ButtonsList />
+                    </div>
 
-            <Header colorFill="var(--bg-color-02)" >
-                <div className="home-header__content">
-                    <a href={routes.Home}>
-                        <LogoMarca />
-                    </a>
-                    <ButtonsList />
-                </div>
-
-                <ul className="home-buttons__list remove-on-mobile">
-                    <li>
-                        <ModalLoginAccount>
-                            <Button className="app-bg-color">Entrar</Button>
-                        </ModalLoginAccount>
-                    </li>
-                    <li>
-                        <ModalCreateAccount>
-                            <Button className="app-bg-color" border={true}>
-                                Criar conta
-                            </Button>
-                        </ModalCreateAccount>
-                    </li>
-                </ul>
-            </Header>
-          </div>
-          <section className="bg-gray-50 dark:bg-gray-900 w-full max-h-[88vh]">
+                    <ul className="home-buttons__list remove-on-mobile">
+                        <li>
+                            <ModalLoginAccount>
+                                <Button className="app-bg-color">Entrar</Button>
+                            </ModalLoginAccount>
+                        </li>
+                        <li>
+                            <ModalCreateAccount>
+                                <Button className="app-bg-color" border={true}>
+                                    Criar conta
+                                </Button>
+                            </ModalCreateAccount>
+                        </li>
+                    </ul>
+                </Header>
+            </div>
+            <section className="bg-gray-50 dark:bg-gray-900 w-full max-h-[88vh]">
                 <div className="flex flex-col items-center justify-center px-6 py-4 mx-auto md:h-auto lg:py-4">
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 lg:max-w-2xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -113,23 +112,19 @@ export default function Register() {
                                 >
                                     Criar conta
                                 </button>
-                               
                             </form>
-                            
                         </div>
-                        
                     </div>
                     <p className="text-sm font-light mt-20 text-gray-500 text-center dark:text-gray-400">
-                                    <a
-                                        href="#"
-                                        className="font-medium text-primary-600 hover:underline  text-center dark:text-primary-500"
-                                    >
-                                        Seu nome e foto serão exibidos para
-                                        outros usuário dentro da plataforma. Ao
-                                        continuar, você confirma que entende e
-                                        concorda com os
-                                    </a>
-                                </p>
+                        <a
+                            href="#"
+                            className="font-medium text-primary-600 hover:underline  text-center dark:text-primary-500"
+                        >
+                            Seu nome e foto serão exibidos para outros usuário
+                            dentro da plataforma. Ao continuar, você confirma
+                            que entende e concorda com os
+                        </a>
+                    </p>
                 </div>
             </section>
         </div>

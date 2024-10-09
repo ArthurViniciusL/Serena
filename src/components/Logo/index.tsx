@@ -1,17 +1,16 @@
-import style from "./Logo.module.css"
+import style from "./Logo.module.css";
 
 import Image from "next/image";
 import logo from "@/assets/icons/logo/serena_logo.svg";
 import routes from "@/app.routes";
 
 interface LogoProps {
-    type: 'LogoTipo' | "LogoMarca";
+    type: "LogoTipo" | "LogoMarca";
 }
 
 export function Logo({ type }: LogoProps) {
     switch (type) {
         case "LogoTipo":
-
             return (
                 <div className={style.logoContainer}>
                     <Image
@@ -24,7 +23,7 @@ export function Logo({ type }: LogoProps) {
                     />
                     <h1 className={style.title}>Serena</h1>
                 </div>
-            )
+            );
 
         case "LogoMarca":
             return (
@@ -38,7 +37,7 @@ export function Logo({ type }: LogoProps) {
                         priority={true}
                     />
                 </>
-            )
+            );
 
         default:
             return null;

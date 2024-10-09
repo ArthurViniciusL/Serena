@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('./variables.css');
-@import url('./fonts.css');
+@import url("./variables.css");
+@import url("./fonts.css");
 @import url("./serena.css");
 
 * {
@@ -29,7 +29,6 @@ html::-webkit-scrollbar {
 body {
     background-color: var(--bg-color-01);
 }
-
 
 main {
     padding: 20px;
@@ -60,7 +59,6 @@ h2 {
     font-weight: 700;
     font-size: 2rem;
     /* font-size: var(--sub-title); */
-
 }
 
 h3 {

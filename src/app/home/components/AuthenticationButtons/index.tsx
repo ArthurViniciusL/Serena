@@ -7,9 +7,7 @@ export function AuthenticationButtons() {
         <>
             <div className="serena-responsive-content">
                 <ModalLoginAccount>
-                    <Button bgColor="var(--bg-color-01)">
-                        Entrar
-                    </Button>
+                    <Button bgColor="var(--bg-color-01)">Entrar</Button>
                 </ModalLoginAccount>
                 <ModalCreateAccount>
                     <Button bgColor="var(--bg-color-01)" border={true}>
@@ -18,5 +16,5 @@ export function AuthenticationButtons() {
                 </ModalCreateAccount>
             </div>
         </>
-    )
+    );
 }

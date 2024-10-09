@@ -1,4 +1,4 @@
-import searchBar from "./SearchBar.module.css"
+import searchBar from "./SearchBar.module.css";
 import { useState } from "react";
 import { IconClose } from "@/modules/app.modules";
 import useSearch from "@/hooks/useSearch";
@@ -31,14 +31,8 @@ export function SearchBar({ onChange }: SearchBarProps) {
                 type="text"
             />
             {icon && search !== "" ? (
-                <IconClose
-                    size={20}
-                    cursor={"pointer"}
-                    onClick={clearSearch}
-                />
-            ) : (
-                null
-            )}
+                <IconClose size={20} cursor={"pointer"} onClick={clearSearch} />
+            ) : null}
         </div>
     );
 }

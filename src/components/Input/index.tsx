@@ -1,4 +1,4 @@
-import input from "./Input.module.css"
+import input from "./Input.module.css";
 
 type inputTypes =
     | "name"

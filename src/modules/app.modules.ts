@@ -1,5 +1,3 @@
-import { SerenaIconBadgeCheck } from "@/modules/app.modules";
-import { SerenaIconStar } from "@/modules/app.modules";
 /* @arthur.vsl */
 
 /*
@@ -10,20 +8,15 @@ import { SerenaIconStar } from "@/modules/app.modules";
 
 export {
     CirclePlus as IconMoreInfo,
-    
     CircleX as IconClose,
     Menu as IconMobileMenu,
-
     LayoutList as IconLayoutList,
     CalendarDays as IconCalendar,
     CircleUserRound as IconUser,
     DoorClosed as IconClosedDoor,
     DoorOpen as IconOpenDoor,
     ListFilter as IconFilter,
-
-    Star as SerenaIconStar,
+    Star as IconReview,
     BadgeCheck as SerenaIconBadgeCheck,
     Image as SerenaIconImage,
-
-    
 } from "lucide-react";
