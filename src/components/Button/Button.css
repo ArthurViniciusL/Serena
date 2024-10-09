@@ -11,6 +11,8 @@
     align-items: center;
     justify-content: center;
 
+    color: var(--font-color-01);
+
     overflow: auto;
 
     cursor: pointer;
@@ -25,8 +27,8 @@
 .serena-btn:hover {
     text-decoration: underline;
     cursor: pointer;
-    color: var(--bg-color-01);
-    background-color: var(--font-color-01);
+    color: var(--font-color-05);
+    background-color: var(--bg-color-05);
 }
 
 .serena-btn-medium {
