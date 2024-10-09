@@ -1,0 +1,27 @@
+
+.serena-card-left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.serena-card-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+}
+
+.serena-card-name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.serena-card-category {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.8rem;
+    padding: var(--padding);
+    border-radius: var(--radius-01);
+    background-color: var(--bg-color-02);
+}

@@ -1,0 +1,28 @@
+.container{
+    min-width: 50vw;
+    height: fit-content;
+
+    display: flex;
+    gap: var(--gap);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    flex-flow: row;
+
+    padding: calc(var(--padding) + 10px);
+    margin: var(--margin);
+    border: solid 0.5px var(--bg-color-03);
+    border-radius: calc(var(--radius-01) + 10px);
+    background-color: var(--bg-color-01);
+
+    margin-bottom: calc(var(--margin) + 10px);
+
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}

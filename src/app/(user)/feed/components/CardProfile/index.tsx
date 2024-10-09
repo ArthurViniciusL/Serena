@@ -1,4 +1,4 @@
-import "@/components/Ui/Card/Card.css";
+import "@/components/Ui/Card/UiCard.css";
 
 import { Card } from "@/components/Ui/Card";
 import { SerenaIconBadgeCheck } from "@/modules/app.modules";
