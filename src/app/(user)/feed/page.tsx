@@ -9,7 +9,7 @@ import { CardProfile } from "./components/CardProfile";
 import { useModal } from "@/hooks/useModal";
 
 import { Loading } from "@/components/Loading";
-import { ModalPorfileDetails } from "@/components/Modals/ModalDetailsServiceProvider";
+import { ModalPorfileDetails } from "@/components/Modals/ModalPorfileDetails";
 import { OptionsMenu } from "./components/OptionsMenu";
 
 export default function Feed() {
@@ -61,8 +61,6 @@ export default function Feed() {
     function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
         setSearch(e.target.value);
     }
-
-    
 
     /* https://www.youtube.com/watch?v=E1cklb4aeXA&list=LL&index=7 */
 

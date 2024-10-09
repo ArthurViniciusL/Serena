@@ -1,7 +1,7 @@
 import "@/components/Ui/Card/UiCard.css";
 
 import { Card } from "@/components/Ui/Card";
-import { SerenaIconBadgeCheck } from "@/modules/app.modules";
+import { IconBadgeCheck } from "@/modules/app.modules";
 import { Avatar } from "@/components/Ui/Avatar";
 import { Reviews } from "@/components/Review";
 
@@ -26,12 +26,12 @@ export function CardProfile({
                     <div className="flex flex-col items-start gap-2">
                         <div className="flex flex-row gap-[var(--gap)]">
                             <h3 className="serena-card-name">{name}</h3>
-                            <SerenaIconBadgeCheck
-                                stroke="var(--serena-01)"
+                            <IconBadgeCheck
+                                stroke="var(--serena-red-01)"
                                 size={20}
                             />
                         </div>
-                        <button>Ver detalhes</button>
+                        <button className="cursor-pointer">Ver detalhes</button>
                     </div>
                 </div>
             </div>
