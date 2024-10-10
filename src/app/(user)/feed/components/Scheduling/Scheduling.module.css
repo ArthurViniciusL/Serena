@@ -1,0 +1,21 @@
+.container {}
+
+.box {}
+
+.content {
+    font-size: large;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.27rem;
+    border-radius: var(--radius-01);
+}
+
+.open {
+    color: #3bad6b;
+    background-color: rgba(87, 227, 137, 0.2);
+}
+
+.close {
+    color: rgba(237, 51, 59);
+    background-color: rgba(237, 49, 58, 0.2);
+}
