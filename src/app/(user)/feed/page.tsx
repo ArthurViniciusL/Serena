@@ -9,7 +9,7 @@ import { CardProfile } from "./components/CardProfile";
 import { useModal } from "@/hooks/useModal";
 
 import { Loading } from "@/components/Loading";
-import { ModalPorfileDetails } from "@/components/Modals/ModalPorfileDetails";
+import { ModalProfileDetails } from "@/components/Modals/ModalProfileDetails";
 import { OptionsMenu } from "./components/OptionsMenu";
 
 export default function Feed() {
@@ -70,32 +70,29 @@ export default function Feed() {
                 {/* sub menu provisorio */}
                 <>
                     <SearchBar onChange={handleSearch} />
-                    <OptionsMenu />
+                    {/* <OptionsMenu/> */}
                 </>
 
-                <main
-                    className=""
-                    style={{
-                        marginBottom: "30px",
-                    }}
-                >
-                    <section className="flex items-center justify-center ">
+                
+
+                <main className="" >
+                    <section className="flex items-center justify-center " style={{
+                        marginBottom: "3rem",
+                    }}>
                         <ul>
-                            {dataFilter.map((provider: any) => (
-                                <li key={provider.id}>
+                            {dataFilter.map((serviceProvider: any) => (
+                                <li key={serviceProvider.id}>
                                     {
-                                        <ModalPorfileDetails data={seletUser}>
+                                        <ModalProfileDetails data={seletUser}>
                                             <CardProfile
-                                                name={provider.name}
-                                                review={provider.review}
-                                                category={provider.category}
+                                                data={serviceProvider}
                                                 onClick={() =>
                                                     selectContentInfo(
-                                                        provider.id,
+                                                        serviceProvider.id,
                                                     )
                                                 }
                                             />
-                                        </ModalPorfileDetails>
+                                        </ModalProfileDetails>
                                     }
                                 </li>
                             ))}
@@ -110,6 +107,7 @@ export default function Feed() {
             </>
         );
     } else {
+        
         return <Loading type="screen" />;
     }
 }
