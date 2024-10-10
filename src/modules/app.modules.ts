@@ -19,4 +19,7 @@ export {
     Star as IconReview,
     BadgeCheck as IconBadgeCheck,
     Image as SerenaIconImage,
+    ChevronUp as IconChevronUp,
+    ChevronDown as IconChevronDown,
+    UserRound as IconUserRound
 } from "lucide-react";
