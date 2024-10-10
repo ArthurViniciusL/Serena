@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/pages/home/styles/home_styles.css";
+// import "@/app/pages/home/styles/home_styles.css";
 
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Ui/Header";
@@ -13,19 +13,18 @@ import { ModalCreateAccount } from "@/components/Modals/ModalCreateAccount";
 import { ModalLoginAccount } from "@/components/Modals/ModalLoginAccount";
 
 import routes from "@/app.routes";
-import { LogoMarca } from "@/components/Ui/LogoMarca";
-import { ButtonsList } from "../home/components/ButtonsList";
+import { Logo } from "@/components/Logo";
+
 
 export default function Register() {
     return (
         <div>
             <div className="max-h-[12vh]">
-                <Header colorFill="var(--bg-color-02)">
+                <Header>
                     <div className="home-header__content">
                         <a href={routes.Home}>
-                            <LogoMarca />
+                            <Logo type="LogoMarca" />
                         </a>
-                        <ButtonsList />
                     </div>
 
                     <ul className="home-buttons__list remove-on-mobile">
