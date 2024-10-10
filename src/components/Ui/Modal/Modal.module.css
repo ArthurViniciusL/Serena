@@ -47,6 +47,8 @@
     align-content: flex-start;
 
     cursor: auto;
+
+    
 }
 
 .header {
@@ -63,12 +65,11 @@
 .content {
     height: 90%;
     display: flex;
-    flex-wrap: wrap;
     overflow: auto;
-    scrollbar-width: none;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: column;
     flex-direction: column;
+    scrollbar-width: none;
 }
 
 @media (max-width: 770px) {

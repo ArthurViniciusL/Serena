@@ -3,10 +3,10 @@
     height: auto;
 
     display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
     gap: var(--gap);
-    align-items: center;
+    flex-wrap: wrap;
+   align-items: center;
+    flex-flow: column;
     flex-direction: column;
 }
 
