@@ -1,12 +1,17 @@
 import score from "./Review.module.css";
 import { IconReview } from "@/modules/app.modules";
 
+/* interface ReviewsProps {
+    score: string;
+} */
+
 interface ReviewsProps {
-    scoreServiceProvider: string;
+    reviewScore: number;
 }
 
-export function Reviews({ scoreServiceProvider }: ReviewsProps) {
-    const review = Number(scoreServiceProvider);
+
+export function Reviews({ reviewScore }: ReviewsProps) {
+    const review = reviewScore;
 
     const attributesIconReview = {
         fill: "var(--serena-yellow)",
@@ -17,9 +22,6 @@ export function Reviews({ scoreServiceProvider }: ReviewsProps) {
     if (review <= 0) {
         return (
             <div className={score.container}>
-                <p className={score.average}>
-                    {review}
-                </p>
                 <div className={score.icons}>
                     <IconReview
                         size={attributesIconReview.size}
@@ -31,9 +33,6 @@ export function Reviews({ scoreServiceProvider }: ReviewsProps) {
     } else if (review >= 1 && review < 2) {
         return (
             <div className={score.container}>
-                <p className={score.average}>
-                    {review}
-                </p>
                 <div className={score.icons}>
                     <IconReview
                         fill={attributesIconReview.fill}
@@ -46,9 +45,7 @@ export function Reviews({ scoreServiceProvider }: ReviewsProps) {
     } else if (review >= 2 && review < 3) {
         return (
             <div className={score.container}>
-                <p className={score.average}>
-                    {review}
-                </p>
+               
                 <div className={score.icons}>
                     <IconReview
                         fill={attributesIconReview.fill}
@@ -66,9 +63,7 @@ export function Reviews({ scoreServiceProvider }: ReviewsProps) {
     } else if (review >= 3 && review < 4) {
         return (
             <div className={score.container}>
-                <p className={score.average}>
-                    {review}
-                </p>
+               
                 <div className={score.icons}>
                     <IconReview
                         fill={attributesIconReview.fill}
@@ -91,9 +86,7 @@ export function Reviews({ scoreServiceProvider }: ReviewsProps) {
     } else if (review >= 4 && review < 5) {
         return (
             <div className={score.container}>
-                <p className={score.average}>
-                    {review}
-                </p>
+               
                 <div className={score.icons}>
                     <IconReview
                         fill={attributesIconReview.fill}
@@ -121,9 +114,7 @@ export function Reviews({ scoreServiceProvider }: ReviewsProps) {
     } else if (review >= 5) {
         return (
             <div className={score.container}>
-                <p className={score.average}>
-                    {review}
-                </p>
+               
                 <div className={score.icons}>
                     <IconReview
                         fill={attributesIconReview.fill}
