@@ -33,13 +33,12 @@
     }
 }
 
-.serena-bg-color {
-    color: var(--font-color-01);
-    background-color: var(--bg-color-01);
+.serena-b-radius-01 {
+    border-radius: var(--radius-01);
 }
 
-.serena-b-radius {
-    border-radius: var(--radius-01);
+.serena-b-radius-02 {
+    border-radius: var(--radius-02);
 }
 
 .serena-shadow-hover:hover {
@@ -110,10 +109,46 @@
     color: var(--font-color-08);
 }
 
+.serena-border {
+    border: solid 1px var(--bg-color-05);
+}
+
 .serena-ft-red-02 {
     color: var(--serena-red-02);
 }
 
-.serena-border {
-    border: solid 1px var(--bg-color-05);
+.serena-bg-red-02 {
+    background-color: var(--serena-red-02);
+}
+
+.serena-bg-red-02\:50\% {
+    background-color: rgba(237, 49, 58, 0.5);
+}
+
+.serena-bg-red-02\:40\% {
+    background-color: rgba(237, 49, 58, 0.5);
+}
+
+.serena-bg-red-02\:30\% {
+    background-color: rgba(237, 49, 58, 0.3);
+}
+
+.serena-bg-red-02\:20\% {
+    background-color: rgba(237, 49, 58, 0.2);
+}
+
+.serena-bg-red-02\:10\% {
+    background-color: rgba(237, 49, 58, 0.1);
+}
+
+.serena-ft-green-02 {
+    color: var(--serena-green-02);
+}
+
+.serena-bg-green-02 {
+    background-color: var(--serena-green-02);
+}
+
+.serena-bg-green-02\:20\% {
+    background-color: rgba(87, 227, 137, 0.2);
 }
