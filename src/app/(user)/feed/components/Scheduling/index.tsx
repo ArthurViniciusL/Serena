@@ -8,11 +8,12 @@ export function Scheduling({ status }: SchedulingProps) {
 
     if (status) {
         return (
-            <p className={`${scheduling.content} font-semibold ${scheduling.open}`}>Aberta</p>
+            /* ${scheduling.content} font-semibold ${scheduling.open} */
+            <p className="font-semibold p-1 serena-ft-green-02 serena-bg-green-02:20% serena-b-radius-01" >Aberta</p>
         )
     } else {
         return (
-            <p className={`${scheduling.content} font-semibold ${scheduling.close}`}>Fechada</p>
+            <p className="font-semibold p-1 serena-ft-red-02 serena-bg-red-02:20% serena-b-radius-01">Fechada</p>
         )
     }
 
