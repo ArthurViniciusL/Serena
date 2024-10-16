@@ -6,7 +6,7 @@ const routes = {
 
     Feed: "/feed",
     Agenda: "/",
-    Profile: "/profile",
+    Profile: (id:number) => `/profile/${id}`,
 
     Cadastro: "",
 
