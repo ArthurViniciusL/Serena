@@ -9,23 +9,24 @@ interface PageNameProps {
 }
 
 export function PageNameProvider({ children }: PageNameProps) {
-    const [currentPage, setCurrentPage] = useState<string>("");
 
-    function setPageName(name: string) {
-        setCurrentPage(name);
-    }
+    const [pageName, setPageName] = useState<boolean>();
+
+    /*     function setPageName(name: string) {
+            setCurrentPage(name);
+        } */
 
     const memoValue = useMemo(
         () => ({
-            currentPage,
+            pageName,
             setPageName,
         }),
-        [currentPage],
+        [pageName],
     );
 
     return (
         <PageNameContext.Provider
-            value={{ currentPage, setPageName, memoValue }}
+            value={{ pageName, setPageName, memoValue }}
         >
             {children}
         </PageNameContext.Provider>
