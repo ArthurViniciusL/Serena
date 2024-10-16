@@ -10,7 +10,6 @@ import { useModal } from "@/hooks/useModal";
 
 import { Loading } from "@/components/Loading";
 import { ModalProfileDetails } from "@/components/Modals/ModalProfileDetails";
-import { OptionsMenu } from "./components/OptionsMenu";
 
 export default function Feed() {
     const { setPageName } = usePageName();
@@ -27,7 +26,7 @@ export default function Feed() {
 
     
     useEffect(() => {
-        setPageName(routes.Feed);
+        setPageName(routes.Feed)
         
         const controller = new AbortController();
         const signal = controller.signal;        

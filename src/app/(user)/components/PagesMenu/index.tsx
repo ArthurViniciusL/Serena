@@ -1,9 +1,10 @@
 "use client";
-import menu from "./PageMenu.module.css";
+import menu from "./NavMenu.module.css";
 import routes from "@/app.routes";
 import { Button } from "@/components/Button";
 import { usePageName } from "@/hooks/usePageName";
 import { useScreen } from "@/hooks/useScreen";
+import { useUserLogin } from "@/hooks/useUserLogin";
 import {
     IconCalendar,
     IconClosedDoor,
@@ -15,16 +16,18 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
-export function PagesMenu() {
-    const { currentPage, setPageName } = usePageName();
+export function NavMenu() {
+    const { pageName, setPageName } = usePageName();
+    const { id } = useUserLogin();
     const { screen } = useScreen();
 
     const route = useRouter();
 
-    function handleButtonClick(pageLink: string) {
-        setPageName(pageLink);
-        if (pageLink) {
-            route.push(pageLink);
+    function handleButtonClick(pageUrl: string) {
+        setPageName(pageUrl);
+
+        if (pageUrl) {
+            route.push(pageUrl);
         }
     }
 
@@ -48,7 +51,7 @@ export function PagesMenu() {
                     <ul className="serena-responsive-content">
                         <li>
                             <Button
-                                isActive={currentPage === routes.Feed}
+                                isActive={pageName === routes.Feed}
                                 onClick={() => handleButtonClick(routes.Feed)}
                             >
                                 <IconLayoutList size={iconsSize} />
@@ -57,7 +60,7 @@ export function PagesMenu() {
                         </li>
                         <li>
                             <Button
-                                isActive={currentPage === routes.Agenda}
+                                isActive={pageName === routes.Agenda}
                                 onClick={() => handleButtonClick(routes.Agenda)}
                             >
                                 <IconCalendar size={iconsSize} />
@@ -65,13 +68,15 @@ export function PagesMenu() {
                             </Button>
                         </li>
                         <li>
-                            <Button
-                                isActive={currentPage === routes.Profile}
-                                onClick={() => handleButtonClick(routes.Profile)}
-                            >
-                                <IconUser size={iconsSize} />
-                                Meu perfil
-                            </Button>
+                            <a>
+                                <Button
+                                    isActive={pageName === routes.Profile(id)}
+                                    onClick={() => handleButtonClick(routes.Profile(id))}
+                                >
+                                    <IconUser size={iconsSize} />
+                                    Meu perfil
+                                </Button>
+                            </a>
                         </li>
                         <li
                             onMouseEnter={() => handleIconDoor(true)}
@@ -96,7 +101,7 @@ export function PagesMenu() {
                     <ul className={menu.mobileBox}>
                         <li>
                             <Button
-                                isActive={currentPage === routes.Feed}
+                                isActive={pageName === routes.Feed}
                                 onClick={() => handleButtonClick(routes.Feed)}
                             >
                                 <IconLayoutList size={iconsSize} />
@@ -104,20 +109,22 @@ export function PagesMenu() {
                         </li>
                         <li>
                             <Button
-                                isActive={currentPage === routes.Agenda}
+                                isActive={pageName === routes.Agenda}
                                 onClick={() => handleButtonClick(routes.Agenda)}
                             >
                                 <IconCalendar size={iconsSize} />
                             </Button>
                         </li>
+                        {/*
                         <li>
                             <Button
-                                isActive={currentPage === routes.Profile}
+                                isActive={pageName === routes.Profile}
                                 onClick={() => handleButtonClick(routes.Profile)}
                             >
                                 <IconUser size={iconsSize} />
                             </Button>
                         </li>
+                        */}
                         <li
                             onMouseEnter={() => handleIconDoor(true)}
                             onMouseLeave={() => handleIconDoor(false)}
