@@ -34,11 +34,11 @@ export function ModalCreateAccount({ children }: ModalProps) {
                         />
 
                         <div className={modal.contentBtn}>
-                            <Button className="serena-btn-medium">
+                            <Button className="">
                                 Serviço
                             </Button>
                             <p className="serena-ft-color-04">ou</p>
-                            <Button className="serena-btn-medium">
+                            <Button className="">
                                 Cliente
                             </Button>
                         </div>

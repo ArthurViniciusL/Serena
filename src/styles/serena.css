@@ -33,6 +33,19 @@
     }
 }
 
+.serena-format-menu-content {
+    padding: calc(var(--padding) + 20px);
+
+    display: flex;
+    gap: var(--gap);
+    flex-wrap: wrap;
+    overflow: auto;
+    flex-flow: column;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
 .serena-b-radius-01 {
     border-radius: var(--radius-01);
 }

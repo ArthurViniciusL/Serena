@@ -21,5 +21,9 @@ export {
     Image as SerenaIconImage,
     ChevronUp as IconChevronUp,
     ChevronDown as IconChevronDown,
-    UserRound as IconUserRound
+    UserRound as IconUserRound,
+    Grid2x2Plus as IconGrid2x2Plus,
+    Settings as IconSettings,
+    Pencil as IconPencil
+    
 } from "lucide-react";

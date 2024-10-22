@@ -12,6 +12,7 @@ export function UserLoginProvider({ children }: UserLoginProviderProps) {
     const [user, setUser] = useState([]);
 
     const [id, setId] = useState<number>(0);
+    const [name, setName] = useState<string>('');
 
     useEffect(() => {
         async function fetchData() {
@@ -27,7 +28,8 @@ export function UserLoginProvider({ children }: UserLoginProviderProps) {
 
                 data.map((userData: any) => {
                     if (userData.id) {
-                        setId(userData.id)
+                        setId(userData.id);
+                        setName(userData.name)
                     }
                 })
 
@@ -40,7 +42,7 @@ export function UserLoginProvider({ children }: UserLoginProviderProps) {
     }, []);
 
     return (
-        <UserLoginContext.Provider value={{ id, user }}>
+        <UserLoginContext.Provider value={{ user, id, name }}>
             {children}
         </UserLoginContext.Provider>
     )

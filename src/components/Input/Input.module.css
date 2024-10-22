@@ -1,10 +1,10 @@
 .container {
     position: relative;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .content {
-    display: block;
+    display: flex;
     width: 50vmax;
     padding: var(--padding);
     font-size: var(--normal-text);
@@ -12,6 +12,11 @@
     border: none;
     border-bottom: 2px solid var(--bg-color-04);
     background-color: transparent;
+
+    flex-wrap: wrap;
+    overflow: auto;
+    flex-direction: row;
+    flex-flow: row;
 }
 
 .highlightLine {
@@ -24,12 +29,25 @@
     transition: all 0.3s ease;
 }
 
-.content:focus ~ .input-label {
+/* .content:focus ~ .input-label {
     top: -20px;
     font-size: var(--small-text);
     color: var(--font-color-01);
+} */
+
+.content:focus~.highlightLine {
+    width: 50vmax;
+    /* Alinhao com a largura do content */
 }
 
-.content:focus ~ .highlightLine {
-    width: 50vmax; /* Alinhao com a largura do content */
+
+@media (max-width: 770px) {
+    .content {
+        width: 40vmax;
+    }
+
+    .content:focus~.highlightLine {
+        width: 40vmax;
+        /* Alinhao com a largura do content */
+    }
 }

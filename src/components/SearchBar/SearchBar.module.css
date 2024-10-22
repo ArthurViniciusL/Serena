@@ -1,5 +1,6 @@
 .container {
     width: 35vmax;
+    /* min-width: 5rem; */
     height: fit-content;
     padding: var(--padding);
     border-radius: var(--radius-01);
@@ -18,4 +19,10 @@
     font-size: var(--normal-text);
     color: var(--font-color-01);
     background-color: transparent;
+}
+
+@media (max-width: 770px) {
+    .container {
+        min-width: 5rem;
+    }
 }

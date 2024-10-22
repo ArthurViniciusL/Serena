@@ -51,7 +51,7 @@ export function NavMenu() {
                     <ul className="serena-responsive-content">
                         <li>
                             <Button
-                                isActive={pageName === routes.Feed}
+                                isActive={pageName === 'Feed'}
                                 onClick={() => handleButtonClick(routes.Feed)}
                             >
                                 <IconLayoutList size={iconsSize} />
@@ -60,7 +60,7 @@ export function NavMenu() {
                         </li>
                         <li>
                             <Button
-                                isActive={pageName === routes.Agenda}
+                                isActive={pageName === 'Agenda'}
                                 onClick={() => handleButtonClick(routes.Agenda)}
                             >
                                 <IconCalendar size={iconsSize} />
@@ -70,7 +70,7 @@ export function NavMenu() {
                         <li>
                             <a>
                                 <Button
-                                    isActive={pageName === routes.Profile(id)}
+                                    isActive={pageName === 'Profile'}
                                     onClick={() => handleButtonClick(routes.Profile(id))}
                                 >
                                     <IconUser size={iconsSize} />
@@ -101,7 +101,8 @@ export function NavMenu() {
                     <ul className={menu.mobileBox}>
                         <li>
                             <Button
-                                isActive={pageName === routes.Feed}
+                                className="serena-btn-active-white"
+                                isActive={pageName === 'Feed'}
                                 onClick={() => handleButtonClick(routes.Feed)}
                             >
                                 <IconLayoutList size={iconsSize} />
@@ -109,7 +110,8 @@ export function NavMenu() {
                         </li>
                         <li>
                             <Button
-                                isActive={pageName === routes.Agenda}
+                                className="serena-btn-active-white"
+                                isActive={pageName === 'Agenda'}
                                 onClick={() => handleButtonClick(routes.Agenda)}
                             >
                                 <IconCalendar size={iconsSize} />
@@ -118,7 +120,8 @@ export function NavMenu() {
                         {/*
                         <li>
                             <Button
-                                isActive={pageName === routes.Profile}
+                                className="serena-btn-active-white"
+                                isActive={pageName === 'Profile'}
                                 onClick={() => handleButtonClick(routes.Profile)}
                             >
                                 <IconUser size={iconsSize} />
@@ -130,6 +133,7 @@ export function NavMenu() {
                             onMouseLeave={() => handleIconDoor(false)}
                         >
                             <Button
+                                className="serena-btn-active-white"
                                 bgColorHover="var(--serena-red-01)"
                                 onClick={() => handleIconDoor(true)}
                             >

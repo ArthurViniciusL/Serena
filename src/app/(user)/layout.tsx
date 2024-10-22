@@ -4,7 +4,7 @@ import { Header } from "@/components/Ui/Header";
 import { PageNameProvider } from "@/context/PageNameContext";
 import { SearchBarProvider } from "@/context/SearchContext";
 import { Logo } from "@/components/Logo";
-import { NavMenu } from "./components/PagesMenu";
+import { NavMenu } from "./components/NavMenu";
 import { ScreenProvider } from "@/context/ScreenContext";
 import { UserLoginProvider } from "@/context/UserLogin";
 

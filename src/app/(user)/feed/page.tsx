@@ -10,6 +10,7 @@ import { useModal } from "@/hooks/useModal";
 
 import { Loading } from "@/components/Loading";
 import { ModalProfileDetails } from "@/components/Modals/ModalProfileDetails";
+import { Menu } from "@/components/Ui/Menu";
 
 export default function Feed() {
     const { setPageName } = usePageName();
@@ -24,12 +25,12 @@ export default function Feed() {
     const { selectContentInfo, infoId } = useModal();
     const seletUser = servicesProviders.find((u: any) => u.id === infoId);
 
-    
+
     useEffect(() => {
-        setPageName(routes.Feed)
-        
+        setPageName('Feed');
+
         const controller = new AbortController();
-        const signal = controller.signal;        
+        const signal = controller.signal;
         async function fetchData() {
             try {
                 const response = await fetch(
@@ -55,7 +56,7 @@ export default function Feed() {
             /* canceling the api request, in case the user cancels the page call */
             controller.abort();
         };
-    },[isLoad]);
+    }, [isLoad]);
 
     function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
         setSearch(e.target.value);
@@ -67,12 +68,25 @@ export default function Feed() {
         return (
             <>
                 {/* sub menu provisorio */}
-                <>
+                <div className="serena-format-menu-content">
                     <SearchBar onChange={handleSearch} />
-                    {/* <OptionsMenu/> */}
-                </>
+                    <Menu>
+                        <span></span>
+                        <div className="serena-responsive-content">
+                            <button>
+                                btn 1
+                            </button>
+                            <button>
+                                btn 2
+                            </button>
+                            <button>
+                                btn 3
+                            </button>
+                        </div>
+                    </Menu>
+                </div>
 
-                
+
 
                 <main className="" >
                     <section className="flex items-center justify-center " style={{
@@ -106,7 +120,7 @@ export default function Feed() {
             </>
         );
     } else {
-        
+
         return <Loading type="screen" />;
     }
 }

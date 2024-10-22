@@ -21,7 +21,7 @@ export function Menu({ children }: MenuProps) {
     if (screen >= 770) {
         return (
             <>
-                <nav className={`serena-active-on-desktop ${menu.content}`}>{children}</nav>
+                <nav className={`serena-active-on-desktop serena-responsive-content ${menu.content}`}>{children}</nav>
             </>
         );
     } else {
@@ -34,10 +34,10 @@ export function Menu({ children }: MenuProps) {
                                 <IconClose size={20} />
                             </Button>
                         </header>
-                        <nav className={""}>{children}</nav>
+                        <nav className={"serena-responsive-content"}>{children}</nav>
                     </aside>
                 ) : (
-                    <Button onClick={handleMenuIsClick}>
+                    <Button className={menu.mobileIcon} onClick={handleMenuIsClick}>
                         <IconMobileMenu size={20} />
                     </Button>
                 )}

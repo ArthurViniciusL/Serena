@@ -33,11 +33,11 @@ export function ModalLoginAccount({ children }: ModalProps) {
                             priority={true}
                         />
                         <div className={modal.contentBtn}>
-                            <Button className="serena-btn-medium">
+                            <Button className="">
                                 Serviço
                             </Button>
-                            <p className="serena-ft-color-04">ou</p>
-                            <Button className="serena-btn-medium">
+                            <p className="">ou</p>
+                            <Button className="">
                                 Cliente
                             </Button>
                         </div>

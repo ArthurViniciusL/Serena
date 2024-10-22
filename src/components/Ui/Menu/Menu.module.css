@@ -7,16 +7,27 @@
     justify-content: space-between;
 }
 
+.mobileIcon {
+    top: 0;
+    right: 0;
+    position: absolute;
+    
+    margin-top: 14px;
+    margin-right: 10px;
+}
+
 .mobile {
     top: 0;
     left: 1;
     right: 0;
+    z-index: 2;
     position: fixed;
     width: 100dvw;
     height: 100dvh;
     background-color: var(--bg-color-02);
 
     display: flex;
+    gap: var(--gap);
     flex-direction: column;
     overflow: auto;
     flex-wrap: wrap;
@@ -38,6 +49,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+
 }
 
 /* .content > * {
