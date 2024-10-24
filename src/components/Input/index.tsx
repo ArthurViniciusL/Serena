@@ -23,7 +23,7 @@ export function Input({ onChange, placeholder, label, value, type }: InputProps)
         <div className={input.container}>
             <h3 className="font-semibold">{label}</h3>
             <input
-                className={input.content}
+                className={`${input.content} text-lg`}
                 onChange={onChange}
                 placeholder={placeholder}
                 value={value}
